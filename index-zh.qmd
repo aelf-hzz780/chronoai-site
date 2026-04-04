@@ -13,8 +13,14 @@ lang: zh
 
 [开源 Agent Connectivity Gateway——把你的 localhost 变成 MCP Server。]{.lead}
 
+::: {.install-box}
+```
+Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
+```
+:::
+
 ::: {.cta-row}
-[开始使用 NyxID](nyxid-zh.qmd){.btn .btn-primary}
+[了解更多](nyxid-zh.qmd){.btn .btn-primary}
 [阅读我们的判断](nyxid-dossier-zh.qmd){.btn .btn-outline-secondary}
 :::
 :::
