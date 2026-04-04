@@ -1,0 +1,101 @@
+---
+title: "NyxID"
+subtitle: "Open-Source Agent Connectivity Gateway"
+lang: en
+toc: true
+toc-depth: 2
+---
+
+::: {.lang-switch}
+[中文版](nyxid-zh.qmd)
+:::
+
+## The Problem
+
+Your AI agents can't reach your services.
+
+Your internal APIs, localhost dev servers, and private infrastructure are invisible to cloud AI agents. There's no path from Claude Code, Cursor, or any MCP client to the services running behind your firewall. And even when connectivity exists, it's fragile — credentials scattered in .env files, keys shared over Slack, zero portability across agent platforms.
+
+8,000+ MCP servers are exposed on the public internet. API key leaks have caused real financial losses ($82K in 48 hours from a single stolen Gemini key). The connectivity gap and the security gap are the same problem.
+
+## The Solution
+
+NyxID is the open-source Agent Connectivity Gateway. One gateway between your APIs and your AI agents. Built in Rust. Self-hosted.
+
+::: {.features-grid}
+::: {.feature-card}
+### NAT Traversal
+
+Your company's internal APIs, home lab services, or development servers can be reached by AI agents through SSH tunnels. No public endpoint, no firewall changes, no VPN configuration.
+
+**How it works:** Run `nyxid node start` to establish an SSH tunnel from your private network to the NyxID gateway. AI agents access private services through the gateway as if they were public endpoints.
+:::
+
+::: {.feature-card}
+### REST → MCP Auto-Wrap
+
+Point NyxID at any REST API endpoint with its OpenAPI spec or manual configuration. NyxID generates an MCP Server that any MCP-compatible client can consume.
+
+**How it works:** Register a REST endpoint in NyxID. NyxID reads the API schema and generates MCP tool definitions automatically. Claude Code, Cursor, n8n, or any MCP client can call these tools through NyxID.
+:::
+
+::: {.feature-card}
+### Credential-Injecting Proxy
+
+NyxID sits between your agents and your APIs as a reverse proxy. When an agent makes a request, NyxID auto-injects the correct credentials at the network layer. Your agents never see or store raw API keys.
+
+**How it works:** Configure an API endpoint and its credentials in NyxID. Route agent traffic through NyxID's proxy. NyxID adds the right headers, tokens, or auth parameters before forwarding the request.
+:::
+:::
+
+## Architecture
+
+```
+Your Services (localhost / internal APIs / any REST endpoint)
+  ↓
+NyxID Gateway
+  ├── NAT Traversal (SSH tunnels — expose private services to cloud agents)
+  ├── MCP Auto-Wrap (REST → MCP Server, auto-generated from OpenAPI)
+  ├── Credential Injection (reverse proxy auto-injects keys per request)
+  ├── Credential Store (encrypted, rotatable, auditable)
+  └── Per-Agent Isolation (scoped tokens, agents can't see each other)
+  ↓
+Any MCP Client (Claude Code / Cursor / n8n / any agent platform)
+```
+
+## Quickstart
+
+```bash
+# 1. Run NyxID
+docker run -d -p 8080:8080 \
+  -e NYXID_SECRET=your-secret \
+  -e NYXID_ADMIN_EMAIL=you@example.com \
+  chronoai/nyxid:latest
+
+# 2. Open http://localhost:8080 and connect a service
+
+# 3. Configure your MCP client to use NyxID as the endpoint
+
+# 4. Run a tool call — NyxID handles connectivity + auth automatically
+```
+
+> **Note:** Docker image and exact configuration are being finalized. Star the repo to get notified when the quickstart is production-ready.
+
+## What Only NyxID Does
+
+No existing solution combines all three:
+
+1. **NAT traversal for private APIs** — expose localhost and internal services to cloud AI agents through SSH tunnels. No public endpoint, no firewall changes. Cloudflare Tunnel does NAT, but has no credential injection. NyxID does both.
+
+2. **REST → MCP auto-wrap** — point at any REST endpoint, get an MCP Server. Any API becomes callable by any MCP client, instantly.
+
+3. **Credential-injecting reverse proxy** — agents never touch raw keys. Not credential storage (everyone does that). Credential *injection* at the network layer, so connectivity is secure by default.
+
+Open source. Self-hosted. Built in Rust.
+
+---
+
+::: {.text-center}
+[Star on GitHub](https://github.com/ChronoAIProject/NyxID){.btn .btn-primary}
+[Read the Dossier →](nyxid-dossier.qmd){.btn .btn-outline-secondary}
+:::

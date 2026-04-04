@@ -1,0 +1,101 @@
+---
+title: "NyxID"
+subtitle: "开源 Agent Connectivity Gateway"
+lang: zh
+toc: true
+toc-depth: 2
+---
+
+::: {.lang-switch}
+[English](nyxid.qmd)
+:::
+
+## 问题
+
+每一个 MCP server 都需要凭证。没有人在管这些凭证。
+
+8,000+ MCP server 暴露在公网上。API key 泄露已造成真实的财务损失（一个被盗的 Gemini key 在 48 小时内产生了 $82K 账单）。即使你保护好了凭证，你的内网 API 对 AI Agent 来说仍然不可见。
+
+开发者通过散落在各 repo 的 .env 文件、Slack 里传的 key、以及不可移植的平台私有 vault 来管理凭证。换一个 agent 平台？全部重新配置。
+
+## 解决方案
+
+NyxID 是开源的 Agent Connectivity Gateway。连接你的 API 和你的 AI Agent 的统一网关。Rust 构建，自托管。
+
+::: {.features-grid}
+::: {.feature-card}
+### 凭证注入代理
+
+NyxID 作为反向代理位于 Agent 和 API 之间。当 Agent 发起请求时，NyxID 在网络层自动注入正确的凭证。你的 Agent 永远不会看到或存储原始 API key。
+
+**工作原理：** 在 NyxID 中配置 API 端点及其凭证。将 Agent 流量路由到 NyxID 代理。NyxID 在转发请求前自动添加正确的 header、token 或认证参数。
+:::
+
+::: {.feature-card}
+### NAT 穿透
+
+你的公司内网 API、家庭实验室服务或开发服务器，都可以通过 SSH 隧道被 AI Agent 访问。无需公网端点，无需防火墙变更，无需 VPN 配置。
+
+**工作原理：** NyxID 从你的私有网络建立 SSH 隧道到 NyxID 网关。AI Agent 通过网关访问私有服务，就像它们是公网端点一样。
+:::
+
+::: {.feature-card}
+### REST → MCP 自动包装
+
+将 NyxID 指向任何 REST API 端点（提供 OpenAPI spec 或手动配置）。NyxID 自动生成 MCP Server，任何 MCP 兼容客户端都可以使用。
+
+**工作原理：** 在 NyxID 中注册 REST 端点。NyxID 读取 API schema 并自动生成 MCP 工具定义。Claude Code、Cursor、n8n 或任何 MCP 客户端都可以通过 NyxID 调用这些工具。
+:::
+:::
+
+## 架构
+
+```
+外部 API (Lark / Slack / HomeAssistant / 任何 REST)
+  ↓
+NyxID Gateway
+  ├── 凭证存储 (加密, 可轮换, 可审计)
+  ├── 反向代理 (按请求自动注入凭证)
+  ├── MCP 自动包装 (REST → MCP Server, 自动生成)
+  ├── NAT 穿透 (SSH 隧道连接内网 API)
+  └── Agent 隔离 (scoped token, Agent 之间不可见)
+  ↓
+任何 MCP 客户端 (Claude Code / Cursor / n8n / 任何 Agent 平台)
+```
+
+## 快速开始
+
+```bash
+# 1. 运行 NyxID
+docker run -d -p 8080:8080 \
+  -e NYXID_SECRET=your-secret \
+  -e NYXID_ADMIN_EMAIL=you@example.com \
+  chronoai/nyxid:latest
+
+# 2. 打开 http://localhost:8080，添加一个 API 凭证
+
+# 3. 配置你的 MCP 客户端使用 NyxID 作为端点
+
+# 4. 运行一个工具调用 — NyxID 自动处理认证
+```
+
+> **注意：** Docker 镜像和具体配置正在定稿中。Star 仓库以获取 quickstart 正式可用的通知。
+
+## 只有 NyxID 能做的事
+
+没有现有方案同时具备这三个能力：
+
+1. **凭证注入反向代理** — Agent 永远不接触原始 key。不是凭证存储（每个人都做）。是在网络层的凭证*注入*。
+
+2. **内网 API 的 NAT 穿透** — Cloudflare Tunnel 做 NAT 但不管凭证。1Password 管凭证但不做 NAT。NyxID 两者都做。
+
+3. **REST → MCP 自动包装** — 指向一个 REST 端点，得到一个 MCP Server。没有现有工具在内置凭证注入的同时做到这一点。
+
+开源。自托管。Rust 构建。
+
+---
+
+::: {.text-center}
+[Star on GitHub](https://github.com/ChronoAIProject/NyxID){.btn .btn-primary}
+[阅读完整分析 →](nyxid-dossier-zh.qmd){.btn .btn-outline-secondary}
+:::

@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Chrono AI"
+  description: "Open-source Agent Connectivity Gateway — turn any API into an MCP Server"
+  site-url: https://chronoaiproject.github.io/chronoai-site/
+  navbar:
+    left:
+      - text: "NyxID"
+        href: nyxid.qmd
+      - text: "Research"
+        menu:
+          - text: "The AI Agent Connectivity Crisis"
+            href: nyxid-dossier.qmd
+          - text: "AI Agent 连接危机"
+            href: nyxid-dossier-zh.qmd
+    right:
+      - icon: github
+        href: https://github.com/ChronoAIProject/NyxID
+      - text: "EN"
+        href: index.qmd
+      - text: "中文"
+        href: index-zh.qmd
+  page-footer:
+    center: "&copy; 2026 Chrono AI"
+  # Analytics: uncomment and set your GoatCounter or Plausible domain
+  # head-extra: |
+  #   <script data-goatcounter="https://YOURSITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3

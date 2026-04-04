@@ -1,0 +1,72 @@
+---
+title: "Chrono AI"
+page-layout: full
+lang: en
+---
+
+::: {.lang-switch}
+[中文版](index-zh.qmd)
+:::
+
+::: {.hero}
+# NyxID
+
+[The open-source Agent Connectivity Gateway — turn your localhost into an MCP Server.]{.lead}
+
+::: {.cta-row}
+[Build with NyxID](nyxid.qmd){.btn .btn-primary}
+[Read the thesis](nyxid-dossier.qmd){.btn .btn-outline-secondary}
+:::
+:::
+
+::: {.features-grid}
+::: {.feature-card}
+### NAT Traversal
+
+Expose localhost and private APIs to cloud AI agents through SSH tunnels. No public endpoint required.
+:::
+
+::: {.feature-card}
+### REST → MCP Auto-Wrap
+
+Point NyxID at any REST endpoint. It generates an MCP Server automatically.
+:::
+
+::: {.feature-card}
+### Credential Injection
+
+Your agents never touch raw API keys. NyxID's reverse proxy auto-injects credentials at the network layer.
+:::
+:::
+
+::: {.proof-strip}
+**97M** monthly MCP downloads. **8,000+** servers exposed. **$82K** lost in 48 hours.
+
+Your AI agents can't reach your private services. And even when they can, credentials are exposed.
+
+[Read the full analysis →](nyxid-dossier.qmd)
+:::
+
+## Why Chrono AI
+
+NyxID is our first product. We are building the infrastructure stack for the AI agent era.
+
+::: {.stack-section}
+```
+NyxID  (connectivity + identity)     ← NOW
+  └── Ornn  (skill marketplace)      ← NEXT
+       └── Aevatar (agent runtime)   ← LATER
+```
+
+**NyxID** — Open-source Agent Connectivity Gateway. Connect any service to any AI agent, with built-in credential security.
+
+**Ornn** — Skill-as-a-Service platform. Create, discover, and execute AI agent skills.
+
+**Aevatar** — Distributed agent runtime. Host persistent AI agents in the cloud.
+:::
+
+---
+
+::: {.text-center .text-muted}
+[NyxID](https://github.com/ChronoAIProject/NyxID) · [Ornn](https://github.com/aevatarAI/chrono-ornn) · [Aevatar](https://github.com/aevatarAI/aevatar)
+:::
