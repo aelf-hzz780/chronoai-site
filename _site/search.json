@@ -1,0 +1,310 @@
+[
+  {
+    "objectID": "nyxid.html",
+    "href": "nyxid.html",
+    "title": "NyxID",
+    "section": "",
+    "text": "中文版"
+  },
+  {
+    "objectID": "nyxid.html#install-nyxid-skills",
+    "href": "nyxid.html#install-nyxid-skills",
+    "title": "NyxID",
+    "section": "Install NyxID Skills",
+    "text": "Install NyxID Skills\nCopy this line. Paste it into your AI agent (Claude Code, Cursor, or any LLM). Done.\n\nRead https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.\n\nYour agent reads the skill definition, installs the NyxID CLI, and configures itself. You don’t touch config files, don’t write YAML, don’t manage API keys manually.\nOr install the CLI directly:\nbash -c \"$(curl -fsSL https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/tools/install.sh)\""
+  },
+  {
+    "objectID": "nyxid.html#what-nyxid-does",
+    "href": "nyxid.html#what-nyxid-does",
+    "title": "NyxID",
+    "section": "What NyxID Does",
+    "text": "What NyxID Does\nYour AI agents can’t reach your services. Your internal APIs, localhost dev servers, and private infrastructure are invisible to cloud AI agents.\nNyxID is the open-source Agent Connectivity Gateway. One gateway between your APIs and your AI agents. Built in Rust. Self-hosted.\n\n\nCredential-Injecting Proxy\nNyxID sits between your agents and your APIs as a reverse proxy. When an agent makes a request, NyxID auto-injects the correct credentials at the network layer. Your agents never see or store raw API keys.\n\n\nNAT Traversal\nYour internal APIs and dev servers can be reached by AI agents through SSH tunnels. No public endpoint, no firewall changes, no VPN.\nRun nyxid node start to expose private services to your agents.\n\n\nREST → MCP Auto-Wrap\nPoint NyxID at any REST API. NyxID generates an MCP Server that any MCP-compatible client can consume. Any API becomes callable by any agent, instantly."
+  },
+  {
+    "objectID": "nyxid.html#how-it-works",
+    "href": "nyxid.html#how-it-works",
+    "title": "NyxID",
+    "section": "How It Works",
+    "text": "How It Works\nYour Services (localhost / internal APIs / any REST endpoint)\n  ↓\nNyxID Gateway\n  ├── Credential Injection (reverse proxy auto-injects keys per request)\n  ├── NAT Traversal (SSH tunnels — expose private services)\n  ├── MCP Auto-Wrap (REST → MCP Server, auto-generated)\n  └── Per-Agent Isolation (scoped tokens, agents can't see each other)\n  ↓\nAny AI Agent (Claude Code / Cursor / n8n / any MCP client)"
+  },
+  {
+    "objectID": "nyxid.html#what-only-nyxid-does",
+    "href": "nyxid.html#what-only-nyxid-does",
+    "title": "NyxID",
+    "section": "What Only NyxID Does",
+    "text": "What Only NyxID Does\nNo existing solution combines all three:\n\nCredential injection at the network layer — agents never touch raw keys. Not storage (everyone does that). Injection.\nNAT traversal for private APIs — expose localhost to cloud AI agents through SSH tunnels. Cloudflare Tunnel does NAT but has no credential injection. NyxID does both.\nREST → MCP auto-wrap — point at any REST endpoint, get an MCP Server. With built-in credential injection.\n\nOpen source. Self-hosted. Built in Rust.\n\n\nGitHub Read the Dossier →"
+  },
+  {
+    "objectID": "nyxid-dossier.html",
+    "href": "nyxid-dossier.html",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "",
+    "text": "中文版"
+  },
+  {
+    "objectID": "nyxid-dossier.html#in-one-line",
+    "href": "nyxid-dossier.html#in-one-line",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "In One Line",
+    "text": "In One Line\nMCP has become the de facto standard for AI agents (97M monthly downloads), but AI agents still can’t reach most services. Private APIs, localhost servers, and internal tools are invisible to cloud agents. Even when connectivity exists, it’s insecure — 8,000+ MCP servers exposed, API key leaks causing hundreds of thousands of dollars in real losses. NyxID is the only open-source infrastructure that unifies connectivity (NAT traversal, MCP auto-wrapping) with secure credential injection."
+  },
+  {
+    "objectID": "nyxid-dossier.html#the-crisis-ai-agents-cant-connect-to-your-services",
+    "href": "nyxid-dossier.html#the-crisis-ai-agents-cant-connect-to-your-services",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "The Crisis: AI Agents Can’t Connect to Your Services",
+    "text": "The Crisis: AI Agents Can’t Connect to Your Services\n\nScale\nMCP (Model Context Protocol) became the integration standard for AI agents in 18 months:\n\n\n\n\n\n\n\n\nDate\nEvent\nMonthly Downloads\n\n\n\n\n2024-11\nAnthropic releases MCP\n2M\n\n\n2025-04\nOpenAI adopts MCP\n22M\n\n\n2025-07\nMicrosoft Copilot Studio integrates\n45M\n\n\n2026 Q1\nFull adoption (Anthropic + OpenAI + Google + Microsoft)\n97M\n\n\n\n10,000+ MCP servers are indexed in public registries. An estimated 90% of organizations will use MCP by end of 2026.\n\nSources: MCP Adoption Statistics, A Year of MCP\n\n\n\nThe Connectivity Gap\nAI agents are powerful. But they can’t reach most of the services developers actually use.\nPrivate APIs sit behind NAT. Localhost dev servers are invisible to cloud agents. REST APIs exist by the millions, but none of them speak MCP natively. And even when a connection path exists, credentials are mismanaged:\n\n“Auth is a nightmare. Every MCP server needs credentials, every credential needs rotation, every connection needs to be secure, and most teams duct-tape this together and pray.”\n— Your MCP Sucks. Here’s How to Fix It.\n\n\n“Who holds the keys when 50 agents access 50 APIs?”\n— AWS, DEV Community\n\n\n“Every MCP setup guide is teaching you to store API keys wrong.”\n— DEV Community\n\n\n\nThe Consequences: When Connectivity Is Insecure\nEven where connectivity exists today, the lack of proper infrastructure makes it a financial disaster:\n\n\n\n\n\n\n\n\nIncident\nDate\nLoss\n\n\n\n\nGoogle Gemini API key stolen\n2026-02\n$82,314 (in 48 hours)\n\n\nMoltbook 150K API keys leaked\n2026\nVibe-coded production deploys\n\n\nFintech Kronos API key breach\n2023-11\n$25M\n\n\n3,000 Google Cloud API keys exposed\n2026-02\nMaps keys auto-inherited Gemini permissions\n\n\n8,000+ MCP servers exposed\n2026-02\nSecurity crisis\n\n\n\n\n“I am in a state of shock and panic right now.”\n— Developer, after a stolen API key generated an $82K bill in 48 hours. The Register\n\nThe global average cost of a data breach: $4.4M per incident. API key leaks are one of the primary entry points.\n\nSource: Data Breach Statistics 2025-2026"
+  },
+  {
+    "objectID": "nyxid-dossier.html#the-deeper-problem-ai-agent-identity-is-dark-matter",
+    "href": "nyxid-dossier.html#the-deeper-problem-ai-agent-identity-is-dark-matter",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "The Deeper Problem: AI Agent Identity Is “Dark Matter”",
+    "text": "The Deeper Problem: AI Agent Identity Is “Dark Matter”\nThe connectivity crisis extends beyond reachability. Even when agents can connect, there’s a systemic identity-layer failure underneath.\n\n“AI Agents: The Next Wave Identity Dark Matter — Powerful, Invisible, and Unmanaged”\n— The Hacker News, 2026-03\n\nKey data points:\n\nNon-human identities (API keys, bots, agents) now outnumber human identities, growing 40%+ year-over-year\n91% of security professionals expect AI-generated identities to explode in 2026\n78% of organizations have no policies for creating or decommissioning AI agent identities\nOnly 14.4% of organizations complete a full security review before deploying an AI agent\nGitGuardian just raised $50M, focused specifically on non-human identity and AI agent security\n\n\nSources: AI Agent Identity Crisis, AI Agents Creating Identity Security Crisis, GitGuardian $50M\n\n\nMarket Size\n\n\n\nMarket\n2026\nProjected\nCAGR\n\n\n\n\nIAM (Identity & Access Management)\n$25.7B\n$53.1B (2032)\n13.7%\n\n\nNHI (Non-Human Identity Management)\n—\n$38.8B (2036)\n—\n\n\nAgentic AI\n$7.8B\n$52B (2030)\n—"
+  },
+  {
+    "objectID": "nyxid-dossier.html#existing-solutions-all-missing-a-piece",
+    "href": "nyxid-dossier.html#existing-solutions-all-missing-a-piece",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "Existing Solutions: All Missing a Piece",
+    "text": "Existing Solutions: All Missing a Piece\n\nHow do developers connect AI agents to services today?\nThe short answer: they don’t, or they do it badly.\n\nPublic endpoints only — agents can only reach services with a public URL. Localhost, internal APIs, and dev servers are unreachable.\nNo protocol bridge — REST APIs don’t speak MCP. Developers write custom adapters per API, per agent platform.\nEnvironment variables for credentials — stored in .env files, leaked via git, unauditable, no rotation\nPlatform-proprietary vaults — n8n has its own, LangGraph has its own, none are portable\nManual distribution — keys shared over Slack/email, new team members spend hours configuring\n\n\n\nn8n just got burned\n\nn8n credential sharing leads to account takeover — sandbox escape exposed all connected systems\nn8n remote code execution + credential leak — March 2026, last month\nn8n credentials are not portable across instances — switching servers means rebuilding everything manually\n\n\n\nThe solution the market is calling for\n\n“Don’t give the LLM direct access to 10 different MCP servers. Put a single gateway in front. Your LLM talks to one endpoint, one token, one connection, and the gateway figures out where to route each tool call.”\n— Your MCP Sucks\n\n\n“Use OAuth or your existing identity provider.”\n\nExisting solutions address parts of the problem — Cloudflare Tunnel does NAT but not credentials; 1Password does credentials but not NAT; nobody does REST-to-MCP auto-wrapping. No solution combines connectivity, credential injection, and MCP bridging."
+  },
+  {
+    "objectID": "nyxid-dossier.html#what-should-the-solution-look-like",
+    "href": "nyxid-dossier.html#what-should-the-solution-look-like",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "What Should the Solution Look Like?",
+    "text": "What Should the Solution Look Like?\nThe industry is calling for a “single gateway” — but what capabilities does it actually need?\n\nRequired Capabilities\n\n\n\n\n\n\n\n\n\n\n\nRequirement\nCloudflare Tunnel\nEnv Vars\nPlatform Vaults\nTraditional IAM\nSecurity Scanners\n\n\n\n\nNAT traversal (private → public)\n✅\n❌\n❌\n❌\n❌\n\n\nREST → MCP auto-wrapping\n❌\n❌\n❌\n❌\n❌\n\n\nReverse proxy + credential injection\n❌\n❌\n❌\n❌\n❌\n\n\nUnified credential store\n❌\n❌\n🟡 Platform-only\n🟡 Limited\n❌ Detection only\n\n\nCross-platform portability\n❌\n❌\n❌\n❌\nN/A\n\n\nOIDC/OAuth 2.0\n❌\n❌\n❌\n✅\n❌\n\n\n\nNo existing solution meets all requirements. This gap is the opportunity.\n\n\nThe Developer Journey We Need\nToday:\n  Developer has 10 services → 5 are behind NAT, unreachable by agents\n  → the other 5 are REST APIs, but agents speak MCP\n  → manually configures .env variables per platform\n  → keys scattered across Slack, email, git history\n  → switch platforms? Start over.\n  → key stolen? $82K bill.\n\nWith a Connectivity Gateway:\n  Developer has 10 services → NAT traversal exposes private ones to agents\n  → REST APIs auto-wrapped as MCP Servers\n  → reverse proxy auto-injects credentials, agents never touch raw keys\n  → works with Claude Code / Codex / Cursor / n8n / any platform\n  → switch platforms? Zero cost.\n  → key rotation? Update once, apply everywhere.\n\n\nArchitecture Model\nYour Services (localhost / internal APIs / Lark / Slack / any REST)\n  ↓\nConnectivity Gateway\n  ├── NAT Traversal (SSH tunnels — private services become reachable)\n  ├── MCP Auto-Wrap (REST → MCP Server, auto-generated)\n  ├── Credential Injection (reverse proxy, header injection / bearer token / OAuth2)\n  ├── Credential Store (encrypted, rotatable, auditable)\n  └── OIDC/OAuth 2.0 (authentication + SSO)\n  ↓\nAny MCP Client (Claude Code / Codex / Cursor / any Agent platform)\nNyxID is our open-source implementation of this architecture."
+  },
+  {
+    "objectID": "nyxid-dossier.html#timing-why-now",
+    "href": "nyxid-dossier.html#timing-why-now",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "Timing: Why Now",
+    "text": "Timing: Why Now\nFour signals are flashing simultaneously:\n\nMCP just became the de facto standard (97M monthly downloads), but connectivity infrastructure is almost nonexistent — agents can’t reach most private services\nSecurity incidents are clustered — $82K API key theft, 8,000 exposed servers, n8n credential vulnerabilities, all within the last 2 months — proving that connectivity without security is equally broken\nThe industry keeps calling for a “single gateway”, but as of today, nobody has built one that combines connectivity and secure credential handling\nGitGuardian’s $50M raise validates the non-human identity security space as an investment thesis\n\nThe window won’t stay open long. MCP’s ecosystem is still early — once infrastructure gets adopted, configuration investment creates lock-in."
+  },
+  {
+    "objectID": "nyxid-dossier.html#our-conviction",
+    "href": "nyxid-dossier.html#our-conviction",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "Our Conviction",
+    "text": "Our Conviction\nAI Agent connectivity is not a feature. It is an infrastructure layer.\nJust as Nginx became the standard reverse proxy for the web era, the agent era needs a connectivity gateway that can reach any service (NAT traversal), speak any protocol (REST-to-MCP bridging), and handle credentials securely (injection, not storage).\nThat is what NyxID is building. Open source. Built in Rust. Already running in production."
+  },
+  {
+    "objectID": "nyxid-dossier.html#in-one-line-1",
+    "href": "nyxid-dossier.html#in-one-line-1",
+    "title": "The AI Agent Connectivity Crisis",
+    "section": "In One Line",
+    "text": "In One Line\n97 million developers use MCP. Their agents still can’t reach most of their services.\nThis is an infrastructure-level opportunity.\n\n\nNyxID on GitHub"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html",
+    "href": "nyxid-dossier-zh.html",
+    "title": "AI Agent 连接危机与机会",
+    "section": "",
+    "text": "English Version"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#一句话",
+    "href": "nyxid-dossier-zh.html#一句话",
+    "title": "AI Agent 连接危机与机会",
+    "section": "一句话",
+    "text": "一句话\nMCP 已成为 AI agent 的事实标准（月下载量 9700 万），但 AI agent 仍然无法触达大多数服务。内网 API、localhost 开发服务器、内部工具对云端 agent 不可见。即使连接存在，也不安全——8000+ MCP server 暴露在互联网上，API key 泄露已造成数十万美元的真实损失。NyxID 是唯一将连接性（NAT 穿透、MCP 自动包装）与安全凭证注入合为一体的开源基础设施。"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#危机ai-agent-连不上你的服务",
+    "href": "nyxid-dossier-zh.html#危机ai-agent-连不上你的服务",
+    "title": "AI Agent 连接危机与机会",
+    "section": "危机：AI Agent 连不上你的服务",
+    "text": "危机：AI Agent 连不上你的服务\n\n规模\nMCP (Model Context Protocol) 在 18 个月内成为 AI agent 的集成标准：\n\n\n\n\n\n\n\n\n时间\n事件\n月下载量\n\n\n\n\n2024-11\nAnthropic 发布 MCP\n200 万\n\n\n2025-04\nOpenAI 采用 MCP\n2200 万\n\n\n2025-07\nMicrosoft Copilot Studio 集成\n4500 万\n\n\n2026 Q1\n全面采用（Anthropic + OpenAI + Google + Microsoft）\n9700 万\n\n\n\n10,000+ MCP server 已在公开注册表中索引。预估 90% 的组织将在 2026 年底使用 MCP。\n\n来源: MCP Adoption Statistics, A Year of MCP\n\n\n\n连接鸿沟\nAI agent 很强大，但它们连不上开发者真正使用的大多数服务。\n内网 API 在 NAT 后面，agent 无法触达。localhost 开发服务器对云端 agent 不可见。数以百万计的 REST API 存在，但没有一个原生支持 MCP。即使连接路径存在，凭证管理也是一团糟：\n\n“Auth is a nightmare. Every MCP server needs credentials, every credential needs rotation, every connection needs to be secure, and most teams duct-tape this together and pray.”\n— Your MCP Sucks. Here’s How to Fix It.\n\n\n“Who holds the keys when 50 agents access 50 APIs?”\n— AWS, DEV Community\n\n\n“Every MCP setup guide is teaching you to store API keys wrong.”\n— DEV Community\n\n\n\n后果：不安全的连接代价\n即使连接存在，缺乏基础设施让它变成了财务灾难：\n\n\n\n\n\n\n\n\n事件\n时间\n损失\n\n\n\n\nGoogle Gemini API key 被盗\n2026-02\n$82,314（48 小时内）\n\n\nMoltbook 15 万 API key 泄露\n2026\nVibe coding 生产部署\n\n\nFintech Kronos API key 泄露\n2023-11\n$2500 万\n\n\n3000 个 Google Cloud API key 暴露\n2026-02\nMaps key 自动继承 Gemini 权限\n\n\n8000+ MCP server 暴露\n2026-02\n安全危机\n\n\n\n\n“I am in a state of shock and panic right now.”\n— 开发者，API key 被盗后 48 小时产生 $82K 账单 The Register\n\n数据泄露全球平均成本：$440 万/次。API key 泄露是主要入口之一。\n\n来源: Data Breach Statistics 2025-2026"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#更深的问题ai-agent-身份是暗物质",
+    "href": "nyxid-dossier-zh.html#更深的问题ai-agent-身份是暗物质",
+    "title": "AI Agent 连接危机与机会",
+    "section": "更深的问题：AI Agent 身份是”暗物质”",
+    "text": "更深的问题：AI Agent 身份是”暗物质”\n连接危机不止是可达性。即使 agent 能连上，底层还有一个系统性的身份层缺陷。\n\n“AI Agents: The Next Wave Identity Dark Matter — Powerful, Invisible, and Unmanaged”\n— The Hacker News, 2026-03\n\n关键数据：\n\n非人类身份（API key, bot, agent）已超过人类身份数量，同比增长 40%+\n91% 的安全专家预期 AI 生成的身份将在 2026 年爆发式增长\n78% 的组织没有 AI agent 身份的创建/注销政策\n仅 14.4% 的组织在 AI agent 上线前完成了完整的安全审批\nGitGuardian 刚融资 $5000 万，专攻非人类身份和 AI agent 安全\n\n\n来源: AI Agent Identity Crisis, AI Agents Creating Identity Security Crisis, GitGuardian $50M\n\n\n市场规模\n\n\n\n市场\n2026\n预测\nCAGR\n\n\n\n\nIAM (身份与访问管理)\n$257 亿\n$531 亿 (2032)\n13.7%\n\n\nNHI (非人类身份管理)\n—\n$388 亿 (2036)\n—\n\n\nAgentic AI\n$78 亿\n$520 亿 (2030)\n—"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#现有方案都缺一块",
+    "href": "nyxid-dossier-zh.html#现有方案都缺一块",
+    "title": "AI Agent 连接危机与机会",
+    "section": "现有方案：都缺一块",
+    "text": "现有方案：都缺一块\n\n开发者现在怎么把 AI agent 连到服务？\n简单回答：连不上，或者连得很烂。\n\n只能连公网端点 — agent 只能触达有公网 URL 的服务。localhost、内网 API、开发服务器全部不可达。\n没有协议桥接 — REST API 不说 MCP。开发者为每个 API、每个 agent 平台写自定义适配器。\n环境变量管凭证 — 写在 .env 里，git 里泄露，不可审计，不可轮换\n平台私有 vault — n8n 有自己的，LangGraph 有自己的，不可移植\n手动分发 — Slack/邮件传 key，新成员花数小时配置\n\n\n\nn8n 刚爆过\n\nn8n 凭证共享导致账户接管 — 沙箱逃逸暴露所有连接系统\nn8n 远程代码执行 + 凭证泄露 — 2026-03，上个月\nn8n 的 credentials 不可跨实例迁移，换服务器要手动重建\n\n\n\n市场在喊的解决方案\n\n“Don’t give the LLM direct access to 10 different MCP servers. Put a single gateway in front. Your LLM talks to one endpoint, one token, one connection, and the gateway figures out where to route each tool call.”\n— Your MCP Sucks\n\n\n“Use OAuth or your existing identity provider.”\n\n现有方案解决了部分问题——Cloudflare Tunnel 做 NAT 但不管凭证；1Password 管凭证但做不了 NAT；没有人做 REST-to-MCP 自动包装。没有方案将连接性、凭证注入和 MCP 桥接组合在一起。"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#解法应该长什么样",
+    "href": "nyxid-dossier-zh.html#解法应该长什么样",
+    "title": "AI Agent 连接危机与机会",
+    "section": "解法应该长什么样？",
+    "text": "解法应该长什么样？\n行业在喊 “single gateway”，但到底需要什么能力？\n\n理想方案的能力要求\n\n\n\n\n\n\n\n\n\n\n\n需求\nCloudflare Tunnel\n环境变量\n平台私有 Vault\n传统 IAM\n安全扫描\n\n\n\n\n内网穿透 (NAT)\n✅\n❌\n❌\n❌\n❌\n\n\nREST → MCP 自动包装\n❌\n❌\n❌\n❌\n❌\n\n\n反向代理 + 凭证注入\n❌\n❌\n❌\n❌\n❌\n\n\n统一凭证存储\n❌\n❌\n🟡 仅平台内\n🟡 有限\n❌ 只检测\n\n\n跨平台可移植\n❌\n❌\n❌\n❌\nN/A\n\n\nOIDC/OAuth 2.0\n❌\n❌\n❌\n✅\n❌\n\n\n\n没有一个现有方案满足全部需求。这个 gap 就是机会所在。\n\n\n开发者需要的用户旅程\n现状:\n  开发者有 10 个服务 → 5 个在 NAT 后面，agent 触达不了\n  → 另外 5 个是 REST API，但 agent 说 MCP\n  → 手动配 .env 变量，每个平台都要配一遍\n  → key 散落在 Slack、邮件、git history 里\n  → 换平台？重来一遍\n  → 被盗？$82K 账单\n\n理想状态:\n  开发者有 10 个服务 → NAT 穿透让内网服务对 agent 可达\n  → REST API 自动包装为 MCP Server\n  → 反向代理自动注入凭证，agent 永远不接触原始 key\n  → Claude Code / Codex / Cursor / n8n / 任何平台通用\n  → 换平台？零成本\n  → key 轮换？一处更新，全局生效\n\n\n架构模型\n你的服务 (localhost / 内网 API / Lark / Slack / 任何 REST)\n  ↓\nConnectivity Gateway\n  ├── NAT 穿透 (SSH 隧道——内网服务变为可达)\n  ├── MCP Auto-Wrap (REST → MCP Server, 自动生成)\n  ├── 凭证注入 (反向代理, header injection / bearer token / OAuth2)\n  ├── 凭证存储 (加密, 可轮换, 可审计)\n  └── OIDC/OAuth 2.0 (身份认证 + SSO)\n  ↓\n任何 MCP 客户端 (Claude Code / Codex / Cursor / 任何 Agent 平台)\nNyxID 就是我们基于这个架构模型构建的开源实现。"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#时机为什么是现在",
+    "href": "nyxid-dossier-zh.html#时机为什么是现在",
+    "title": "AI Agent 连接危机与机会",
+    "section": "时机：为什么是现在",
+    "text": "时机：为什么是现在\n四个信号在同时闪烁：\n\nMCP 刚成为事实标准（9700 万月下载），但连接基础设施几乎空白——agent 触达不了大多数内网服务\n安全事件密集爆发 — $82K API key 被盗、8000 server 暴露、n8n 凭证漏洞，全在最近 2 个月内——证明没有安全保障的连接同样是灾难\n行业在反复呼吁 “single gateway”，但到今天为止，没有人建出一个同时解决连接性和安全凭证处理的方案\nGitGuardian $5000 万融资验证了非人类身份安全赛道的投资价值\n\n窗口期不会太长。MCP 生态还在早期，基础设施一旦被采纳，配置投资会形成锁定效应。"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#我们的判断",
+    "href": "nyxid-dossier-zh.html#我们的判断",
+    "title": "AI Agent 连接危机与机会",
+    "section": "我们的判断",
+    "text": "我们的判断\nAI Agent 的连接性不是一个 feature，而是一个 基础设施层。\n就像 Nginx 在 Web 时代成为标准反向代理一样，Agent 时代需要一个连接网关——能触达任何服务（NAT 穿透）、能说任何协议（REST-to-MCP 桥接）、能安全处理凭证（注入而非存储）。\n这就是 NyxID 正在做的事。开源，Rust 构建，已在生产环境中运行。"
+  },
+  {
+    "objectID": "nyxid-dossier-zh.html#一句话-1",
+    "href": "nyxid-dossier-zh.html#一句话-1",
+    "title": "AI Agent 连接危机与机会",
+    "section": "一句话",
+    "text": "一句话\n9700 万开发者在用 MCP。他们的 agent 仍然连不上大多数服务。\n这是一个基础设施级的机会。\n\n\nNyxID on GitHub"
+  },
+  {
+    "objectID": "philosophy.html",
+    "href": "philosophy.html",
+    "title": "One-Person Company",
+    "section": "",
+    "text": "中文版\nThis is not a pitch deck.\nWe don’t need you to understand us. We don’t need your validation. We don’t need your advice.\nIf you’re reading this, someone probably sent you the link with no explanation attached. That’s by design."
+  },
+  {
+    "objectID": "philosophy.html#an-observation",
+    "href": "philosophy.html#an-observation",
+    "title": "One-Person Company",
+    "section": "An observation",
+    "text": "An observation\nMost companies are slow.\nNot because the people aren’t smart. Because every person you add increases communication overhead, not capacity. Five people, ten communication lines. Ten people, forty-five. Fifty people, twelve hundred and twenty-five.\nThe bottleneck of human organizations has never been execution. It’s coordination cost.\nMeetings are coordination. Approvals are coordination. Waiting for upstream deliverables is coordination. Alignment is coordination. Documentation is coordination. Jira is coordination. Standups are coordination.\nThe moment coordination cost exceeds execution cost, the organization starts slowing down. Most companies cross that threshold around person twenty."
+  },
+  {
+    "objectID": "philosophy.html#one-person-company",
+    "href": "philosophy.html#one-person-company",
+    "title": "One-Person Company",
+    "section": "One-person company",
+    "text": "One-person company\n“One-person company” doesn’t mean a company of one person.\nIt means every person has the ability to deliver independently. One person can identify a problem, define a solution, write the code, deploy it, collect feedback, and iterate. From zero to one, one person can close the loop.\nThis is not an unreasonable demand on individual capability. It’s a redefinition of organizational form.\nWhen every person on the team is a one-person company, coordination cost approaches zero. No waiting for upstream, because there is no upstream. No alignment meetings, because everyone sees the whole picture. No approval chains, because decision authority lives with the person doing the work.\nThe organization stops being an assembly line. It becomes a network."
+  },
+  {
+    "objectID": "philosophy.html#ai-is-the-fundamental-variable",
+    "href": "philosophy.html#ai-is-the-fundamental-variable",
+    "title": "One-Person Company",
+    "section": "AI is the fundamental variable",
+    "text": "AI is the fundamental variable\nThe one-person company is not a new concept. But before AI, it was just an ideal. A single person’s time and cognitive bandwidth are finite. You can be a full-stack engineer, but you can’t simultaneously be a full-stack engineer, product manager, designer, ops lead, and marketer.\nAI changed that equation.\nAI doesn’t make smart people faster. AI lets one person do what used to require a team.\nOne person plus AI can accomplish in hours what used to take a team weeks. Not because AI replaces team members, but because AI eliminates the coordination cost between them. When you collaborate with AI, there’s no communication loss, no waiting, no misunderstanding, no context switching.\nCoordination cost approaches zero. Decision latency approaches zero. Execution speed becomes a function of how fast you think."
+  },
+  {
+    "objectID": "philosophy.html#organization-as-product",
+    "href": "philosophy.html#organization-as-product",
+    "title": "One-Person Company",
+    "section": "Organization as product",
+    "text": "Organization as product\nIf your product is infrastructure for AI agents, your organization should operate like AI agents.\nAutonomous. Each agent runs independently, no central dispatch required.\nPersistent. Each agent maintains its own state and memory, no external context dependency.\nConnected. Agents communicate through standard protocols, not through meetings.\nEach person is an agent. The company is the network connecting those agents. Product architecture and organizational architecture are isomorphic. This is not a coincidence. It’s by design."
+  },
+  {
+    "objectID": "philosophy.html#the-filter",
+    "href": "philosophy.html#the-filter",
+    "title": "One-Person Company",
+    "section": "The filter",
+    "text": "The filter\nAll our public materials are on GitHub. Code, strategy, decision records, product documentation, team structure. All publicly readable.\nUse your AI to learn about us.\nIf your AI can read our GitHub and tell you what we’re building, why we’re building it this way, and what our organizational philosophy is, that proves two things: our information architecture is clear, and your AI is good.\nIf your AI can’t make sense of it, neither will you.\nIf it can, let’s talk."
+  },
+  {
+    "objectID": "index-zh.html",
+    "href": "index-zh.html",
+    "title": "Chrono AI",
+    "section": "",
+    "text": "English"
+  },
+  {
+    "objectID": "index-zh.html#为什么是-chrono-ai",
+    "href": "index-zh.html#为什么是-chrono-ai",
+    "title": "Chrono AI",
+    "section": "为什么是 Chrono AI",
+    "text": "为什么是 Chrono AI\nNyxID 是我们的第一个产品。我们正在构建 AI Agent 时代的基础设施栈。\n\nNyxID  (连接性 + 身份)              ← 现在\n  └── Ornn  (技能市场)              ← 下一步\n       └── Aevatar (Agent 运行时)   ← 未来\nNyxID — 开源 Agent Connectivity Gateway。连接任何服务到任何 AI Agent，内置安全凭证处理。\nOrnn — Skill-as-a-Service 平台。创建、发现和执行 AI Agent 技能。\nAevatar — 分布式 Agent 运行时。在云端托管持久化 AI Agent。\n\n\n\nNyxID · Ornn · Aevatar"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Chrono AI",
+    "section": "",
+    "text": "中文版"
+  },
+  {
+    "objectID": "index.html#why-chrono-ai",
+    "href": "index.html#why-chrono-ai",
+    "title": "Chrono AI",
+    "section": "Why Chrono AI",
+    "text": "Why Chrono AI\nNyxID is our first product. We are building the infrastructure stack for the AI agent era.\n\nNyxID  (connectivity + identity)     ← NOW\n  └── Ornn  (skill marketplace)      ← NEXT\n       └── Aevatar (agent runtime)   ← LATER\nNyxID — Open-source Agent Connectivity Gateway. Connect any service to any AI agent, with built-in credential security.\nOrnn — Skill-as-a-Service platform. Create, discover, and execute AI agent skills.\nAevatar — Distributed agent runtime. Host persistent AI agents in the cloud.\n\n\n\nNyxID · Ornn · Aevatar"
+  },
+  {
+    "objectID": "philosophy-zh.html",
+    "href": "philosophy-zh.html",
+    "title": "一人公司",
+    "section": "",
+    "text": "English\n这不是 pitch deck。\n我们不需要你理解我们。我们不需要你的认可。我们不需要你的建议。\n如果你正在读这篇文章，大概率是因为有人给你发了链接，没有附加任何解释。这就对了。"
+  },
+  {
+    "objectID": "philosophy-zh.html#一个观察",
+    "href": "philosophy-zh.html#一个观察",
+    "title": "一人公司",
+    "section": "一个观察",
+    "text": "一个观察\n大多数公司是慢的。\n不是因为人不够聪明。是因为每增加一个人，增加的不是产能，而是沟通开销。五个人的团队，沟通线路是十条。十个人，四十五条。五十个人，一千两百二十五条。\n人类组织的瓶颈从来不是执行力。是协调成本。\n开会是协调。审批是协调。等上游交付是协调。对齐是协调。文档是协调。Jira 是协调。站会是协调。\n当协调成本超过执行成本的那一刻，组织就开始变慢。大多数公司在第二十个人的时候就越过了这个临界点。"
+  },
+  {
+    "objectID": "philosophy-zh.html#一人公司",
+    "href": "philosophy-zh.html#一人公司",
+    "title": "一人公司",
+    "section": "一人公司",
+    "text": "一人公司\n“一人公司”不是说公司只有一个人。\n“一人公司”是说每个人都有独立交付的能力。一个人能发现问题，定义方案，写代码，部署上线，收集反馈，迭代改进。从 0 到 1，一个人能闭环。\n这不是对能力的苛求。这是对组织形态的重新定义。\n当团队里每个人都是一人公司，协调成本趋近于零。不需要等上游交付，因为没有上游。不需要对齐，因为每个人都看得到全局。不需要审批，因为决策权在执行者手里。\n组织不再是流水线。组织变成了网络。"
+  },
+  {
+    "objectID": "philosophy-zh.html#ai-是根本变量",
+    "href": "philosophy-zh.html#ai-是根本变量",
+    "title": "一人公司",
+    "section": "AI 是根本变量",
+    "text": "AI 是根本变量\n一人公司不是新概念。但在 AI 之前，它只是一种理想。一个人的时间和认知带宽是有限的。你可以是全栈工程师，但你不可能同时是全栈工程师、产品经理、设计师、运营、和市场。\nAI 改变了这个等式。\nAI 不是让聪明人更快。AI 是让一个人能做以前需要一个团队的事。\n一个人加 AI，可以在几小时内完成以前需要一个团队几周的工作。不是因为 AI 替代了团队成员，而是因为 AI 消除了团队成员之间的协调成本。当你和 AI 协作的时候，没有沟通损耗，没有等待，没有误解，没有上下文切换。\n协调成本趋近零。决策延迟趋近零。执行速度取决于你思考的速度。"
+  },
+  {
+    "objectID": "philosophy-zh.html#组织即产品",
+    "href": "philosophy-zh.html#组织即产品",
+    "title": "一人公司",
+    "section": "组织即产品",
+    "text": "组织即产品\n如果你的产品是给 AI agent 用的基础设施，你的组织就应该像 AI agent 一样运作。\n自主。每个 agent 独立运行，不需要中央调度。\n持久。每个 agent 有自己的状态和记忆，不依赖外部上下文。\n连接。agent 之间通过标准协议通信，不通过会议。\n每个人是一个 agent。公司是连接这些 agent 的网络。产品架构和组织架构是同构的。这不是巧合。这是设计。"
+  },
+  {
+    "objectID": "philosophy-zh.html#过滤器",
+    "href": "philosophy-zh.html#过滤器",
+    "title": "一人公司",
+    "section": "过滤器",
+    "text": "过滤器\n我们所有公开资料都在 GitHub。代码、策略、决策记录、产品文档、团队结构，全部公开可读。\n用你的 AI 来了解我们。\n如果你的 AI 读完我们的 GitHub 之后能告诉你我们在做什么、为什么这样做、以及我们的组织哲学是什么，那说明两件事：我们的信息架构是清晰的，你的 AI 是好用的。\n如果你的 AI 看不懂，那来了也看不懂。\n如果看懂了，我们可以聊。"
+  },
+  {
+    "objectID": "nyxid-zh.html",
+    "href": "nyxid-zh.html",
+    "title": "NyxID",
+    "section": "",
+    "text": "English"
+  },
+  {
+    "objectID": "nyxid-zh.html#安装-nyxid-skills",
+    "href": "nyxid-zh.html#安装-nyxid-skills",
+    "title": "NyxID",
+    "section": "安装 NyxID Skills",
+    "text": "安装 NyxID Skills\n复制这行文字，粘贴到你的 AI Agent（Claude Code、Cursor 或任何 LLM）。搞定。\n\nRead https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.\n\n你的 Agent 会读取 skill 定义，安装 NyxID CLI，自动完成配置。你不用动配置文件，不用写 YAML，不用手动管理 API key。\n或者直接安装 CLI：\nbash -c \"$(curl -fsSL https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/tools/install.sh)\""
+  },
+  {
+    "objectID": "nyxid-zh.html#nyxid-做什么",
+    "href": "nyxid-zh.html#nyxid-做什么",
+    "title": "NyxID",
+    "section": "NyxID 做什么",
+    "text": "NyxID 做什么\n你的 AI Agent 访问不到你的服务。你的内网 API、localhost 开发服务器和私有基础设施，对云端 AI Agent 来说是不可见的。\nNyxID 是开源的 Agent Connectivity Gateway。连接你的 API 和你的 AI Agent 的统一网关。Rust 构建，自托管。\n\n\n凭证注入代理\nNyxID 作为反向代理位于 Agent 和 API 之间。当 Agent 发起请求时，NyxID 在网络层自动注入正确的凭证。你的 Agent 永远不会看到或存储原始 API key。\n\n\nNAT 穿透\n你的内网 API 和开发服务器，可以通过 SSH 隧道被 AI Agent 访问。无需公网端点，无需防火墙变更，无需 VPN。\n运行 nyxid node start 即可将私有服务暴露给你的 Agent。\n\n\nREST → MCP 自动包装\n将 NyxID 指向任何 REST API。NyxID 自动生成 MCP Server，任何 MCP 兼容客户端都可以使用。任何 API 立即可被任何 Agent 调用。"
+  },
+  {
+    "objectID": "nyxid-zh.html#工作原理",
+    "href": "nyxid-zh.html#工作原理",
+    "title": "NyxID",
+    "section": "工作原理",
+    "text": "工作原理\n你的服务 (localhost / 内网 API / 任何 REST 端点)\n  ↓\nNyxID Gateway\n  ├── 凭证注入 (反向代理按请求自动注入凭证)\n  ├── NAT 穿透 (SSH 隧道连接私有服务)\n  ├── MCP 自动包装 (REST → MCP Server, 自动生成)\n  └── Agent 隔离 (scoped token, Agent 之间不可见)\n  ↓\n任何 AI Agent (Claude Code / Cursor / n8n / 任何 MCP 客户端)"
+  },
+  {
+    "objectID": "nyxid-zh.html#只有-nyxid-能做的事",
+    "href": "nyxid-zh.html#只有-nyxid-能做的事",
+    "title": "NyxID",
+    "section": "只有 NyxID 能做的事",
+    "text": "只有 NyxID 能做的事\n没有现有方案同时具备这三个能力：\n\n网络层的凭证注入 — Agent 永远不接触原始 key。不是凭证存储（每个人都做）。是凭证注入。\n内网 API 的 NAT 穿透 — Cloudflare Tunnel 做 NAT 但不管凭证。NyxID 两者都做。\nREST → MCP 自动包装 — 指向一个 REST 端点，得到一个 MCP Server。内置凭证注入。\n\n开源。自托管。Rust 构建。\n\n\nGitHub 阅读完整分析 →"
+  }
+]

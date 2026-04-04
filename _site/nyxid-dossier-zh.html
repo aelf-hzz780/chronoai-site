@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Chrono AI">
+
+<title>AI Agent 连接危机与机会 – Chrono AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5685cd926c25366c96d9f1407e584118.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Chrono AI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="搜索"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="展开或折叠导航栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-philosophy" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Philosophy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-philosophy">    
+        <li>
+    <a class="dropdown-item" href="./philosophy.html">
+ <span class="dropdown-text">One-Person Company</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./philosophy-zh.html">
+ <span class="dropdown-text">一人公司</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./nyxid.html"> 
+<span class="menu-text">NyxID</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="./nyxid-dossier.html">
+ <span class="dropdown-text">The AI Agent Connectivity Crisis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./nyxid-dossier-zh.html">
+ <span class="dropdown-text">AI Agent 连接危机</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ChronoAIProject/NyxID"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">EN</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index-zh.html"> 
+<span class="menu-text">中文</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="切换深色模式"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#一句话" id="toc-一句话" class="nav-link active" data-scroll-target="#一句话">一句话</a></li>
+  <li><a href="#危机ai-agent-连不上你的服务" id="toc-危机ai-agent-连不上你的服务" class="nav-link" data-scroll-target="#危机ai-agent-连不上你的服务">危机：AI Agent 连不上你的服务</a>
+  <ul class="collapse">
+  <li><a href="#规模" id="toc-规模" class="nav-link" data-scroll-target="#规模">规模</a></li>
+  <li><a href="#连接鸿沟" id="toc-连接鸿沟" class="nav-link" data-scroll-target="#连接鸿沟">连接鸿沟</a></li>
+  <li><a href="#后果不安全的连接代价" id="toc-后果不安全的连接代价" class="nav-link" data-scroll-target="#后果不安全的连接代价">后果：不安全的连接代价</a></li>
+  </ul></li>
+  <li><a href="#更深的问题ai-agent-身份是暗物质" id="toc-更深的问题ai-agent-身份是暗物质" class="nav-link" data-scroll-target="#更深的问题ai-agent-身份是暗物质">更深的问题：AI Agent 身份是”暗物质”</a>
+  <ul class="collapse">
+  <li><a href="#市场规模" id="toc-市场规模" class="nav-link" data-scroll-target="#市场规模">市场规模</a></li>
+  </ul></li>
+  <li><a href="#现有方案都缺一块" id="toc-现有方案都缺一块" class="nav-link" data-scroll-target="#现有方案都缺一块">现有方案：都缺一块</a>
+  <ul class="collapse">
+  <li><a href="#开发者现在怎么把-ai-agent-连到服务" id="toc-开发者现在怎么把-ai-agent-连到服务" class="nav-link" data-scroll-target="#开发者现在怎么把-ai-agent-连到服务">开发者现在怎么把 AI agent 连到服务？</a></li>
+  <li><a href="#n8n-刚爆过" id="toc-n8n-刚爆过" class="nav-link" data-scroll-target="#n8n-刚爆过">n8n 刚爆过</a></li>
+  <li><a href="#市场在喊的解决方案" id="toc-市场在喊的解决方案" class="nav-link" data-scroll-target="#市场在喊的解决方案">市场在喊的解决方案</a></li>
+  </ul></li>
+  <li><a href="#解法应该长什么样" id="toc-解法应该长什么样" class="nav-link" data-scroll-target="#解法应该长什么样">解法应该长什么样？</a>
+  <ul class="collapse">
+  <li><a href="#理想方案的能力要求" id="toc-理想方案的能力要求" class="nav-link" data-scroll-target="#理想方案的能力要求">理想方案的能力要求</a></li>
+  <li><a href="#开发者需要的用户旅程" id="toc-开发者需要的用户旅程" class="nav-link" data-scroll-target="#开发者需要的用户旅程">开发者需要的用户旅程</a></li>
+  <li><a href="#架构模型" id="toc-架构模型" class="nav-link" data-scroll-target="#架构模型">架构模型</a></li>
+  </ul></li>
+  <li><a href="#时机为什么是现在" id="toc-时机为什么是现在" class="nav-link" data-scroll-target="#时机为什么是现在">时机：为什么是现在</a></li>
+  <li><a href="#我们的判断" id="toc-我们的判断" class="nav-link" data-scroll-target="#我们的判断">我们的判断</a></li>
+  <li><a href="#一句话-1" id="toc-一句话-1" class="nav-link" data-scroll-target="#一句话-1">一句话</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AI Agent 连接危机与机会</h1>
+<p class="subtitle lead">NyxID Dossier</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Chrono AI </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">发布于</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2026年4月1日</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="text-end text-muted">
+<p><a href="./nyxid-dossier.html">English Version</a></p>
+</div>
+<section id="一句话" class="level2">
+<h2 class="anchored" data-anchor-id="一句话">一句话</h2>
+<p>MCP 已成为 AI agent 的事实标准（月下载量 9700 万），但 AI agent 仍然无法触达大多数服务。内网 API、localhost 开发服务器、内部工具对云端 agent 不可见。即使连接存在，也不安全——8000+ MCP server 暴露在互联网上，API key 泄露已造成数十万美元的真实损失。NyxID 是唯一将连接性（NAT 穿透、MCP 自动包装）与安全凭证注入合为一体的开源基础设施。</p>
+<hr>
+</section>
+<section id="危机ai-agent-连不上你的服务" class="level2">
+<h2 class="anchored" data-anchor-id="危机ai-agent-连不上你的服务">危机：AI Agent 连不上你的服务</h2>
+<section id="规模" class="level3">
+<h3 class="anchored" data-anchor-id="规模">规模</h3>
+<p>MCP (Model Context Protocol) 在 18 个月内成为 AI agent 的集成标准：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>时间</th>
+<th>事件</th>
+<th>月下载量</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2024-11</td>
+<td>Anthropic 发布 MCP</td>
+<td>200 万</td>
+</tr>
+<tr class="even">
+<td>2025-04</td>
+<td>OpenAI 采用 MCP</td>
+<td>2200 万</td>
+</tr>
+<tr class="odd">
+<td>2025-07</td>
+<td>Microsoft Copilot Studio 集成</td>
+<td>4500 万</td>
+</tr>
+<tr class="even">
+<td>2026 Q1</td>
+<td>全面采用（Anthropic + OpenAI + Google + Microsoft）</td>
+<td>9700 万</td>
+</tr>
+</tbody>
+</table>
+<p>10,000+ MCP server 已在公开注册表中索引。预估 90% 的组织将在 2026 年底使用 MCP。</p>
+<blockquote class="blockquote">
+<p>来源: <a href="https://mcpmanager.ai/blog/mcp-adoption-statistics/">MCP Adoption Statistics</a>, <a href="https://www.pento.ai/blog/a-year-of-mcp-2025-review">A Year of MCP</a></p>
+</blockquote>
+</section>
+<section id="连接鸿沟" class="level3">
+<h3 class="anchored" data-anchor-id="连接鸿沟">连接鸿沟</h3>
+<p><strong>AI agent 很强大，但它们连不上开发者真正使用的大多数服务。</strong></p>
+<p>内网 API 在 NAT 后面，agent 无法触达。localhost 开发服务器对云端 agent 不可见。数以百万计的 REST API 存在，但没有一个原生支持 MCP。即使连接路径存在，凭证管理也是一团糟：</p>
+<blockquote class="blockquote">
+<p>“Auth is a nightmare. Every MCP server needs credentials, every credential needs rotation, every connection needs to be secure, and most teams duct-tape this together and pray.”</p>
+<p>— <a href="https://medium.com/future-of-qa/your-mcp-sucks-heres-how-to-fix-it-89300e2d6f3c">Your MCP Sucks. Here’s How to Fix It.</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Who holds the keys when 50 agents access 50 APIs?”</p>
+<p>— <a href="https://dev.to/aws/missing-from-the-mcp-debate-who-holds-the-keys-when-50-agents-access-50-apis-mb3">AWS, DEV Community</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Every MCP setup guide is teaching you to store API keys wrong.”</p>
+<p>— <a href="https://dev.to/the_seventeen/why-every-mcp-setup-guide-is-teaching-you-to-store-api-keys-wrong-4ghf">DEV Community</a></p>
+</blockquote>
+</section>
+<section id="后果不安全的连接代价" class="level3">
+<h3 class="anchored" data-anchor-id="后果不安全的连接代价">后果：不安全的连接代价</h3>
+<p>即使连接存在，缺乏基础设施让它变成了财务灾难：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>事件</th>
+<th>时间</th>
+<th>损失</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Google Gemini API key 被盗</td>
+<td>2026-02</td>
+<td><strong>$82,314</strong>（48 小时内）</td>
+</tr>
+<tr class="even">
+<td>Moltbook 15 万 API key 泄露</td>
+<td>2026</td>
+<td>Vibe coding 生产部署</td>
+</tr>
+<tr class="odd">
+<td>Fintech Kronos API key 泄露</td>
+<td>2023-11</td>
+<td><strong>$2500 万</strong></td>
+</tr>
+<tr class="even">
+<td>3000 个 Google Cloud API key 暴露</td>
+<td>2026-02</td>
+<td>Maps key 自动继承 Gemini 权限</td>
+</tr>
+<tr class="odd">
+<td>8000+ MCP server 暴露</td>
+<td>2026-02</td>
+<td>安全危机</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>“I am in a state of shock and panic right now.”</p>
+<p>— 开发者，API key 被盗后 48 小时产生 $82K 账单 <a href="https://www.theregister.com/2026/03/03/gemini_api_key_82314_dollar_charge/">The Register</a></p>
+</blockquote>
+<p>数据泄露全球平均成本：<strong>$440 万/次</strong>。API key 泄露是主要入口之一。</p>
+<blockquote class="blockquote">
+<p>来源: <a href="https://deepstrike.io/blog/data-breach-statistics-2025">Data Breach Statistics 2025-2026</a></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="更深的问题ai-agent-身份是暗物质" class="level2">
+<h2 class="anchored" data-anchor-id="更深的问题ai-agent-身份是暗物质">更深的问题：AI Agent 身份是”暗物质”</h2>
+<p>连接危机不止是可达性。即使 agent 能连上，底层还有一个系统性的身份层缺陷。</p>
+<blockquote class="blockquote">
+<p>“AI Agents: The Next Wave Identity Dark Matter — Powerful, Invisible, and Unmanaged”</p>
+<p>— <a href="https://thehackernews.com/2026/03/ai-agents-next-wave-identity-dark.html">The Hacker News, 2026-03</a></p>
+</blockquote>
+<p>关键数据：</p>
+<ul>
+<li><strong>非人类身份（API key, bot, agent）已超过人类身份数量</strong>，同比增长 40%+</li>
+<li><strong>91% 的安全专家</strong>预期 AI 生成的身份将在 2026 年爆发式增长</li>
+<li><strong>78% 的组织</strong>没有 AI agent 身份的创建/注销政策</li>
+<li><strong>仅 14.4% 的组织</strong>在 AI agent 上线前完成了完整的安全审批</li>
+<li><strong>GitGuardian 刚融资 $5000 万</strong>，专攻非人类身份和 AI agent 安全</li>
+</ul>
+<blockquote class="blockquote">
+<p>来源: <a href="https://www.strata.io/blog/agentic-identity/the-ai-agent-identity-crisis-new-research-reveals-a-governance-gap/">AI Agent Identity Crisis</a>, <a href="https://www.iansresearch.com/resources/all-blogs/post/security-blog/2026/02/24/ai-agents-are-creating-an-identity-security-crisis-in-2026">AI Agents Creating Identity Security Crisis</a>, <a href="https://siliconangle.com/2026/02/11/gitguardian-raises-50m-expand-non-human-identity-ai-agent-security/">GitGuardian $50M</a></p>
+</blockquote>
+<section id="市场规模" class="level3">
+<h3 class="anchored" data-anchor-id="市场规模">市场规模</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>市场</th>
+<th>2026</th>
+<th>预测</th>
+<th>CAGR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IAM (身份与访问管理)</td>
+<td>$257 亿</td>
+<td>$531 亿 (2032)</td>
+<td>13.7%</td>
+</tr>
+<tr class="even">
+<td>NHI (非人类身份管理)</td>
+<td>—</td>
+<td>$388 亿 (2036)</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Agentic AI</td>
+<td>$78 亿</td>
+<td>$520 亿 (2030)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="现有方案都缺一块" class="level2">
+<h2 class="anchored" data-anchor-id="现有方案都缺一块">现有方案：都缺一块</h2>
+<section id="开发者现在怎么把-ai-agent-连到服务" class="level3">
+<h3 class="anchored" data-anchor-id="开发者现在怎么把-ai-agent-连到服务">开发者现在怎么把 AI agent 连到服务？</h3>
+<p>简单回答：连不上，或者连得很烂。</p>
+<ol type="1">
+<li><strong>只能连公网端点</strong> — agent 只能触达有公网 URL 的服务。localhost、内网 API、开发服务器全部不可达。</li>
+<li><strong>没有协议桥接</strong> — REST API 不说 MCP。开发者为每个 API、每个 agent 平台写自定义适配器。</li>
+<li><strong>环境变量管凭证</strong> — 写在 .env 里，git 里泄露，不可审计，不可轮换</li>
+<li><strong>平台私有 vault</strong> — n8n 有自己的，LangGraph 有自己的，不可移植</li>
+<li><strong>手动分发</strong> — Slack/邮件传 key，新成员花数小时配置</li>
+</ol>
+</section>
+<section id="n8n-刚爆过" class="level3">
+<h3 class="anchored" data-anchor-id="n8n-刚爆过">n8n 刚爆过</h3>
+<ul>
+<li><a href="https://securityboulevard.com/2026/03/n8n-shared-credentials-and-account-takeover/">n8n 凭证共享导致账户接管</a> — 沙箱逃逸暴露所有连接系统</li>
+<li><a href="https://thehackernews.com/2026/03/critical-n8n-flaws-allow-remote-code.html">n8n 远程代码执行 + 凭证泄露</a> — 2026-03，上个月</li>
+<li>n8n 的 credentials 不可跨实例迁移，换服务器要手动重建</li>
+</ul>
+</section>
+<section id="市场在喊的解决方案" class="level3">
+<h3 class="anchored" data-anchor-id="市场在喊的解决方案">市场在喊的解决方案</h3>
+<blockquote class="blockquote">
+<p>“Don’t give the LLM direct access to 10 different MCP servers. Put a <strong>single gateway</strong> in front. Your LLM talks to <strong>one endpoint, one token, one connection</strong>, and the gateway figures out where to route each tool call.”</p>
+<p>— <a href="https://medium.com/future-of-qa/your-mcp-sucks-heres-how-to-fix-it-89300e2d6f3c">Your MCP Sucks</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Use OAuth or your existing identity provider.”</p>
+</blockquote>
+<p><strong>现有方案解决了部分问题——Cloudflare Tunnel 做 NAT 但不管凭证；1Password 管凭证但做不了 NAT；没有人做 REST-to-MCP 自动包装。没有方案将连接性、凭证注入和 MCP 桥接组合在一起。</strong></p>
+<hr>
+</section>
+</section>
+<section id="解法应该长什么样" class="level2">
+<h2 class="anchored" data-anchor-id="解法应该长什么样">解法应该长什么样？</h2>
+<p>行业在喊 “single gateway”，但到底需要什么能力？</p>
+<section id="理想方案的能力要求" class="level3">
+<h3 class="anchored" data-anchor-id="理想方案的能力要求">理想方案的能力要求</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 27%">
+<col style="width: 13%">
+<col style="width: 22%">
+<col style="width: 14%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>需求</th>
+<th>Cloudflare Tunnel</th>
+<th>环境变量</th>
+<th>平台私有 Vault</th>
+<th>传统 IAM</th>
+<th>安全扫描</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>内网穿透 (NAT)</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td>REST → MCP 自动包装</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td>反向代理 + 凭证注入</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td>统一凭证存储</td>
+<td>❌</td>
+<td>❌</td>
+<td>🟡 仅平台内</td>
+<td>🟡 有限</td>
+<td>❌ 只检测</td>
+</tr>
+<tr class="odd">
+<td>跨平台可移植</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>OIDC/OAuth 2.0</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>没有一个现有方案满足全部需求。这个 gap 就是机会所在。</p>
+</section>
+<section id="开发者需要的用户旅程" class="level3">
+<h3 class="anchored" data-anchor-id="开发者需要的用户旅程">开发者需要的用户旅程</h3>
+<pre><code>现状:
+  开发者有 10 个服务 → 5 个在 NAT 后面，agent 触达不了
+  → 另外 5 个是 REST API，但 agent 说 MCP
+  → 手动配 .env 变量，每个平台都要配一遍
+  → key 散落在 Slack、邮件、git history 里
+  → 换平台？重来一遍
+  → 被盗？$82K 账单
+
+理想状态:
+  开发者有 10 个服务 → NAT 穿透让内网服务对 agent 可达
+  → REST API 自动包装为 MCP Server
+  → 反向代理自动注入凭证，agent 永远不接触原始 key
+  → Claude Code / Codex / Cursor / n8n / 任何平台通用
+  → 换平台？零成本
+  → key 轮换？一处更新，全局生效</code></pre>
+</section>
+<section id="架构模型" class="level3">
+<h3 class="anchored" data-anchor-id="架构模型">架构模型</h3>
+<pre><code>你的服务 (localhost / 内网 API / Lark / Slack / 任何 REST)
+  ↓
+Connectivity Gateway
+  ├── NAT 穿透 (SSH 隧道——内网服务变为可达)
+  ├── MCP Auto-Wrap (REST → MCP Server, 自动生成)
+  ├── 凭证注入 (反向代理, header injection / bearer token / OAuth2)
+  ├── 凭证存储 (加密, 可轮换, 可审计)
+  └── OIDC/OAuth 2.0 (身份认证 + SSO)
+  ↓
+任何 MCP 客户端 (Claude Code / Codex / Cursor / 任何 Agent 平台)</code></pre>
+<p>NyxID 就是我们基于这个架构模型构建的开源实现。</p>
+<hr>
+</section>
+</section>
+<section id="时机为什么是现在" class="level2">
+<h2 class="anchored" data-anchor-id="时机为什么是现在">时机：为什么是现在</h2>
+<p>四个信号在同时闪烁：</p>
+<ol type="1">
+<li><strong>MCP 刚成为事实标准</strong>（9700 万月下载），但连接基础设施几乎空白——agent 触达不了大多数内网服务</li>
+<li><strong>安全事件密集爆发</strong> — $82K API key 被盗、8000 server 暴露、n8n 凭证漏洞，全在最近 2 个月内——证明没有安全保障的连接同样是灾难</li>
+<li><strong>行业在反复呼吁 “single gateway”</strong>，但到今天为止，没有人建出一个同时解决连接性和安全凭证处理的方案</li>
+<li><strong>GitGuardian $5000 万融资</strong>验证了非人类身份安全赛道的投资价值</li>
+</ol>
+<p>窗口期不会太长。MCP 生态还在早期，基础设施一旦被采纳，配置投资会形成锁定效应。</p>
+<hr>
+</section>
+<section id="我们的判断" class="level2">
+<h2 class="anchored" data-anchor-id="我们的判断">我们的判断</h2>
+<p>AI Agent 的连接性不是一个 feature，而是一个 <strong>基础设施层</strong>。</p>
+<p>就像 Nginx 在 Web 时代成为标准反向代理一样，Agent 时代需要一个连接网关——能触达任何服务（NAT 穿透）、能说任何协议（REST-to-MCP 桥接）、能安全处理凭证（注入而非存储）。</p>
+<p>这就是 NyxID 正在做的事。开源，Rust 构建，已在生产环境中运行。</p>
+<hr>
+</section>
+<section id="一句话-1" class="level2 text-center">
+<h2 class="text-center anchored" data-anchor-id="一句话-1">一句话</h2>
+<p><strong>9700 万开发者在用 MCP。他们的 agent 仍然连不上大多数服务。</strong></p>
+<p><strong>这是一个基础设施级的机会。</strong></p>
+<hr>
+<div class="text-center">
+<p><a href="https://github.com/ChronoAIProject/NyxID" class="btn btn-primary">NyxID on GitHub</a></p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/chronoaiproject\.github\.io\/chronoai-site\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Chrono AI</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
