@@ -87,42 +87,6 @@ blockquote {
   margin-bottom: 0.5rem;
 }
 
-/* Install box — one-liner copy target */
-.install-box {
-  margin: 1.5rem 0;
-  padding: 1.25rem 1.5rem;
-  border: 2px solid #0d6efd;
-  border-radius: 0.75rem;
-  background: #f0f6ff;
-  position: relative;
-}
-
-.install-box p {
-  margin: 0;
-}
-
-.install-box code {
-  background: transparent !important;
-  color: #1a1a2e !important;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  padding: 0 !important;
-  white-space: normal;
-  word-break: break-word;
-  user-select: all;
-  cursor: pointer;
-  display: block;
-}
-
-/* Dark mode */
-.quarto-dark .install-box {
-  background: #1a2332;
-  border-color: #4a90d9;
-}
-
-.quarto-dark .install-box code {
-  color: #e0e8f0 !important;
-}
 
 /* Language switcher (page-level) */
 .lang-switch {

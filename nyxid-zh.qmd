@@ -14,9 +14,9 @@ toc-depth: 2
 
 复制这行文字，粘贴到你的 AI Agent（Claude Code、Cursor 或任何 LLM）。搞定。
 
-::: {.install-box}
-`Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.`{.copy-target}
-:::
+```bash
+Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
+```
 
 你的 Agent 会读取 skill 定义，安装 NyxID CLI，自动完成配置。你不用动配置文件，不用写 YAML，不用手动管理 API key。
 
