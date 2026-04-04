@@ -1,0 +1,78 @@
+---
+title: "One-Person Company"
+page-layout: article
+lang: en
+toc: false
+---
+
+::: {.lang-switch}
+[中文版](philosophy-zh.qmd)
+:::
+
+This is not a pitch deck.
+
+We don't need you to understand us. We don't need your validation. We don't need your advice.
+
+If you're reading this, someone probably sent you the link with no explanation attached. That's by design.
+
+---
+
+## An observation
+
+Most companies are slow.
+
+Not because the people aren't smart. Because every person you add increases communication overhead, not capacity. Five people, ten communication lines. Ten people, forty-five. Fifty people, twelve hundred and twenty-five.
+
+The bottleneck of human organizations has never been execution. It's coordination cost.
+
+Meetings are coordination. Approvals are coordination. Waiting for upstream deliverables is coordination. Alignment is coordination. Documentation is coordination. Jira is coordination. Standups are coordination.
+
+The moment coordination cost exceeds execution cost, the organization starts slowing down. Most companies cross that threshold around person twenty.
+
+## One-person company
+
+"One-person company" doesn't mean a company of one person.
+
+It means every person has the ability to deliver independently. One person can identify a problem, define a solution, write the code, deploy it, collect feedback, and iterate. From zero to one, one person can close the loop.
+
+This is not an unreasonable demand on individual capability. It's a redefinition of organizational form.
+
+When every person on the team is a one-person company, coordination cost approaches zero. No waiting for upstream, because there is no upstream. No alignment meetings, because everyone sees the whole picture. No approval chains, because decision authority lives with the person doing the work.
+
+The organization stops being an assembly line. It becomes a network.
+
+## AI is the fundamental variable
+
+The one-person company is not a new concept. But before AI, it was just an ideal. A single person's time and cognitive bandwidth are finite. You can be a full-stack engineer, but you can't simultaneously be a full-stack engineer, product manager, designer, ops lead, and marketer.
+
+AI changed that equation.
+
+AI doesn't make smart people faster. AI lets one person do what used to require a team.
+
+One person plus AI can accomplish in hours what used to take a team weeks. Not because AI replaces team members, but because AI eliminates the coordination cost between them. When you collaborate with AI, there's no communication loss, no waiting, no misunderstanding, no context switching.
+
+Coordination cost approaches zero. Decision latency approaches zero. Execution speed becomes a function of how fast you think.
+
+## Organization as product
+
+If your product is infrastructure for AI agents, your organization should operate like AI agents.
+
+Autonomous. Each agent runs independently, no central dispatch required.
+
+Persistent. Each agent maintains its own state and memory, no external context dependency.
+
+Connected. Agents communicate through standard protocols, not through meetings.
+
+Each person is an agent. The company is the network connecting those agents. Product architecture and organizational architecture are isomorphic. This is not a coincidence. It's by design.
+
+## The filter
+
+All our public materials are on GitHub. Code, strategy, decision records, product documentation, team structure. All publicly readable.
+
+Use your AI to learn about us.
+
+If your AI can read our GitHub and tell you what we're building, why we're building it this way, and what our organizational philosophy is, that proves two things: our information architecture is clear, and your AI is good.
+
+If your AI can't make sense of it, neither will you.
+
+If it can, let's talk.

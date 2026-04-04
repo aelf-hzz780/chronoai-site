@@ -8,6 +8,12 @@ website:
   site-url: https://chronoaiproject.github.io/chronoai-site/
   navbar:
     left:
+      - text: "Philosophy"
+        menu:
+          - text: "One-Person Company"
+            href: philosophy.qmd
+          - text: "一人公司"
+            href: philosophy-zh.qmd
       - text: "NyxID"
         href: nyxid.qmd
       - text: "Research"
