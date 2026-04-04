@@ -9,64 +9,50 @@ lang: zh
 :::
 
 ::: {.hero}
-# NyxID
+# AI Agent 时代的基础设施
 
-[开源 Agent Connectivity Gateway——把你的 localhost 变成 MCP Server。]{.lead}
-
-```bash
-Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
-```
+[你的 AI Agent 需要两样东西：连接你的服务，以及完成工作的技能。Chrono AI 两者都提供。]{.lead}
 
 ::: {.cta-row}
-[了解更多](nyxid-zh.qmd){.btn .btn-primary}
-[阅读我们的判断](nyxid-dossier-zh.qmd){.btn .btn-outline-secondary}
+[NyxID — 连接](nyxid-zh.qmd){.btn .btn-primary}
+[Ornn — 技能](ornn-zh.qmd){.btn .btn-primary}
 :::
 :::
 
 ::: {.features-grid}
 ::: {.feature-card}
-### NAT 穿透
+### NyxID
 
-通过 SSH 隧道将 localhost 和内网 API 暴露给云端 AI Agent。无需公网端点。
+开源 Agent Connectivity Gateway。连接任何私有服务到任何 AI Agent。凭证注入、NAT 穿透、REST 转 MCP 自动包装。Rust 构建。
+
+[了解更多 →](nyxid-zh.qmd)
 :::
 
 ::: {.feature-card}
-### REST → MCP 自动包装
+### Ornn
 
-将 NyxID 指向任何 REST 端点，自动生成 MCP Server。
+AI Skill 平台。搜索、安装、共享技能，跨设备同步。创建海报、构建演示文稿、通过飞书/Slack 协作。你的 AI Agent 无所不能。
+
+[了解更多 →](ornn-zh.qmd)
 :::
 
 ::: {.feature-card}
-### 凭证注入
+### 它们如何协作
 
-你的 Agent 永远不接触原始 API key。NyxID 的反向代理在网络层自动注入凭证。
+NyxID 连接你的 Agent 到服务。Ornn 给你的 Agent 技能。一行命令完成设置。支持 Claude Code、Codex、Cursor 等。
 :::
 :::
-
-::: {.proof-strip}
-**9700 万** MCP 月下载量。**8,000+** 服务器暴露。**$82K** 在 48 小时内损失。
-
-你的 AI Agent 连不上你的内网服务。即使连上了，凭证也是暴露的。
-
-[阅读完整分析 →](nyxid-dossier-zh.qmd)
-:::
-
-## 为什么是 Chrono AI
-
-NyxID 是我们的第一个产品。我们正在构建 AI Agent 时代的基础设施栈。
 
 ::: {.stack-section}
 ```
-NyxID  (连接性 + 身份)              ← 现在
-  └── Ornn  (技能市场)              ← 下一步
-       └── Aevatar (Agent 运行时)   ← 未来
+你的服务 → NyxID (连接) → Ornn (技能) → 你的 AI Agent 无所不能
 ```
 
 **NyxID** — 开源 Agent Connectivity Gateway。连接任何服务到任何 AI Agent，内置安全凭证处理。
 
-**Ornn** — Skill-as-a-Service 平台。创建、发现和执行 AI Agent 技能。
+**Ornn** — AI Skill 平台。搜索、安装、共享技能。跨设备同步。
 
-**Aevatar** — 分布式 Agent 运行时。在云端托管持久化 AI Agent。
+**Aevatar** — 分布式 Agent 运行时。在云端托管持久化 AI Agent。（即将推出）
 :::
 
 ---

@@ -4,8 +4,10 @@ project:
 
 website:
   title: "Chrono AI"
-  description: "Open-source Agent Connectivity Gateway — turn any API into an MCP Server"
+  description: "Infrastructure for the AI Agent Era"
   site-url: https://chronoaiproject.github.io/chronoai-site/
+  open-graph: true
+  twitter-card: true
   navbar:
     left:
       - text: "Philosophy"
@@ -14,8 +16,12 @@ website:
             href: philosophy.qmd
           - text: "一人公司"
             href: philosophy-zh.qmd
-      - text: "NyxID"
-        href: nyxid.qmd
+      - text: "Products"
+        menu:
+          - text: "NyxID"
+            href: nyxid.qmd
+          - text: "Ornn"
+            href: ornn.qmd
       - text: "Research"
         menu:
           - text: "The AI Agent Connectivity Crisis"
@@ -31,7 +37,7 @@ website:
         href: index-zh.qmd
   page-footer:
     center: "&copy; 2026 Chrono AI"
-  # Analytics: uncomment and set your GoatCounter or Plausible domain
+  # Analytics: register at goatcounter.com, then replace YOURSITE below
   # head-extra: |
   #   <script data-goatcounter="https://YOURSITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 

@@ -9,64 +9,50 @@ lang: en
 :::
 
 ::: {.hero}
-# NyxID
+# Infrastructure for the AI Agent Era
 
-[The open-source Agent Connectivity Gateway — turn your localhost into an MCP Server.]{.lead}
-
-```bash
-Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
-```
+[Your AI agents need two things: connectivity to your services, and skills to get work done. Chrono AI provides both.]{.lead}
 
 ::: {.cta-row}
-[Learn more](nyxid.qmd){.btn .btn-primary}
-[Read the thesis](nyxid-dossier.qmd){.btn .btn-outline-secondary}
+[NyxID — Connectivity](nyxid.qmd){.btn .btn-primary}
+[Ornn — Skills](ornn.qmd){.btn .btn-primary}
 :::
 :::
 
 ::: {.features-grid}
 ::: {.feature-card}
-### NAT Traversal
+### NyxID
 
-Expose localhost and private APIs to cloud AI agents through SSH tunnels. No public endpoint required.
+The open-source Agent Connectivity Gateway. Connect any private service to any AI agent. Credential injection, NAT traversal, REST-to-MCP auto-wrap. Built in Rust.
+
+[Learn more →](nyxid.qmd)
 :::
 
 ::: {.feature-card}
-### REST → MCP Auto-Wrap
+### Ornn
 
-Point NyxID at any REST endpoint. It generates an MCP Server automatically.
+The AI Skill Platform. Search, install, and share skills across devices. Create posters, build presentations, collaborate through Lark/Slack. Your AI agent does anything.
+
+[Learn more →](ornn.qmd)
 :::
 
 ::: {.feature-card}
-### Credential Injection
+### How They Work Together
 
-Your agents never touch raw API keys. NyxID's reverse proxy auto-injects credentials at the network layer.
+NyxID connects your agent to services. Ornn gives your agent skills. One command to set up. Works with Claude Code, Codex, Cursor, and more.
 :::
 :::
-
-::: {.proof-strip}
-**97M** monthly MCP downloads. **8,000+** servers exposed. **$82K** lost in 48 hours.
-
-Your AI agents can't reach your private services. And even when they can, credentials are exposed.
-
-[Read the full analysis →](nyxid-dossier.qmd)
-:::
-
-## Why Chrono AI
-
-NyxID is our first product. We are building the infrastructure stack for the AI agent era.
 
 ::: {.stack-section}
 ```
-NyxID  (connectivity + identity)     ← NOW
-  └── Ornn  (skill marketplace)      ← NEXT
-       └── Aevatar (agent runtime)   ← LATER
+Your Services → NyxID (connectivity) → Ornn (skills) → Your AI Agent Does Anything
 ```
 
 **NyxID** — Open-source Agent Connectivity Gateway. Connect any service to any AI agent, with built-in credential security.
 
-**Ornn** — Skill-as-a-Service platform. Create, discover, and execute AI agent skills.
+**Ornn** — AI Skill Platform. Search, install, and share skills. Sync across devices.
 
-**Aevatar** — Distributed agent runtime. Host persistent AI agents in the cloud.
+**Aevatar** — Distributed agent runtime. Host persistent AI agents in the cloud. (Coming soon)
 :::
 
 ---

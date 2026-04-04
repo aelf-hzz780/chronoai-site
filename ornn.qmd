@@ -1,0 +1,112 @@
+---
+title: "Ornn"
+subtitle: "AI Skill Platform"
+lang: en
+toc: true
+toc-depth: 2
+---
+
+::: {.lang-switch}
+[中文版](ornn-zh.qmd)
+:::
+
+## Give Your AI Agent Superpowers
+
+Search, install, and share AI Skills. Sync across devices. One command via NyxID.
+
+Ornn is an independent Skill-as-a-Service platform. It works best through NyxID.
+
+## What You Can Do
+
+::: {.features-grid}
+::: {.feature-card}
+### Create Posters & Videos
+
+Your AI agent finds the right skill, runs it, and delivers the result. No manual setup.
+:::
+
+::: {.feature-card}
+### Build Presentations
+
+Use NotebookLM and other skills to create polished presentations from your data.
+:::
+
+::: {.feature-card}
+### Work Through Lark & Slack
+
+Connect your agent to your team tools. Pull data, send messages, manage tasks.
+:::
+
+::: {.feature-card}
+### Pull Any Data You Need
+
+Your agent searches, filters, and delivers data from any connected service.
+:::
+:::
+
+## Get Started
+
+**With NyxID (recommended):**
+
+```bash
+Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
+```
+
+Your agent installs NyxID, connects to Ornn, and gets access to all available skills automatically.
+
+**Without NyxID:**
+
+Visit [ornn.chrono-ai.fun](https://ornn.chrono-ai.fun) to browse and search skills directly. Or use the [Codex desktop app](https://openai.com/index/codex/) to get started without a terminal.
+
+## How It Works
+
+```
+Your AI Agent (Claude Code / Codex / Cursor)
+  ↓
+NyxID (connectivity + credential injection)
+  ↓
+Ornn (skill search + install + sync)
+  ↓
+Skills execute → You get results
+```
+
+Ornn is NyxID's built-in skill management service. When you install NyxID, Ornn is already connected. Your skills sync across every device where NyxID is installed.
+
+## Features
+
+::: {.features-grid}
+::: {.feature-card}
+### Skill Search
+
+Find skills by what they do, not what they're called. Semantic search plus keyword search plus category browsing.
+:::
+
+::: {.feature-card}
+### Sandbox Playground
+
+Test any skill before installing it. Interactive playground with Node.js and Python runtimes.
+:::
+
+::: {.feature-card}
+### Cross-Device Sync
+
+Install a skill on your laptop, use it on your desktop. Your skill library follows you everywhere.
+:::
+
+::: {.feature-card}
+### Multi-Platform
+
+Works with Claude Code, OpenAI Codex, Cursor, and Antigravity. One skill library, any agent.
+:::
+:::
+
+## Build & Share Your Own Skills
+
+Create custom skills and publish them to Ornn. Other users discover and use them instantly. The complete skill lifecycle: create, validate, publish, discover, execute.
+
+---
+
+::: {.text-center}
+[Get Started](https://ornn.chrono-ai.fun){.btn .btn-primary}
+[GitHub](https://github.com/aevatarAI/chrono-ornn){.btn .btn-outline-secondary}
+:::

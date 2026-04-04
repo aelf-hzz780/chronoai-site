@@ -68,6 +68,14 @@ NyxID Gateway
 任何 AI Agent (Claude Code / Cursor / n8n / 任何 MCP 客户端)
 ```
 
+## 内置 Skill 管理
+
+NyxID 内置 [Ornn](ornn-zh.qmd) 作为默认 skill 服务。安装 NyxID 后，你的 Agent 立即拥有一整套技能库：创建海报、构建演示文稿、调取数据、通过飞书和 Slack 协作。
+
+Skills 在每台安装了 NyxID 的设备上同步。按功能搜索，不用记 skill 名字。
+
+[探索 Ornn →](ornn-zh.qmd){.btn .btn-outline-secondary}
+
 ## 只有 NyxID 能做的事
 
 没有现有方案同时具备这三个能力：
@@ -79,6 +87,12 @@ NyxID Gateway
 3. **REST → MCP 自动包装** — 指向一个 REST 端点，得到一个 MCP Server。内置凭证注入。
 
 开源。自托管。Rust 构建。
+
+::: {.proof-strip}
+**9700 万** MCP 月下载量。**8,000+** 服务器暴露。**$82K** 在 48 小时内损失。
+
+你的 AI Agent 连不上你的内网服务。即使连上了，凭证也是暴露的。
+:::
 
 ---
 

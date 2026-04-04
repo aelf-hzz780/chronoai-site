@@ -68,6 +68,14 @@ NyxID Gateway
 Any AI Agent (Claude Code / Cursor / n8n / any MCP client)
 ```
 
+## Built-in Skill Management
+
+NyxID comes with [Ornn](ornn.qmd), the AI Skill Platform, as its default service. Install NyxID, and your agent immediately has access to a library of skills: create posters, build presentations, pull data, collaborate through Lark and Slack.
+
+Skills sync across every device where NyxID is installed. Search by what you want to do, not by skill name.
+
+[Explore Ornn →](ornn.qmd){.btn .btn-outline-secondary}
+
 ## What Only NyxID Does
 
 No existing solution combines all three:
@@ -79,6 +87,12 @@ No existing solution combines all three:
 3. **REST → MCP auto-wrap** — point at any REST endpoint, get an MCP Server. With built-in credential injection.
 
 Open source. Self-hosted. Built in Rust.
+
+::: {.proof-strip}
+**97M** monthly MCP downloads. **8,000+** servers exposed. **$82K** lost in 48 hours.
+
+Your AI agents can't reach your private services. And even when they can, credentials are exposed.
+:::
 
 ---
 
