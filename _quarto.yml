@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
 
 website:
   title: "Chrono AI"
@@ -16,6 +18,10 @@ website:
             href: philosophy.qmd
           - text: "一人公司"
             href: philosophy-zh.qmd
+          - text: "Order, Not Tools"
+            href: harness.qmd
+          - text: "秩序, 不是工具"
+            href: harness-zh.qmd
       - text: "Products"
         menu:
           - text: "NyxID"
@@ -37,9 +43,8 @@ website:
         href: index-zh.qmd
   page-footer:
     center: "&copy; 2026 Chrono AI"
-  # Analytics: register at goatcounter.com, then replace YOURSITE below
-  # head-extra: |
-  #   <script data-goatcounter="https://YOURSITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  margin-header: |
+    <script data-goatcounter="https://chronoai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 format:
   html:
