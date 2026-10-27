@@ -1,0 +1,255 @@
+{
+  "status": "pass",
+  "contentRevision": "0cf6294bd364508df543e49fb4e2de2d7de6ad5e65eebf2026aa2f12d4424abb",
+  "bundleManifestSHA256": "b276449ec14aa7b2cef11356e6a49fdd82717d2620582208dcf771ed5d179584",
+  "preview": false,
+  "base": "http://127.0.0.1:8769/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/home.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "zh/index.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/zh/home.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/nyxid.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "zh/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/zh/nyxid.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/ornn.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "zh/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/zh/ornn.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "philosophy.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/philosophy.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "zh/philosophy.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/zh/philosophy.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "harness.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/harness.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "zh/harness.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/zh/harness.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/nyxid-dossier.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/zh/nyxid-dossier.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex"
+    },
+    {
+      "path": "index-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "nyxid-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "ornn-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "philosophy-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "harness-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "nyxid-dossier-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "llms.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "robots": null
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "robots": null
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "mime": "application/xml",
+      "robots": null
+    },
+    {
+      "path": "unknown",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "zh/unknown.html",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "hidden-draft.html",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "read/en/unknown.md",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex"
+    },
+    {
+      "path": "scripts/build.py",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "docs/implementation.md",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null
+    },
+    {
+      "path": "http://127.0.0.1:8769/zh",
+      "method": "GET",
+      "status": 301,
+      "location": "/zh/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:8769/zh",
+      "method": "HEAD",
+      "status": 301,
+      "location": "/zh/?sample=1"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "status": "pass",
+  "verifiedAt": "2026-10-27T16:46:33.054658+08:00",
+  "branch": "feature/approved-home-bilingual-seo",
+  "baseline": "1317113a4c3cb9164ccc601af19f6ce1d3817ca8",
+  "verifiedSourceCommit": "0b9bf0763d896bfa0c3bf198174bc9ad3d9d31bb",
+  "deliveryCommitNote": "The following local commit only records this evidence. Its HEAD is reported in the final response.",
+  "quartoVersion": "1.10.18",
+  "bundles": {
+    "_site": {
+      "sourceCommit": "0b9bf0763d896bfa0c3bf198174bc9ad3d9d31bb",
+      "contentRevision": "96339c112c5de5f6ae24dc19cd111d87f9cce4e48b3f6b41d889af226d4dbf3f",
+      "manifestSHA256": "aa60347b4a37350599788aa4c37baf30cd6ad726e5d49ebcbaf392b2a822702b",
+      "pages": 12,
+      "listedFiles": 86,
+      "preview": false,
+      "siteUrl": "https://chronoaiproject.github.io/chronoai-site/"
+    },
+    "_preview": {
+      "sourceCommit": "0b9bf0763d896bfa0c3bf198174bc9ad3d9d31bb",
+      "contentRevision": "96339c112c5de5f6ae24dc19cd111d87f9cce4e48b3f6b41d889af226d4dbf3f",
+      "manifestSHA256": "6db7362658a4420137eedcef5ff7ac87cf4c8528ca33d02128c2a4e8692342a7",
+      "pages": 12,
+      "listedFiles": 86,
+      "preview": true,
+      "siteUrl": "https://chronoaiproject.github.io/chronoai-site/"
+    }
+  },
+  "checks": {
+    "unit": {
+      "status": "pass",
+      "tests": 4,
+      "command": ".tools/venv/bin/python -m unittest discover -s tests -p 'test_*.py'"
+    },
+    "staticPublic": {
+      "status": "pass",
+      "pages": 12,
+      "command": ".tools/venv/bin/python tests/verify_site.py"
+    },
+    "staticPreview": {
+      "status": "pass",
+      "pages": 12,
+      "command": ".tools/venv/bin/python tests/verify_site.py _preview"
+    },
+    "httpPublic": {
+      "status": "pass",
+      "contracts": 45,
+      "evidence": "http-public.json"
+    },
+    "httpPreview": {
+      "status": "pass",
+      "contracts": 45,
+      "evidence": "http-preview.json"
+    },
+    "browser": {
+      "status": "pass",
+      "evidence": "browser.json",
+      "prototypeGeometryWidths": [
+        375,
+        700,
+        768,
+        1024,
+        1440
+      ],
+      "homeLanguageWidthCases": 10,
+      "allArticleResponsiveCases": 20,
+      "noJsCanonicalPages": 12,
+      "networkErrors": 0,
+      "externalRequests": 0
+    },
+    "alternateOriginRootBuild": {
+      "status": "pass",
+      "evidence": [
+        "root-build.json",
+        "http-root.json"
+      ],
+      "httpContracts": 43,
+      "scope": "origin/base-path configuration tested before the final text-only REST compatibility calibration; the recorded content revision is intentionally earlier"
+    },
+    "gitDiffCheck": {
+      "status": "pass"
+    }
+  },
+  "preview": "http://127.0.0.1:8768/chronoai-site/",
+  "chinesePreview": "http://127.0.0.1:8768/chronoai-site/zh/",
+  "reviewRemediation": [
+    "Paired article section mapping preserves locale hashes.",
+    "Directory normalization retains base path and query for GET and HEAD.",
+    "Pending hero scene initialization is serialized and obeys current activity after resolve.",
+    "Chinese Ornn cross-device claims are release-dependent.",
+    "Product visible subtitle/description duplicates removed.",
+    "REST compatibility wording qualified in both languages and architecture diagrams."
+  ],
+  "limitations": [
+    "No remote push, workflow trigger, DNS change or deployment.",
+    "Final domain is undecided; existing configured GitHub Pages URL remains the documented default.",
+    "Native GitHub Pages ignores _headers; strict Markdown MIME/noindex requires a compatible host/CDN and remote HTTP verification.",
+    "Legacy static compatibility pages are HTTP 200 refresh/link pages, not production HTTP 301; query/hash preservation is enhanced by JavaScript.",
+    "Subpath robots does not control origin-level crawl or training policy.",
+    "Chromium viewport/touch emulation; visibility and persisted page-transition events are explicitly simulated, not full real-device/background/bfcache certification.",
+    "Quarto/Pandoc emits documented missing Chinese translation-term warnings.",
+    "Technical readiness does not imply search indexing or AI ranking."
+  ]
+}
