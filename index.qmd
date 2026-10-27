@@ -1,62 +1,15 @@
 ---
-title: "Chrono AI"
-page-layout: full
+title: ChronoAI — Build for what comes next.
+description: ChronoAI pursues verifiable research and builds infrastructure for people
+  to work with AI agents.
 lang: en
+page-layout: full
+toc: false
+template: templates/home.html
+css:
+- assets/fonts.css
+- assets/site.css
+- assets/refined.css
 ---
 
-::: {.lang-switch}
-[中文版](index-zh.qmd)
-:::
-
-::: {.hero}
-# Infrastructure for the AI Agent Era
-
-[Your AI agents need two things: connectivity to your services, and skills to get work done. Chrono AI provides both.]{.lead}
-
-::: {.cta-row}
-[NyxID — Connectivity](nyxid.qmd){.btn .btn-primary}
-[Ornn — Skills](ornn.qmd){.btn .btn-primary}
-:::
-:::
-
-::: {.features-grid}
-::: {.feature-card}
-### NyxID
-
-The open-source Agent Connectivity Gateway. Connect any private service to any AI agent. Credential injection, NAT traversal, REST-to-MCP auto-wrap. Built in Rust.
-
-[Learn more →](nyxid.qmd)
-:::
-
-::: {.feature-card}
-### Ornn
-
-The AI Skill Platform. Search, install, and share skills across devices. Create posters, build presentations, collaborate through Lark/Slack. Your AI agent does anything.
-
-[Learn more →](ornn.qmd)
-:::
-
-::: {.feature-card}
-### How They Work Together
-
-NyxID connects your agent to services. Ornn gives your agent skills. One command to set up. Works with Claude Code, Codex, Cursor, and more.
-:::
-:::
-
-::: {.stack-section}
-```
-Your Services → NyxID (connectivity) → Ornn (skills) → Your AI Agent Does Anything
-```
-
-**NyxID** — Open-source Agent Connectivity Gateway. Connect any service to any AI agent, with built-in credential security.
-
-**Ornn** — AI Skill Platform. Search, install, and share skills. Sync across devices.
-
-**Aevatar** — Distributed agent runtime. Host persistent AI agents in the cloud. (Coming soon)
-:::
-
----
-
-::: {.text-center .text-muted}
-[NyxID](https://github.com/ChronoAIProject/NyxID) · [Ornn](https://github.com/aevatarAI/chrono-ornn) · [Aevatar](https://github.com/aevatarAI/aevatar)
-:::
+{{< include content/home.html >}}

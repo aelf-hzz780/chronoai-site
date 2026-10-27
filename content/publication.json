@@ -1,0 +1,8 @@
+[
+  {"id":"home","en":"index.qmd","zh":"index-zh.qmd"},
+  {"id":"nyxid","en":"nyxid.qmd","zh":"nyxid-zh.qmd"},
+  {"id":"ornn","en":"ornn.qmd","zh":"ornn-zh.qmd"},
+  {"id":"philosophy","en":"philosophy.qmd","zh":"philosophy-zh.qmd"},
+  {"id":"harness","en":"harness.qmd","zh":"harness-zh.qmd"},
+  {"id":"nyxid-dossier","en":"nyxid-dossier.qmd","zh":"nyxid-dossier-zh.qmd"}
+]

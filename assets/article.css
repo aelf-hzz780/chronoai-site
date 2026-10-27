@@ -1,0 +1,6 @@
+.article-nav { display:flex; gap:1.25rem; flex-wrap:wrap; padding:1.25rem max(1rem,calc((100% - 1150px)/2)); border-bottom:1px solid #7383a844; }
+.article-nav a { text-decoration:none; }
+.article-nav a:last-child { margin-left:auto; }
+main { overflow-wrap:anywhere; }
+.features-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); }
+.lang-switch { margin-bottom:1.5rem; }

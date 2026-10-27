@@ -1,12 +1,19 @@
 ---
-title: "The AI Agent Connectivity Crisis"
-subtitle: "NyxID Dossier"
-author: "Chrono AI"
-date: "2026-04-01"
+title: The AI Agent Connectivity Crisis
+subtitle: NyxID Dossier
+author: Chrono AI
+date: '2026-04-01'
 lang: en
 toc: true
 toc-depth: 3
+description: Historical research dated April 1, 2026 on agent connectivity, credentials
+  and infrastructure, with original references.
 ---
+
+::: {.callout-note}
+Historical research / organizational perspective. The original arguments, dates and references are retained. This article is not a statement of current product capabilities or availability.
+:::
+
 
 ::: {.text-end .text-muted}
 [中文版](nyxid-dossier-zh.qmd)

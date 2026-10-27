@@ -1,30 +1,28 @@
 ---
-title: "NyxID"
-subtitle: "Open-Source Agent Connectivity Gateway"
+title: NyxID
+subtitle: AI that does more than chat.
 lang: en
 toc: true
 toc-depth: 2
+description: Hand the boring stuff to AI, so you can focus on what matters. Connect
+  your apps, decide what it can touch, and let it get to work.
 ---
 
 ::: {.lang-switch}
 [中文版](nyxid-zh.qmd)
 :::
 
-## Install NyxID Skills
+## AI that does more than chat.
 
-Copy this line. Paste it into your AI agent (Claude Code, Cursor, or any LLM). Done.
+Hand the boring stuff to AI, so you can focus on what matters. Connect your apps, decide what it can touch, and let it get to work.
 
-```bash
-Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
-```
+**Flagship.** NyxBot, the main agent, lives inside NyxID.
 
-Your agent reads the skill definition, installs the NyxID CLI, and configures itself. You don't touch config files, don't write YAML, don't manage API keys manually.
+[Try NyxID](https://nyx.chrono-ai.fun/){.btn .btn-primary} [Current documentation](https://nyx.chrono-ai.fun/docs)
 
-Or install the CLI directly:
+## Technical overview
 
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/tools/install.sh)"
-```
+The following describes the gateway architecture. Available workflows and setup steps depend on the current release; consult the documentation before installation.
 
 ## What NyxID Does
 
@@ -36,7 +34,7 @@ NyxID is the open-source Agent Connectivity Gateway. One gateway between your AP
 ::: {.feature-card}
 ### Credential-Injecting Proxy
 
-NyxID sits between your agents and your APIs as a reverse proxy. When an agent makes a request, NyxID auto-injects the correct credentials at the network layer. Your agents never see or store raw API keys.
+NyxID sits between your agents and your APIs as a reverse proxy. When an agent makes a request, NyxID auto-injects the correct credentials at the network layer. With services configured for gateway injection, agents can call them without receiving the raw API keys.
 :::
 
 ::: {.feature-card}
@@ -50,7 +48,7 @@ Run `nyxid node start` to expose private services to your agents.
 ::: {.feature-card}
 ### REST → MCP Auto-Wrap
 
-Point NyxID at any REST API. NyxID generates an MCP Server that any MCP-compatible client can consume. Any API becomes callable by any agent, instantly.
+Point NyxID at any REST API. NyxID generates an MCP Server that any MCP-compatible client can consume. The generated MCP interface can be used by compatible clients.
 :::
 :::
 
@@ -68,35 +66,9 @@ NyxID Gateway
 Any AI Agent (Claude Code / Cursor / n8n / any MCP client)
 ```
 
-## Built-in Skill Management
 
-NyxID comes with [Ornn](ornn.qmd), the AI Skill Platform, as its default service. Install NyxID, and your agent immediately has access to a library of skills: create posters, build presentations, pull data, collaborate through Lark and Slack.
+## Skills across runtimes
 
-Skills sync across every device where NyxID is installed. Search by what you want to do, not by skill name.
+[Ornn](ornn.qmd) is a separate skill lifecycle API: find, install, run, build and share skills across runtimes. Project availability and integrations vary; this overview does not promise automatic provisioning or cross-device synchronization.
 
-[Explore Ornn →](ornn.qmd){.btn .btn-outline-secondary}
-
-## What Only NyxID Does
-
-No existing solution combines all three:
-
-1. **Credential injection at the network layer** — agents never touch raw keys. Not storage (everyone does that). *Injection*.
-
-2. **NAT traversal for private APIs** — expose localhost to cloud AI agents through SSH tunnels. Cloudflare Tunnel does NAT but has no credential injection. NyxID does both.
-
-3. **REST → MCP auto-wrap** — point at any REST endpoint, get an MCP Server. With built-in credential injection.
-
-Open source. Self-hosted. Built in Rust.
-
-::: {.proof-strip}
-**97M** monthly MCP downloads. **8,000+** servers exposed. **$82K** lost in 48 hours.
-
-Your AI agents can't reach your private services. And even when they can, credentials are exposed.
-:::
-
----
-
-::: {.text-center}
-[GitHub](https://github.com/ChronoAIProject/NyxID){.btn .btn-primary}
-[Read the Dossier →](nyxid-dossier.qmd){.btn .btn-outline-secondary}
-:::
+[GitHub](https://github.com/ChronoAIProject/NyxID) · [Historical connectivity research](nyxid-dossier.qmd)

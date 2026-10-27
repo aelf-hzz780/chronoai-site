@@ -1,56 +1,16 @@
 project:
   type: website
   output-dir: _site
-  render:
-    - "*.qmd"
-
 website:
-  title: "Chrono AI"
-  description: "Infrastructure for the AI Agent Era"
-  site-url: https://chronoaiproject.github.io/chronoai-site/
-  open-graph: true
-  twitter-card: true
-  navbar:
-    left:
-      - text: "Philosophy"
-        menu:
-          - text: "One-Person Company"
-            href: philosophy.qmd
-          - text: "一人公司"
-            href: philosophy-zh.qmd
-          - text: "Order, Not Tools"
-            href: harness.qmd
-          - text: "秩序, 不是工具"
-            href: harness-zh.qmd
-      - text: "Products"
-        menu:
-          - text: "NyxID"
-            href: nyxid.qmd
-          - text: "Ornn"
-            href: ornn.qmd
-      - text: "Research"
-        menu:
-          - text: "The AI Agent Connectivity Crisis"
-            href: nyxid-dossier.qmd
-          - text: "AI Agent 连接危机"
-            href: nyxid-dossier-zh.qmd
-    right:
-      - icon: github
-        href: https://github.com/ChronoAIProject/NyxID
-      - text: "EN"
-        href: index.qmd
-      - text: "中文"
-        href: index-zh.qmd
-  page-footer:
-    center: "&copy; 2026 Chrono AI"
-  margin-header: |
-    <script data-goatcounter="https://chronoai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
+  title: ChronoAI
+  navbar: false
+  search: false
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: [flatly, assets/article-theme.scss]
+      dark: [darkly, assets/article-theme.scss]
     css: styles.css
     toc: true
     toc-depth: 3
+    anchor-sections: false

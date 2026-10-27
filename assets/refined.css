@@ -1,0 +1,28 @@
+/* Only the existing product cards and footer language control are adjusted. */
+.stack .bxk { font:500 14px/1.45 var(--c-body); text-transform:none; letter-spacing:0; }
+.stack .bx-nyx {
+  border-color:var(--c-link);
+  background:radial-gradient(420px circle at var(--mx) var(--my),rgba(29,81,246,.18),transparent 55%),linear-gradient(160deg,rgba(29,81,246,.2),transparent 65%);
+}
+.stack .bx-nyx .bxk { color:#dce5ff; font-weight:600; }
+.stack .bx-nyx .bxflow path { stroke:var(--c-link); }
+.stack .nyx-white-wordmark { display:block; width:260px; max-width:100%; height:auto; margin:6px 0 5px; }
+.stack .nyx-tagline { position:relative; display:grid; gap:0; margin:4px 0; font:600 clamp(28px,2.5vw,36px)/1.12 var(--c-head); letter-spacing:-.02em; color:var(--c-fg); }
+.stack .nyx-tagline span { display:block; }
+.stack .heca-tagline { position:relative; margin:0; font:600 20px/1.4 var(--c-head); color:var(--c-fg); }
+.stack .bx-nyx small { color:#b8c4d8; position:relative; font-size:14px; line-height:1.6; max-width:32em; }
+.stack .bx-nyx .bxgo { display:inline-flex; align-items:center; align-self:flex-start; min-height:44px; margin-top:12px; padding:0 17px; border-radius:7px; background:var(--c-btn); color:var(--c-fg); font:600 15px/1.4 var(--c-body); }
+.stack .bx-nyx .bxgo { --nyx-cta-line:#edf3ff; --nyx-cta-edge:var(--c-link); isolation:isolate; box-shadow:0 0 0 1px #ffffff12 inset,0 5px 18px #1d51f628; }
+.stack .nyx-cta-label { position:relative; z-index:2; }
+.stack .nyx-cta-light { position:absolute; inset:-24px; width:calc(100% + 48px); height:calc(100% + 48px); z-index:1; display:block; pointer-events:none; }
+.stack .nyx-cta-light[data-render-state="lost"] { display:none; }
+.stack .bx-nyx:focus-visible .bxgo { outline:2px solid var(--c-link); outline-offset:4px; }
+@media(prefers-reduced-motion:reduce) { .stack .nyx-cta-light { display:none; } }
+footer .language-switch { display:flex; align-items:center; gap:4px; margin-top:16px; }
+footer .language-switch a { min-width:44px; min-height:44px; padding:0 8px; border:0; background:transparent; color:#b8c4d8; font:500 14px/1 var(--c-body); cursor:pointer; }
+footer .language-switch a[aria-current="page"] { color:white; text-decoration:underline; text-underline-offset:7px; }
+footer .language-switch span { color:#8d9cb4; }
+@media(max-width:1023px) { .stack .nyx-white-wordmark { width:220px; } }
+@media(max-width:640px) { .stack .nyx-white-wordmark { width:210px; } }
+
+footer .language-switch a { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; }

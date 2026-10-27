@@ -1,9 +1,16 @@
 ---
-title: "One-Person Company"
+title: One-Person Company
 page-layout: article
 lang: en
 toc: false
+description: ChronoAI’s organizational perspective on independent delivery, AI and
+  coordination costs.
 ---
+
+::: {.callout-note}
+Historical research / organizational perspective. The original arguments, dates and references are retained. This article is not a statement of current product capabilities or availability.
+:::
+
 
 ::: {.lang-switch}
 [中文版](philosophy-zh.qmd)

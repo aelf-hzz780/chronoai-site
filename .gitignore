@@ -1,3 +1,8 @@
 /.quarto/
 _site/
 **/*.quarto_ipynb
+
+.tools/
+.build/
+_preview/
+__pycache__/

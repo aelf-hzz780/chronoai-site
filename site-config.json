@@ -1,0 +1,20 @@
+{
+  "origin": "https://chronoaiproject.github.io",
+  "basePath": "/chronoai-site/",
+  "external": {
+    "research": "https://chrono-ai.fun/research.html",
+    "developers": "https://chrono-ai.fun/developers.html",
+    "cma": "https://chrono-ai.fun/products/cma.html",
+    "godgpt": "https://chrono-ai.fun/products/godgpt.html",
+    "nyxApp": "https://nyx.chrono-ai.fun/",
+    "nyxDocs": "https://nyx.chrono-ai.fun/docs",
+    "ornnApp": "https://ornn.chrono-ai.fun/",
+    "github": "https://github.com/ChronoAIProject",
+    "harness": "https://github.com/ChronoAIProject/chrono-harness",
+    "jobs": "https://sg.jobstreet.com/ChronoAI-Pte-Ltd-jobs/at-this-company",
+    "linkedin": "https://www.linkedin.com/company/chronoaiaevatar/",
+    "counterexample": "https://the-omega-institute.github.io/trureturing-mdbook/Blueprint/D5/S0/Certificates/GreathouseLogTwoFloorRefutation.html",
+    "quantum": "https://the-omega-institute.github.io/trureturing-mdbook/Blueprint/D5/S3/Quantum/Divergence/VonNeumannEntropyPinching.html",
+    "email": "mailto:contact@chrono-ai.fun"
+  }
+}

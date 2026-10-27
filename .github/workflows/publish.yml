@@ -22,8 +22,11 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render site
-        run: quarto render
+      - name: Build and verify the publication manifest
+        run: |
+          python -m pip install -r requirements.txt
+          python scripts/build.py
+          python tests/verify_site.py
 
       - uses: actions/upload-pages-artifact@v3
         with:
