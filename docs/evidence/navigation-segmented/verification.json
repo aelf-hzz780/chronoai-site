@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "verifiedAt": "2026-10-27T18:13:03.034302+08:00",
+  "baseline": "5dc5652988cd02d0e82a6a9b31bf541dd2ac9f42",
+  "verifiedSourceCommit": "9cc4991b4e122917bca3d4b2795246a0b60eaeef",
+  "deliveryCommitNote": "The next local commit only saves this evidence; final response identifies its HEAD.",
+  "reference": "Newer local NyxID WebsiteHeader.tsx and website-a.css .lang rules; read only, reference service untouched.",
+  "bundles": {
+    "_site": {
+      "sourceCommit": "9cc4991b4e122917bca3d4b2795246a0b60eaeef",
+      "contentRevision": "67652614c0718f0db111606bbe833e795e69642d3c16c572b593729d698660ea",
+      "manifestSHA256": "7067d9ee36c0a946dcfeff2e6c675c9016076fa4e86ace9aa94ebbb8e6895dce",
+      "pages": 12,
+      "preview": false
+    },
+    "_preview": {
+      "sourceCommit": "9cc4991b4e122917bca3d4b2795246a0b60eaeef",
+      "contentRevision": "67652614c0718f0db111606bbe833e795e69642d3c16c572b593729d698660ea",
+      "manifestSHA256": "c279ad4352e469612795f1dedf018dacf68152699e7be43abe2cb0a736ac10e9",
+      "pages": 12,
+      "preview": true
+    }
+  },
+  "checks": {
+    "quartoPublicBuild": "pass",
+    "quartoPreviewBuild": "pass",
+    "staticPublicPages": 12,
+    "staticPreviewPages": 12,
+    "bilingualViewportCases": 16,
+    "widths": [
+      320,
+      359,
+      360,
+      375,
+      768,
+      1023,
+      1024,
+      1440
+    ],
+    "keyboardQueryHashCases": 8,
+    "noJsLanguageCases": 6,
+    "readingSectionPreserved": true,
+    "menuNaturalOrderAndWrap": "pass",
+    "mobile44pxLanguageAndBurger": "pass",
+    "noOverlapOrHorizontalOverflow": "pass",
+    "menuResizeCleanup": true,
+    "pageErrors": [],
+    "gitDiffCheck": "pass"
+  },
+  "screenshotExamples": [
+    "en-1440-header.png",
+    "zh-320-header.png",
+    "en-1440-keyboard-header.png",
+    "zh-375-open-menu.png"
+  ],
+  "historicalEvidence": "Earlier navigation and whole-site evidence remains tied to its original recorded commits/revisions. Full-site animation/article browser checks were not rerun.",
+  "preview": "http://127.0.0.1:8768/chronoai-site/",
+  "remoteActions": "No push, deployment, workflow trigger, NyxID file modification or 4180 restart/stop.",
+  "limitation": "Chromium viewport emulation, not physical-device certification."
+}
