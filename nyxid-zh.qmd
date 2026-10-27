@@ -47,14 +47,14 @@ NyxID 作为反向代理位于 Agent 和 API 之间。当 Agent 发起请求时�
 ::: {.feature-card}
 ### REST → MCP 自动包装
 
-将 NyxID 指向任何 REST API。NyxID 自动生成 MCP Server，任何 MCP 兼容客户端都可以使用。生成的 MCP 接口可供兼容的客户端调用。
+将 NyxID 指向兼容的 REST API。NyxID 可为支持的端点生成 MCP 接口，供 MCP 兼容客户端使用。具体兼容范围以当前版本文档为准。
 :::
 :::
 
 ## 工作原理
 
 ```
-你的服务 (localhost / 内网 API / 任何 REST 端点)
+你的服务 (localhost / 内网 API / 支持的 REST 端点)
   ↓
 NyxID Gateway
   ├── 凭证注入 (反向代理按请求自动注入凭证)
@@ -62,7 +62,7 @@ NyxID Gateway
   ├── MCP 自动包装 (REST → MCP Server, 自动生成)
   └── Agent 隔离 (scoped token, Agent 之间不可见)
   ↓
-任何 AI Agent (Claude Code / Cursor / n8n / 任何 MCP 客户端)
+兼容的 AI Agent (Claude Code / Cursor / n8n / MCP 客户端)
 ```
 
 

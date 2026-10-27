@@ -48,14 +48,14 @@ Run `nyxid node start` to expose private services to your agents.
 ::: {.feature-card}
 ### REST → MCP Auto-Wrap
 
-Point NyxID at any REST API. NyxID generates an MCP Server that any MCP-compatible client can consume. The generated MCP interface can be used by compatible clients.
+Point NyxID at a compatible REST API. NyxID can generate an MCP interface for supported endpoints, for use by MCP-compatible clients. Check the current documentation for the supported scope.
 :::
 :::
 
 ## How It Works
 
 ```
-Your Services (localhost / internal APIs / any REST endpoint)
+Your Services (localhost / internal APIs / supported REST endpoints)
   ↓
 NyxID Gateway
   ├── Credential Injection (reverse proxy auto-injects keys per request)
@@ -63,7 +63,7 @@ NyxID Gateway
   ├── MCP Auto-Wrap (REST → MCP Server, auto-generated)
   └── Per-Agent Isolation (scoped tokens, agents can't see each other)
   ↓
-Any AI Agent (Claude Code / Cursor / n8n / any MCP client)
+Compatible AI Agents (Claude Code / Cursor / n8n / MCP clients)
 ```
 
 
