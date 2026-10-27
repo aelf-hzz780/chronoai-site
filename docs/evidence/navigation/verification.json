@@ -1,0 +1,44 @@
+{
+  "status": "pass",
+  "verifiedAt": "2026-10-27T17:50:44.959794+08:00",
+  "baseline": "4380fcd87a07fa5b0035ec8f5d0cc411bfb031d6",
+  "verifiedSourceCommit": "ff62d105946c733f184c09740cd34299856570ad",
+  "deliveryCommitNote": "The next commit only saves this follow-up evidence; final response reports its HEAD.",
+  "bundles": {
+    "_site": {
+      "sourceCommit": "ff62d105946c733f184c09740cd34299856570ad",
+      "contentRevision": "ffc31cc04b41f0aeaaa9d5d651de0b6faa24ea3d0863da766c9b39629f24c845",
+      "manifestSHA256": "0db37e61b1f33e98653f849633d8c2a116cbcffded555505d4f45959656c105d",
+      "pages": 12,
+      "preview": false
+    },
+    "_preview": {
+      "sourceCommit": "ff62d105946c733f184c09740cd34299856570ad",
+      "contentRevision": "ffc31cc04b41f0aeaaa9d5d651de0b6faa24ea3d0863da766c9b39629f24c845",
+      "manifestSHA256": "0c66ee3d5f695599cefd6b65c58a555aee0478dc440881556378f07086c5b42e",
+      "pages": 12,
+      "preview": true
+    }
+  },
+  "checks": {
+    "publicQuartoBuild": "pass",
+    "previewQuartoBuild": "pass",
+    "staticPublicPages": 12,
+    "staticPreviewPages": 12,
+    "focusedBrowserCases": 16,
+    "focusedBrowserStatus": "pass",
+    "keyboardFocusAnd44pxTargets": "pass",
+    "currentLocaleAtAllThreeEntrances": "pass",
+    "queryHashAndNativeLinks": "pass",
+    "menuOpenCloseAndResizeCleanup": "pass",
+    "horizontalOverflowAndNavOverlap": "none",
+    "gitDiffCheck": "pass"
+  },
+  "previousEvidence": "../verification.json and ../browser.json remain tied to their earlier recorded source commit/content revision; they were not updated or claimed as current full-suite results.",
+  "notRerun": [
+    "Full article and animation browser matrix",
+    "Unrelated external/production checks"
+  ],
+  "preview": "http://127.0.0.1:8768/chronoai-site/",
+  "remoteActions": "No push, deployment or workflow trigger."
+}

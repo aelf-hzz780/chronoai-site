@@ -1,0 +1,34 @@
+[ 1/12] harness.qmd
+[ 2/12] index.qmd
+[ 3/12] nyxid-dossier.qmd
+[ 4/12] nyxid.qmd
+[ 5/12] ornn.qmd
+[ 6/12] philosophy.qmd
+[ 7/12] zh/harness.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml: 
+[WARNING] The term Abstract has no translation defined.
+[ 8/12] zh/index.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml: 
+[WARNING] The term Abstract has no translation defined.
+[ 9/12] zh/nyxid-dossier.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml: 
+[WARNING] The term Abstract has no translation defined.
+[10/12] zh/nyxid.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml: 
+[WARNING] The term Abstract has no translation defined.
+[11/12] zh/ornn.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml: 
+[WARNING] The term Abstract has no translation defined.
+[12/12] zh/philosophy.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml: 
+[WARNING] The term Abstract has no translation defined.
+
+Output created: ../_site/index.html
+
+Built 12 canonical pages at /Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/_site; revision ffc31cc04b41f0aeaaa9d5d651de0b6faa24ea3d0863da766c9b39629f24c845
