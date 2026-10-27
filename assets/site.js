@@ -44,7 +44,7 @@
     document.addEventListener('keydown',event => {
       if (event.key === 'Escape') {closeDropdowns();if(opened)setDrawer(false);}
       if (event.key !== 'Tab' || !opened) return;
-      const focusable = [burger,...drawer.querySelectorAll('a,button')].filter(el => el.getClientRects().length);
+      const focusable = [...document.querySelectorAll('header a,header button'),...drawer.querySelectorAll('a,button')].filter(el => el.getClientRects().length);
       const first=focusable[0],last=focusable.at(-1);
       if (event.shiftKey && document.activeElement === first) {event.preventDefault();last.focus();}
       else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus();}

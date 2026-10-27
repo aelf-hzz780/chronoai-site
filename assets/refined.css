@@ -28,17 +28,32 @@ footer .language-switch { margin-top:16px; }
 
 .language-switch a { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; }
 
-/* Keep the language entrance beside the CTA; use the existing 1024px layout breakpoint. */
+/* Compact segmented locale control, following the newer NyxID header behavior. */
 header .navr { flex-shrink:0; }
-header .language-switch { white-space:nowrap; }
-.drawer > .language-switch { padding:8px 0 12px; border-bottom:1px solid var(--c-line); }
+header .language-switch { display:inline-flex; align-items:stretch; gap:0; height:32px; border:1px solid rgba(255,255,255,.12); border-radius:8px; overflow:hidden; white-space:nowrap; }
+header .language-switch a { min-width:44px; min-height:0; padding:0 10px; font-size:12.5px; font-weight:600; color:#8a8a8a; border-radius:0; }
+header .language-switch a[aria-current="page"] { background:rgba(255,255,255,.08); color:#fff; text-decoration:none; }
+header .language-switch a:not([aria-current]):hover { background:rgba(255,255,255,.04); color:#fff; }
+header .language-switch a:focus-visible { outline:2px solid var(--c-link); outline-offset:-3px; border-radius:6px; }
 @media (min-width:1024px) and (max-width:1199px) {
   header nav { gap:16px; }
   header .navl { gap:16px; }
 }
-@media (max-width:1023px) { header .language-switch { display:none; } }
+@media (max-width:1023px) {
+  /* Inset border keeps the entire 44px target clickable. */
+  header .language-switch { height:44px; border:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,.12); }
+  header .language-switch a { min-height:44px; }
+  header .language-switch a[aria-current="page"] { display:none; }
+}
+@media (max-width:767px) {
+  header .wrap { width:calc(100% - 32px); }
+  header nav { gap:8px; }
+  header .navr { gap:6px; }
+  header .navr .try { padding-inline:10px; font-size:13px; }
+}
+@media (min-width:360px) and (max-width:374px) { header .clogo img { width:112px; } }
 @media (max-width:359px) {
-  header .clogo img { width:96px; }
-  header nav, header .navr { gap:6px; }
-  header .navr .try { padding-inline:10px; }
+  header .wrap { width:calc(100% - 24px); }
+  header .clogo img { width:80px; }
+  header nav { gap:6px; }
 }
