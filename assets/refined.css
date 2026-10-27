@@ -1,4 +1,4 @@
-/* Only the existing product cards and footer language control are adjusted. */
+/* Approved product cards and shared language controls. */
 .stack .bxk { font:500 14px/1.45 var(--c-body); text-transform:none; letter-spacing:0; }
 .stack .bx-nyx {
   border-color:var(--c-link);
@@ -18,11 +18,27 @@
 .stack .nyx-cta-light[data-render-state="lost"] { display:none; }
 .stack .bx-nyx:focus-visible .bxgo { outline:2px solid var(--c-link); outline-offset:4px; }
 @media(prefers-reduced-motion:reduce) { .stack .nyx-cta-light { display:none; } }
-footer .language-switch { display:flex; align-items:center; gap:4px; margin-top:16px; }
-footer .language-switch a { min-width:44px; min-height:44px; padding:0 8px; border:0; background:transparent; color:#b8c4d8; font:500 14px/1 var(--c-body); cursor:pointer; }
-footer .language-switch a[aria-current="page"] { color:white; text-decoration:underline; text-underline-offset:7px; }
-footer .language-switch span { color:#8d9cb4; }
+.language-switch { display:flex; align-items:center; gap:4px; flex-shrink:0; }
+footer .language-switch { margin-top:16px; }
+.language-switch a { min-width:44px; min-height:44px; padding:0 8px; border:0; background:transparent; color:#b8c4d8; font:500 14px/1 var(--c-body); cursor:pointer; }
+.language-switch a[aria-current="page"] { color:white; text-decoration:underline; text-underline-offset:7px; }
+.language-switch span { color:#8d9cb4; }
 @media(max-width:1023px) { .stack .nyx-white-wordmark { width:220px; } }
 @media(max-width:640px) { .stack .nyx-white-wordmark { width:210px; } }
 
-footer .language-switch a { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; }
+.language-switch a { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; }
+
+/* Keep the language entrance beside the CTA; use the existing 1024px layout breakpoint. */
+header .navr { flex-shrink:0; }
+header .language-switch { white-space:nowrap; }
+.drawer > .language-switch { padding:8px 0 12px; border-bottom:1px solid var(--c-line); }
+@media (min-width:1024px) and (max-width:1199px) {
+  header nav { gap:16px; }
+  header .navl { gap:16px; }
+}
+@media (max-width:1023px) { header .language-switch { display:none; } }
+@media (max-width:359px) {
+  header .clogo img { width:96px; }
+  header nav, header .navr { gap:6px; }
+  header .navr .try { padding-inline:10px; }
+}

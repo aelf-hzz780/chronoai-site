@@ -85,7 +85,8 @@ def home_body(language, current, config):
                 if node.get(attr) in translations: node[attr] = translations[node[attr]]
     placeholder = soup.new_tag('header', attrs={'class':'quarto-title-block','hidden':True})
     soup.select_one('main').insert(0,placeholder)
-    soup.select_one(f'[data-locale="{language}"]')['aria-current'] = 'page'
+    for link in soup.select(f'[data-locale="{language}"]'):
+        link['aria-current'] = 'page'
     source = resolve_tokens(str(soup), language, current, config)
     soup = BeautifulSoup(source, 'html.parser')
     for name in ('unicornStudio.umd.js','site.js','home.js','asciimark.js','nyx-cta-light.js'):

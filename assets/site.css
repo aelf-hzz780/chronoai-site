@@ -136,20 +136,23 @@ footer .copy{grid-column:1/-1;font:400 13px/20px var(--c-body);color:var(--c-fai
   .hero,.cols2,.grid2,.grid3{grid-template-columns:1fr}
   .flow{flex-direction:column}.flow .ar{width:auto;height:28px;transform:rotate(90deg)}
 }
-@media (max-width:767px){
-  body{font-size:16px;line-height:26px}
-  nav{height:64px}
-  .clogo img{height:28px}
+@media (max-width:1023px){
   .menu,.login{display:none}
   .burger{display:flex}
-  .navr .try{height:40px;padding:0 14px}
-  .drawer.open{display:block;position:fixed;inset:64px 0 0;background:#000;overflow:auto;padding:8px 24px 32px;z-index:29}
+  .drawer.open{display:block;position:fixed;inset:72px 0 0;background:#000;overflow:auto;padding:8px 24px 32px;z-index:29}
   .dgrp{border-bottom:1px solid var(--c-line)}
   .dgrp>button{width:100%;height:56px;background:none;border:0;color:#fff;font:600 18px/24px var(--c-body);display:flex;justify-content:space-between;align-items:center;padding:0;cursor:pointer}
   .dgrp .items{display:none;padding-bottom:12px}
   .dgrp.open .items{display:grid}
   .dgrp .items a{min-height:44px;display:flex;align-items:center;color:var(--c-muted)}
   .drawer .dlogin{display:flex;align-items:center;min-height:56px;color:#fff;font-weight:600}
+}
+@media (max-width:767px){
+  body{font-size:16px;line-height:26px}
+  nav{height:64px}
+  .clogo img{height:28px}
+  .navr .try{height:40px;padding:0 14px}
+  .drawer.open{top:64px}
   .page{padding-block:32px 64px}
   .sec{padding-top:64px}
   .h1home,.slogan .phtxt{font-size:40px;line-height:46px}

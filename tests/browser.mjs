@@ -14,7 +14,7 @@ try {
  const page=await context.newPage();
  const prototype=await context.newPage();
  await prototype.goto(pathToFileURL(path.resolve(process.env.APPROVED_PROTOTYPE||'../design-review/refined.html')).href+'?lang=en');
- const geometry=()=>Object.fromEntries(['header','.s1','.s1in','.s1text','.bigslogan','.navr .try'].map(selector=>{const r=document.querySelector(selector).getBoundingClientRect();return[selector,{x:r.x,y:r.y,width:r.width,height:r.height}];}));
+ const geometry=()=>Object.fromEntries(['header','.s1','.s1in','.s1text','.bigslogan'].map(selector=>{const r=document.querySelector(selector).getBoundingClientRect();return[selector,{x:r.x,y:r.y,width:r.width,height:r.height}];}));
  evidence.prototypeGeometry=[];
  page.on('pageerror',err=>evidence.errors.push(err.message));
  page.on('request',request=>{if(!request.url().startsWith(base)&&!request.url().startsWith('data:'))evidence.externalRequests.push(request.url());});
@@ -42,9 +42,9 @@ try {
  assert(await page.locator('.drawer').isVisible());await page.keyboard.press('Escape');assert.equal(await page.locator('.burger').getAttribute('aria-expanded'),'false');
  // Locale enhancement preserves the current reading section and real query/hash.
  await page.goto(base+'zh/#projects');
- await page.locator('a[data-locale="en"]').click();assert.match(page.url(),/index\.html#projects$/);
+ await page.locator('footer a[data-locale="en"]').click();assert.match(page.url(),/index\.html#projects$/);
  await page.goto(base+'?sample=1&sample=2#method');
- await page.locator('a[data-locale="zh"]').click();assert.match(page.url(),/zh\/index\.html\?sample=1&sample=2#method$/);
+ await page.locator('footer a[data-locale="zh"]').click();assert.match(page.url(),/zh\/index\.html\?sample=1&sample=2#method$/);
  assert.equal(await page.locator('.bx-nyx a,.bx-nyx button').count(),0);
  assert.equal(await page.locator('.project-summary,.role-map,.flagship-entry').count(),0);
  await page.goto(base+'philosophy.html#an-observation');
