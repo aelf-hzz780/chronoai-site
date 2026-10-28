@@ -6,27 +6,27 @@
 [ 6/12] philosophy.qmd
 [ 7/12] zh/harness.qmd
 [WARNING] Could not load translations for zh-CN
-  translations/zh.yaml: 
+  translations/zh.yaml:
 [WARNING] The term Abstract has no translation defined.
 [ 8/12] zh/index.qmd
 [WARNING] Could not load translations for zh-CN
-  translations/zh.yaml: 
+  translations/zh.yaml:
 [WARNING] The term Abstract has no translation defined.
 [ 9/12] zh/nyxid-dossier.qmd
 [WARNING] Could not load translations for zh-CN
-  translations/zh.yaml: 
+  translations/zh.yaml:
 [WARNING] The term Abstract has no translation defined.
 [10/12] zh/nyxid.qmd
 [WARNING] Could not load translations for zh-CN
-  translations/zh.yaml: 
+  translations/zh.yaml:
 [WARNING] The term Abstract has no translation defined.
 [11/12] zh/ornn.qmd
 [WARNING] Could not load translations for zh-CN
-  translations/zh.yaml: 
+  translations/zh.yaml:
 [WARNING] The term Abstract has no translation defined.
 [12/12] zh/philosophy.qmd
 [WARNING] Could not load translations for zh-CN
-  translations/zh.yaml: 
+  translations/zh.yaml:
 [WARNING] The term Abstract has no translation defined.
 
 Output created: ../_site/index.html
