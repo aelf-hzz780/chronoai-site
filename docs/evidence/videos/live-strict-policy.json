@@ -1,0 +1,118 @@
+{
+  "type": "real YouTube with stricter Chromium media policy",
+  "sourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+  "revision": "07aba97bbe0f2e53adf7b760c691350c8e912ef72bc22b649c7a2aecea39562b",
+  "manifestSHA256": "f62f4f90fb907411ac961a764a97ca8a08fed4982b941d7bacbb60a9821447ae",
+  "checks": [
+    {
+      "width": 375,
+      "lang": "en",
+      "kind": "case",
+      "state": "player",
+      "media": {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "muted": false,
+        "volume": 1,
+        "audioDecodedBytes": 0,
+        "width": 0,
+        "height": 0,
+        "renderedWidth": 349,
+        "renderedHeight": 196
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": false,
+        "fullscreen": false
+      },
+      "timeAdvanced": false
+    },
+    {
+      "width": 375,
+      "lang": "en",
+      "kind": "research",
+      "state": "player",
+      "media": {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "muted": false,
+        "volume": 1,
+        "audioDecodedBytes": 0,
+        "width": 0,
+        "height": 0,
+        "renderedWidth": 349,
+        "renderedHeight": 196
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": false,
+        "fullscreen": false
+      },
+      "timeAdvanced": false
+    },
+    {
+      "width": 375,
+      "lang": "zh",
+      "kind": "case",
+      "state": "player",
+      "media": {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "muted": false,
+        "volume": 1,
+        "audioDecodedBytes": 0,
+        "width": 0,
+        "height": 0,
+        "renderedWidth": 349,
+        "renderedHeight": 196
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": false,
+        "fullscreen": false
+      },
+      "timeAdvanced": false
+    },
+    {
+      "width": 375,
+      "lang": "zh",
+      "kind": "research",
+      "state": "player",
+      "media": {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "muted": false,
+        "volume": 1,
+        "audioDecodedBytes": 0,
+        "width": 0,
+        "height": 0,
+        "renderedWidth": 349,
+        "renderedHeight": 196
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": false,
+        "fullscreen": false
+      },
+      "timeAdvanced": false
+    }
+  ],
+  "errors": [],
+  "status": "pass"
+}

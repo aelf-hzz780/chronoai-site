@@ -1,0 +1,75 @@
+{
+  "type": "simulated YouTube integration; not proof of remote playback",
+  "sourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+  "revision": "07aba97bbe0f2e53adf7b760c691350c8e912ef72bc22b649c7a2aecea39562b",
+  "manifestSHA256": "f62f4f90fb907411ac961a764a97ca8a08fed4982b941d7bacbb60a9821447ae",
+  "checks": [
+    {
+      "lang": "en",
+      "width": 320,
+      "entries": 4,
+      "noPrefetch": true,
+      "placement": true,
+      "localePoster": true,
+      "nativeControlsUncovered": true,
+      "closeAndFocus": true
+    },
+    {
+      "lang": "zh",
+      "width": 320,
+      "entries": 4,
+      "noPrefetch": true,
+      "placement": true,
+      "localePoster": true,
+      "nativeControlsUncovered": true,
+      "closeAndFocus": true
+    },
+    {
+      "lang": "en",
+      "width": 375,
+      "entries": 4,
+      "noPrefetch": true,
+      "placement": true,
+      "localePoster": true,
+      "nativeControlsUncovered": true,
+      "closeAndFocus": true
+    },
+    {
+      "lang": "zh",
+      "width": 375,
+      "entries": 4,
+      "noPrefetch": true,
+      "placement": true,
+      "localePoster": true,
+      "nativeControlsUncovered": true,
+      "closeAndFocus": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "entries": 4,
+      "noPrefetch": true,
+      "placement": true,
+      "localePoster": true,
+      "nativeControlsUncovered": true,
+      "closeAndFocus": true
+    },
+    {
+      "lang": "zh",
+      "width": 1440,
+      "entries": 4,
+      "noPrefetch": true,
+      "placement": true,
+      "localePoster": true,
+      "nativeControlsUncovered": true,
+      "closeAndFocus": true
+    }
+  ],
+  "errors": [],
+  "errorsTimeoutsDisabledAndRetry": true,
+  "staleCallbackAndSimulatedPageTransition": true,
+  "simulatedAutoplayBlock": true,
+  "shortViewportControlsReachable": true,
+  "noJsSourceLinks": true,
+  "status": "pass"
+}

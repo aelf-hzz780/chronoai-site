@@ -1,0 +1,67 @@
+{
+  "status": "pass",
+  "verifiedAt": "2026-10-28T19:11:26.876608+08:00",
+  "baseline": "05720b71c25f06ce17e3dcfd52a86b8246b902b6",
+  "branch": "feature/approved-home-bilingual-seo",
+  "verifiedSourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+  "deliveryCommitNote": "The next local commit records only this evidence; final response supplies its HEAD.",
+  "bundles": {
+    "_site": {
+      "sourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+      "revision": "07aba97bbe0f2e53adf7b760c691350c8e912ef72bc22b649c7a2aecea39562b",
+      "manifestSHA256": "58d778cf6543c62e18f5ece71c620a1edfaf313a80b8a87ef46ccad4c03da0bc",
+      "pages": 12,
+      "preview": false
+    },
+    "_preview": {
+      "sourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+      "revision": "07aba97bbe0f2e53adf7b760c691350c8e912ef72bc22b649c7a2aecea39562b",
+      "manifestSHA256": "f62f4f90fb907411ac961a764a97ca8a08fed4982b941d7bacbb60a9821447ae",
+      "pages": 12,
+      "preview": true
+    }
+  },
+  "checks": {
+    "unitTests": 7,
+    "publicAndPreviewQuartoBuilds": "pass",
+    "staticCanonicalPagesPerPackage": 12,
+    "httpContractsPerPackage": 45,
+    "simulatedIntegrationPages": 6,
+    "simulatedEntryChecks": 24,
+    "defaultPolicyLiveInitialSamples": 10,
+    "defaultPolicySamePageReopens": 4,
+    "liveTargetIdAndNoAdAndDecodedAudioAndUnmutedProgress": "pass",
+    "strictPolicyStates": [
+      "player",
+      "player",
+      "player",
+      "player"
+    ],
+    "strictPolicyMeaning": "Ready/uncovered native iframe fallback observed; no playback-time advancement in the early strict samples. This is not a universal autoplay or policy-cause claim.",
+    "navigationViewportCases": 16,
+    "noJsVideoLinks": "pass",
+    "preClickExternalPlayerRequests": 0,
+    "localeStaticAndModalPosters": "pass",
+    "decodedPosterScreenshots": "pass",
+    "researchOriginalCardLinksAndOrder": "pass",
+    "320ResearchTitleDoesNotOverlapPlay": "pass",
+    "gitDiffCheck": "pass"
+  },
+  "preview": "http://127.0.0.1:8768/chronoai-site/",
+  "chinesePreview": "http://127.0.0.1:8768/chronoai-site/zh/",
+  "screenshots": [
+    "zh-375-video-case.png",
+    "en-320-research-video.png",
+    "live-zh-320-case.png",
+    "live-en-375-research.png"
+  ],
+  "limitations": [
+    "No push, deployment, workflow trigger or DNS changes.",
+    "Only the provided YouTube sources are implemented; no Bilibili adapter or uploaded MP4.",
+    "Autoplay depends on browser policy/network. Native controls and external links remain the fallback.",
+    "Shorts and standard native controls differ; role probes are observational, with screenshots retained.",
+    "Chromium viewport emulation; simulated persisted transitions are not real-device/bfcache certification.",
+    "Pages response-header and final-domain limits remain as previously documented."
+  ],
+  "historicalEvidence": "Other evidence directories and the parent prototype retain their original version and are not reused as current results."
+}

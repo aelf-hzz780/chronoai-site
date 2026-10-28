@@ -1,0 +1,376 @@
+{
+  "type": "real YouTube playback under default Chromium policy",
+  "sourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+  "revision": "07aba97bbe0f2e53adf7b760c691350c8e912ef72bc22b649c7a2aecea39562b",
+  "manifestSHA256": "f62f4f90fb907411ac961a764a97ca8a08fed4982b941d7bacbb60a9821447ae",
+  "checks": [
+    {
+      "width": 320,
+      "lang": "zh",
+      "kind": "case",
+      "state": "playing",
+      "media": {
+        "time": 0.661321,
+        "duration": 59.061,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9977000638225533,
+        "audioDecodedBytes": 15532,
+        "width": 360,
+        "height": 640,
+        "renderedWidth": 294,
+        "renderedHeight": 523
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true
+    },
+    {
+      "width": 320,
+      "lang": "zh",
+      "kind": "research",
+      "state": "playing",
+      "media": {
+        "time": 0.74572,
+        "duration": 92.021,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9965520801347685,
+        "audioDecodedBytes": 22539,
+        "width": 426,
+        "height": 240,
+        "renderedWidth": 294,
+        "renderedHeight": 165
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true
+    },
+    {
+      "width": 375,
+      "lang": "en",
+      "kind": "case",
+      "state": "playing",
+      "media": {
+        "time": 0.752816,
+        "duration": 59.061,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9977000638225533,
+        "audioDecodedBytes": 17064,
+        "width": 360,
+        "height": 640,
+        "renderedWidth": 349,
+        "renderedHeight": 620
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true,
+      "samePageReopen": {
+        "state": "playing",
+        "media": {
+          "time": 0.731655,
+          "duration": 59.061,
+          "paused": false,
+          "muted": false,
+          "volume": 0.9977000638225533,
+          "audioDecodedBytes": 16782,
+          "width": 360,
+          "height": 640,
+          "renderedWidth": 349,
+          "renderedHeight": 620
+        },
+        "identity": {
+          "videoId": "Vre-ZFYv9as",
+          "adShowing": false
+        },
+        "controls": {
+          "play": true,
+          "fullscreen": true
+        },
+        "timeAdvanced": true
+      }
+    },
+    {
+      "width": 375,
+      "lang": "en",
+      "kind": "research",
+      "state": "playing",
+      "media": {
+        "time": 0.746579,
+        "duration": 92.021,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9965520801347685,
+        "audioDecodedBytes": 22539,
+        "width": 426,
+        "height": 240,
+        "renderedWidth": 349,
+        "renderedHeight": 196
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true,
+      "samePageReopen": {
+        "state": "playing",
+        "media": {
+          "time": 0.750215,
+          "duration": 92.021,
+          "paused": false,
+          "muted": false,
+          "volume": 0.9965520801347685,
+          "audioDecodedBytes": 22539,
+          "width": 426,
+          "height": 240,
+          "renderedWidth": 349,
+          "renderedHeight": 196
+        },
+        "identity": {
+          "videoId": "ilKLSItmT0M",
+          "adShowing": false
+        },
+        "controls": {
+          "play": true,
+          "fullscreen": true
+        },
+        "timeAdvanced": true
+      }
+    },
+    {
+      "width": 375,
+      "lang": "zh",
+      "kind": "case",
+      "state": "playing",
+      "media": {
+        "time": 0.753829,
+        "duration": 59.061,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9977000638225533,
+        "audioDecodedBytes": 17064,
+        "width": 360,
+        "height": 640,
+        "renderedWidth": 349,
+        "renderedHeight": 620
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": false,
+        "fullscreen": false
+      },
+      "timeAdvanced": true,
+      "samePageReopen": {
+        "state": "playing",
+        "media": {
+          "time": 0.747487,
+          "duration": 59.061,
+          "paused": false,
+          "muted": false,
+          "volume": 0.9977000638225533,
+          "audioDecodedBytes": 16782,
+          "width": 360,
+          "height": 640,
+          "renderedWidth": 349,
+          "renderedHeight": 620
+        },
+        "identity": {
+          "videoId": "Vre-ZFYv9as",
+          "adShowing": false
+        },
+        "controls": {
+          "play": true,
+          "fullscreen": true
+        },
+        "timeAdvanced": true
+      }
+    },
+    {
+      "width": 375,
+      "lang": "zh",
+      "kind": "research",
+      "state": "playing",
+      "media": {
+        "time": 0.737119,
+        "duration": 92.021,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9965520801347685,
+        "audioDecodedBytes": 22539,
+        "width": 426,
+        "height": 240,
+        "renderedWidth": 349,
+        "renderedHeight": 196
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true,
+      "samePageReopen": {
+        "state": "playing",
+        "media": {
+          "time": 0.733474,
+          "duration": 92.021,
+          "paused": false,
+          "muted": false,
+          "volume": 0.9965520801347685,
+          "audioDecodedBytes": 22539,
+          "width": 426,
+          "height": 240,
+          "renderedWidth": 349,
+          "renderedHeight": 196
+        },
+        "identity": {
+          "videoId": "ilKLSItmT0M",
+          "adShowing": false
+        },
+        "controls": {
+          "play": true,
+          "fullscreen": true
+        },
+        "timeAdvanced": true
+      }
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "kind": "case",
+      "state": "playing",
+      "media": {
+        "time": 0.699948,
+        "duration": 59.061,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9977000638225533,
+        "audioDecodedBytes": 16200,
+        "width": 608,
+        "height": 1080,
+        "renderedWidth": 423,
+        "renderedHeight": 752
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "kind": "research",
+      "state": "playing",
+      "media": {
+        "time": 0.786658,
+        "duration": 92.021,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9965520801347685,
+        "audioDecodedBytes": 23466,
+        "width": 426,
+        "height": 240,
+        "renderedWidth": 958,
+        "renderedHeight": 539
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true
+    },
+    {
+      "width": 1440,
+      "lang": "zh",
+      "kind": "case",
+      "state": "playing",
+      "media": {
+        "time": 0.758631,
+        "duration": 59.061,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9977000638225533,
+        "audioDecodedBytes": 17064,
+        "width": 608,
+        "height": 1080,
+        "renderedWidth": 423,
+        "renderedHeight": 752
+      },
+      "identity": {
+        "videoId": "Vre-ZFYv9as",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true
+    },
+    {
+      "width": 1440,
+      "lang": "zh",
+      "kind": "research",
+      "state": "playing",
+      "media": {
+        "time": 0.737723,
+        "duration": 92.021,
+        "paused": false,
+        "muted": false,
+        "volume": 0.9965520801347685,
+        "audioDecodedBytes": 22539,
+        "width": 426,
+        "height": 240,
+        "renderedWidth": 958,
+        "renderedHeight": 539
+      },
+      "identity": {
+        "videoId": "ilKLSItmT0M",
+        "adShowing": false
+      },
+      "controls": {
+        "play": true,
+        "fullscreen": true
+      },
+      "timeAdvanced": true
+    }
+  ],
+  "errors": [],
+  "status": "pass"
+}
