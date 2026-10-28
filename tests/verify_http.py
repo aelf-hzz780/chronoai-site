@@ -1,5 +1,5 @@
 """HTTP contract check against the loopback server, including the mounted base path."""
-import json,sys,hashlib
+import json,sys,hashlib,os
 from pathlib import Path
 from urllib.request import urlopen, build_opener, HTTPRedirectHandler, Request
 from urllib.error import HTTPError
@@ -44,5 +44,5 @@ for path in (['/','/unknown.html'] if manifest['basePath']!='/' else ['/unknown.
     try: response=urlopen(urlsplit(base)._replace(path='',query='',fragment='').geturl()+path)
     except HTTPError as error:response=error
     assert response.status==404
-Path('docs/evidence/http-preview.json' if manifest['preview'] else 'docs/evidence/http-public.json').write_text(json.dumps({'status':'pass','contentRevision':manifest['revision'],'bundleManifestSHA256':hashlib.sha256(raw_manifest).hexdigest(),'preview':manifest['preview'],'base':base,'checks':checks},indent=2)+'\n')
+(Path(os.environ.get('HTTP_EVIDENCE_DIR','docs/evidence'))/('http-preview.json' if manifest['preview'] else 'http-public.json')).write_text(json.dumps({'status':'pass','contentRevision':manifest['revision'],'bundleManifestSHA256':hashlib.sha256(raw_manifest).hexdigest(),'preview':manifest['preview'],'base':base,'checks':checks},indent=2)+'\n')
 print(f'PASS: {len(checks)+2} HTTP contracts; real 404s, MIME, mounted URLs and indexing headers')

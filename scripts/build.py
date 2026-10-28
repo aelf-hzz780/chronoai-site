@@ -20,6 +20,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGE = ROOT/'.build'
+sys.path.insert(0, str(ROOT/'scripts'))
+from video_content import read_videos, watch_url, locale_video_config
 
 
 def load_configuration():
@@ -33,6 +35,7 @@ def load_configuration():
     if not base.startswith('/') or not base.endswith('/') or any(x in base for x in ('..','?','#','//')):
         raise ValueError('SITE_BASE_PATH must be a normalized absolute directory path')
     config['siteUrl'] = config['origin'] + base
+    config['videosConfig'] = read_videos(ROOT/'content/videos.json')
     return config
 
 
@@ -65,16 +68,18 @@ def source_revision():
 def resolve_tokens(source, language, current, config):
     def substitute(match):
         kind, key = match.groups()
+        if kind == 'video': return watch_url(config['videosConfig'], key, language)
         if kind == 'asset': return relative('assets/'+key, current)
         if kind == 'page': return relative(route(key, language), current)
         if kind == 'locale': return relative(route('home', key), current)
         if kind == 'external': return config['external'][key]
         raise ValueError('Unknown template token')
-    return re.sub(r'\[\[(asset|page|locale|external):([^\]]+)\]\]', substitute, source)
+    return re.sub(r'\[\[(asset|page|locale|external|video):([^\]]+)\]\]', substitute, source)
 
 
 def home_body(language, current, config):
     soup = BeautifulSoup((ROOT/'content/home.html').read_text(), 'html.parser')
+    soup.append(BeautifulSoup((ROOT/'templates/video-dialog.html').read_text(), 'html.parser'))
     if language == 'zh':
         translations = json.loads((ROOT/'content/home.zh.json').read_text())
         for node in soup.find_all(string=True):
@@ -83,13 +88,21 @@ def home_body(language, current, config):
         for node in soup.select('[aria-label], [data-us-alttext], [alt]'):
             for attr in ('aria-label','data-us-alttext','alt'):
                 if node.get(attr) in translations: node[attr] = translations[node[attr]]
+    for anchor in soup.select('a[data-open-video]'):
+        image=anchor.find('img')
+        if image:
+            image['src']=relative(config['videosConfig']['videos'][anchor['data-open-video']]['posters'][language],current)
+            image['loading']='lazy';image['decoding']='async'
     placeholder = soup.new_tag('header', attrs={'class':'quarto-title-block','hidden':True})
     soup.select_one('main').insert(0,placeholder)
     for link in soup.select(f'[data-locale="{language}"]'):
         link['aria-current'] = 'page'
     source = resolve_tokens(str(soup), language, current, config)
     soup = BeautifulSoup(source, 'html.parser')
-    for name in ('unicornStudio.umd.js','site.js','home.js','asciimark.js','nyx-cta-light.js'):
+    settings=soup.new_tag('script',id='video-config',type='application/json')
+    settings.string=json.dumps(locale_video_config(config['videosConfig'], language, lambda asset:relative(asset,current)),ensure_ascii=False).replace('<','\\u003c')
+    soup.append(settings)
+    for name in ('videos.js','unicornStudio.umd.js','site.js','home.js','asciimark.js','nyx-cta-light.js'):
         tag = soup.new_tag('script', src=relative('assets/'+name, current), defer=True)
         soup.append(tag)
     return str(soup)
@@ -134,7 +147,7 @@ def prepare(config, entries):
             if entry['id'] == 'home':
                 body = '\n```{=html}\n'+home_body(lang,current,config)+'\n```\n'
                 # Home uses the approved standalone Quarto template, without Bootstrap layout.
-                meta['format']['html'].update({'theme':'none','minimal':True,'title-block-style':'none','template':relative('templates/home.html',current),'css':[relative('assets/'+n,current) for n in ('fonts.css','site.css','refined.css')]})
+                meta['format']['html'].update({'theme':'none','minimal':True,'title-block-style':'none','template':relative('templates/home.html',current),'css':[relative('assets/'+n,current) for n in ('fonts.css','site.css','refined.css','videos.css')]})
                 for key in ('template','css'): meta.pop(key,None)
             else:
                 # Resolve original language-switch/article links against the explicit publication manifest.
@@ -254,13 +267,17 @@ def write_derivatives(output, pages, config, revision, quarto, preview):
         for p in pages:
             if p['lang']==lang:llms.append(f'- [{p["title"]}]({config["siteUrl"]+p["markdown"]}): {p["description"]} Canonical: {p["url"]}')
         llms.append('')
+    llms+=['## Videos / 视频','']
+    for language in ('en','zh'):
+        for key,video in config['videosConfig']['videos'].items():
+            llms.append(f'- [{video["sourceTitle"]}]({watch_url(config["videosConfig"],key,language)}) — {language}: {video["duration"]}, English video. Context: {canonical(config,route("home",language))}#{"video-case" if key=="case" else "research-video"}')
     (output/'llms.txt').write_text('\n'.join(llms))
     # Crawlability and training permissions are separate; this file grants no training license.
     robots='User-agent: *\n'+('Disallow: /\n' if preview else f'Allow: {config["basePath"]}\nSitemap: {config["siteUrl"]}sitemap.xml\n')
     (output/'robots.txt').write_text(robots)
     (output/'_headers').write_text(config['basePath']+'read/*\n  X-Robots-Tag: noindex\n  Content-Type: text/markdown; charset=utf-8\n'+config['basePath']+'llms.txt\n  Content-Type: text/plain; charset=utf-8\n')
     (output/'404.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>404 — ChronoAI</title><meta name="robots" content="noindex"></head><body><h1>404</h1><p>Page not found / 页面不存在</p><a href="'+config['basePath']+'">ChronoAI</a></body></html>')
-    manifest={'revision':revision,'siteUrl':config['siteUrl'],'basePath':config['basePath'],'preview':preview,'quartoVersion':subprocess.check_output([quarto,'--version'],text=True).strip(),'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'pages':[{k:v for k,v in p.items() if k!='meta'} for p in pages],'aliases':aliases}
+    manifest={'revision':revision,'siteUrl':config['siteUrl'],'basePath':config['basePath'],'preview':preview,'videos':config['videosConfig'],'quartoVersion':subprocess.check_output([quarto,'--version'],text=True).strip(),'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'pages':[{k:v for k,v in p.items() if k!='meta'} for p in pages],'aliases':aliases}
     manifest['files']={p.relative_to(output).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(output.rglob('*')) if p.is_file()}
     (output/'publication.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 

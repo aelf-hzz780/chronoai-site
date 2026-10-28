@@ -46,6 +46,21 @@ for page in manifest['pages']:
         if len(value)>8:assert value in normalized_md, f'{page["path"]}: mirror missing {value[:60]}'
     assert '<div' not in md and '<main' not in md
     if page['id']=='home':
+        runtime=json.loads(soup.select_one('#video-config').string)
+        assert manifest['videos']['videos']['case']['sources']['zh']['id']=='Vre-ZFYv9as'
+        assert len(soup.select('a[data-open-video]'))==4
+        assert not soup.select('iframe, script[src*="youtube"], link[rel=preconnect]')
+        assert soup.select_one('.vr-poster img')['src']==runtime['videos']['case']['poster']
+        assert ('poster-zh.jpg' if page['lang']=='zh-CN' else 'poster-en.jpg') in soup.select_one('.vr-poster img')['src']
+        for anchor in soup.select('a[data-open-video]'):
+            selected=runtime['videos'][anchor['data-open-video']]
+            assert anchor['href']==selected['watchUrl']
+            assert selected['watchUrl'] in md and selected['watchUrl'] in (root/'llms.txt').read_text()
+        assert ('In this demonstration:' if page['lang']=='en' else '视频中的一次演示：') in md
+        assert ('English video' if page['lang']=='en' else '当前为英文视频') in md
+        assert len(soup.select('#cases .case2 a'))==2
+        schema=json.loads(soup.select_one('script[type="application/ld+json"]').string)
+        assert schema['@type']=='WebPage' and 'uploadDate' not in schema
         assert ('Coming soon' if page['lang']=='en' else '即将推出') in md
         assert ('NyxBot, the main agent' if page['lang']=='en' else 'NyxBot 是 NyxID') in md
     else:

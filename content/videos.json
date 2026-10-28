@@ -1,0 +1,57 @@
+{
+  "providers": {
+    "youtube": {
+      "enabled": true,
+      "embedOrigin": "https://www.youtube-nocookie.com",
+      "apiUrl": "https://www.youtube.com/iframe_api",
+      "watchUrl": "https://www.youtube.com/watch",
+      "loadTimeoutMs": 20000
+    }
+  },
+  "videos": {
+    "case": {
+      "shape": "portrait",
+      "duration": "00:59",
+      "titles": {
+        "zh": "观看协作演示",
+        "en": "Watch the workflow"
+      },
+      "posters": {
+        "zh": "assets/poster-zh.jpg",
+        "en": "assets/poster-en.jpg"
+      },
+      "sources": {
+        "zh": {
+          "provider": "youtube",
+          "id": "Vre-ZFYv9as"
+        },
+        "en": {
+          "provider": "youtube",
+          "id": "Vre-ZFYv9as"
+        }
+      },
+      "durationSeconds": 59.061,
+      "sourceTitle": "One Sentence to a Live Website | NyxBot × CMA"
+    },
+    "research": {
+      "shape": "landscape",
+      "duration": "01:32",
+      "titles": {
+        "zh": "观看研究介绍",
+        "en": "Watch the research introduction"
+      },
+      "sources": {
+        "zh": {
+          "provider": "youtube",
+          "id": "ilKLSItmT0M"
+        },
+        "en": {
+          "provider": "youtube",
+          "id": "ilKLSItmT0M"
+        }
+      },
+      "durationSeconds": 92.021,
+      "sourceTitle": "Help Mathematicians Without Knowing Math | ChronoAI Vibe Knowledge EP01"
+    }
+  }
+}

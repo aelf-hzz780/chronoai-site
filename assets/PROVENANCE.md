@@ -11,3 +11,10 @@ Home/navigation enhancements preserve approved behavior with lifecycle handling;
 NyxID CTA 的完整来源与许可位于 `vendor/react-bits/PROVENANCE.md`、`vendor/react-bits/LICENSE.md`；许可也内嵌在 `nyx-cta-light.js`。它作为网站的一部分集成。`social.png` 是本次生成的静态分享图，生成源为 `scripts/social.mjs`。
 
 Complete CTA provenance and license terms are retained in `vendor/react-bits/` and embedded in its source. It is integrated as part of this site. The social card is generated from `scripts/social.mjs`.
+
+本轮视频封面从已批准的 `design-review/video-placement/assets/` 复制，仅 JPG；没有复制 MP4。数学封面由本地 HTML/CSS 绘制。
+
+Video posters are the approved local JPG assets; no MP4 was copied. The research cover is local HTML/CSS.
+
+- `poster-en.jpg` SHA-256: `89a7bac8e22035426337274ac88a62fd2712d4e38bb1f915d6b01d170aabde1c`
+- `poster-zh.jpg` SHA-256: `b1d32ba9aaac11dad7617ca082ca0af82f720ea03d34dbd739e93488caaf0bcb`
