@@ -49,3 +49,8 @@ Manifest-driven verification covers all 26 subpages, both locales/viewports, com
 最终包、来源、逐页矩阵和证据位于 `docs/evidence/five-pages/`，与上一轮证据分离。最终归档后不因证据提交重建。回滚本轮实施提交并重建，或恢复上一份完整静态包即可；不涉及数据迁移。本轮不 push、PR、合并或部署，不停止现有 8768/8767/4180 服务。
 
 Final package/source hashes and per-page evidence live in a separate directory. Evidence-only commits do not trigger rebuilds. Revert the implementation and rebuild, or restore the previous complete static package. No data migration, push, PR, merge or deployment is performed, and existing services are retained.
+
+
+本地预览响应使用 `Cache-Control: no-store`，并忽略预览请求中的条件缓存头，确保重建后实际返回当前脚本；正式包本地验证服务仍保留原有条件响应行为。已加载的旧预览标签可单页强制刷新一次，不需清除全局浏览器缓存。最终 HTTP 验证以未来日期的 If-Modified-Since 请求确认预览返回200及当前locale.js哈希、公开模式仍返回304。
+
+Local preview responses disable storage and conditional-cache validation so rebuilt assets are served as current bytes. Public-mode validation keeps normal conditional responses. A previously loaded preview tab can be force-reloaded once without clearing global browser data. Final HTTP checks verify a future-date conditional request returns current asset bytes in preview and 304 in public mode.

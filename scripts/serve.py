@@ -36,10 +36,16 @@ class PreviewHandler(SimpleHTTPRequestHandler):
             self.send_header('Location',path+'/' + ('?' + urlsplit(self.path).query if urlsplit(self.path).query else ''))
             self.send_header('Content-Length','0');self.end_headers();return
         self.path='/'+local+('?' + urlsplit(self.path).query if urlsplit(self.path).query else '')
+        if self.server.preview:
+            # A preview rebuild must never validate a previously cached asset.
+            for header in ('If-Modified-Since','If-None-Match'):
+                if header in self.headers:del self.headers[header]
         if head: super().do_HEAD()
         else: super().do_GET()
 
     def end_headers(self):
+        if self.server.preview:
+            self.send_header('Cache-Control','no-store')
         if self.server.preview or urlsplit(self.path).path.startswith('/read/'):
             self.send_header('X-Robots-Tag','noindex, nofollow' if self.server.preview else 'noindex')
         self.send_header('X-Content-Type-Options','nosniff')

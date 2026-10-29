@@ -14,7 +14,8 @@ def request(path,status=200,mime=None,noindex=None):
     assert response.status==status,(path,response.status,status)
     if mime: assert response.headers.get_content_type()==mime,(path,response.headers)
     if noindex is not None: assert ('noindex' in response.headers.get('X-Robots-Tag',''))==noindex
-    checks.append({'path':path,'status':response.status,'mime':response.headers.get_content_type(),'robots':response.headers.get('X-Robots-Tag')})
+    if manifest['preview']:assert response.headers.get('Cache-Control')=='no-store'
+    checks.append({'path':path,'status':response.status,'mime':response.headers.get_content_type(),'robots':response.headers.get('X-Robots-Tag'),'cacheControl':response.headers.get('Cache-Control')})
     return response.read().decode('utf-8')
 for page in manifest['pages']:
     body=request(page['path'],mime='text/html',noindex=manifest['preview'])
@@ -44,5 +45,12 @@ for path in (['/','/unknown.html'] if manifest['basePath']!='/' else ['/unknown.
     try: response=urlopen(urlsplit(base)._replace(path='',query='',fragment='').geturl()+path)
     except HTTPError as error:response=error
     assert response.status==404
+try: conditional=urlopen(Request(base+'assets/locale.js',headers={'If-Modified-Since':'Fri, 01 Jan 2100 00:00:00 GMT'}))
+except HTTPError as error:conditional=error
+assert conditional.status==(200 if manifest['preview'] else 304)
+if manifest['preview']:
+    assert conditional.headers.get('Cache-Control')=='no-store'
+    assert hashlib.sha256(conditional.read()).hexdigest()==manifest['files']['assets/locale.js']
+checks.append({'path':'assets/locale.js','conditionalRequest':True,'status':conditional.status,'cacheControl':conditional.headers.get('Cache-Control'),'currentAssetVerified':manifest['preview']})
 (Path(os.environ.get('HTTP_EVIDENCE_DIR','docs/evidence'))/('http-preview.json' if manifest['preview'] else 'http-public.json')).write_text(json.dumps({'status':'pass','contentRevision':manifest['revision'],'bundleManifestSHA256':hashlib.sha256(raw_manifest).hexdigest(),'preview':manifest['preview'],'base':base,'checks':checks},indent=2)+'\n')
 print(f'PASS: {len(checks)+2} HTTP contracts; real 404s, MIME, mounted URLs and indexing headers')
