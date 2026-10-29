@@ -1,18 +1,13 @@
 ---
-title: AI Agent 连接危机与机会
-subtitle: NyxID Dossier
-author: Chrono AI
-date: '2026-04-01'
+title: "AI Agent 连接危机与机会"
+subtitle: "NyxID Dossier"
+author: "Chrono AI"
+date: "2026-04-01"
 lang: zh
 toc: true
 toc-depth: 3
 description: 发表于 2026 年 4 月 1 日的 Agent 连接、凭证与基础设施历史研究，保留原始引用。
 ---
-
-::: {.callout-note}
-历史研究／组织观点。本文保留原始论点、日期与引用，不作为当前产品能力或上线状态的声明。
-:::
-
 
 ::: {.text-end .text-muted}
 [English Version](nyxid-dossier.qmd)

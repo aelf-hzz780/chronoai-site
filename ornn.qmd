@@ -1,32 +1,78 @@
 ---
 title: Ornn
-subtitle: Skill lifecycle API
+subtitle: AI Skill Platform
 lang: en
 toc: true
 toc-depth: 2
-description: An agent-facing API to find, install, run, build and share skills across
-  runtimes.
+description: Archived technical overview of Ornn, preserving original technical claims.
+  See the current product page for current positioning and integrations.
 ---
 
 ::: {.lang-switch}
 [中文版](ornn-zh.qmd)
 :::
 
-## Skill lifecycle API
+## Give Your AI Agent Superpowers
 
-An agent-facing API to find, install, run, build and share skills across runtimes.
+Search, install, and share AI Skills. Sync across devices. One command via NyxID.
 
-Ornn is an independent project. It provides skills for agents across runtimes; this overview does not assert that NyxID automatically provisions or connects it.
+Ornn is an independent Skill-as-a-Service platform. It works best through NyxID.
 
-## Lifecycle
+## What You Can Do
 
-Discover → install → run → build → share.
+::: {.features-grid}
+::: {.feature-card}
+### Create Posters & Videos
 
-Skills can support workflows such as presentations, media creation and connected tools. Actual execution depends on the selected skill, its permissions and runtime requirements.
+Your AI agent finds the right skill, runs it, and delivers the result. No manual setup.
+:::
 
-## Technical feature catalogue
+::: {.feature-card}
+### Build Presentations
 
-The following catalogue is retained from the existing product overview. Runtime availability and service integrations depend on the current release; consult the repository before setup.
+Use NotebookLM and other skills to create polished presentations from your data.
+:::
+
+::: {.feature-card}
+### Work Through Lark & Slack
+
+Connect your agent to your team tools. Pull data, send messages, manage tasks.
+:::
+
+::: {.feature-card}
+### Pull Any Data You Need
+
+Your agent searches, filters, and delivers data from any connected service.
+:::
+:::
+
+## Get Started
+
+**With NyxID (recommended):**
+
+```bash
+Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
+```
+
+Your agent installs NyxID, connects to Ornn, and gets access to all available skills automatically.
+
+**Without NyxID:**
+
+Visit [ornn.chrono-ai.fun](https://ornn.chrono-ai.fun) to browse and search skills directly. Or use the [Codex desktop app](https://openai.com/index/codex/) to get started without a terminal.
+
+## How It Works
+
+```
+Your AI Agent (Claude Code / Codex / Cursor)
+  ↓
+NyxID (connectivity + credential injection)
+  ↓
+Ornn (skill search + install + sync)
+  ↓
+Skills execute → You get results
+```
+
+Ornn is NyxID's built-in skill management service. When you install NyxID, Ornn is already connected. Your skills sync across every device where NyxID is installed.
 
 ## Features
 
@@ -46,7 +92,7 @@ Test any skill before installing it. Interactive playground with Node.js and Pyt
 ::: {.feature-card}
 ### Cross-Device Sync
 
-Skill library synchronization is a release-dependent workflow; check the project documentation for current support.
+Install a skill on your laptop, use it on your desktop. Your skill library follows you everywhere.
 :::
 
 ::: {.feature-card}
@@ -56,9 +102,13 @@ Works with Claude Code, OpenAI Codex, Cursor, and Antigravity. One skill library
 :::
 :::
 
+## Build & Share Your Own Skills
 
-## Build & share
+Create custom skills and publish them to Ornn. Other users discover and use them instantly. The complete skill lifecycle: create, validate, publish, discover, execute.
 
-Create, validate and publish skills so other agents can discover and run them. Review each skill's dependencies and permissions before use.
+---
 
-[Visit Ornn](https://ornn.chrono-ai.fun) · [GitHub](https://github.com/ChronoAIProject/Ornn) · [NyxID](nyxid.qmd)
+::: {.text-center}
+[Get Started](https://ornn.chrono-ai.fun){.btn .btn-primary}
+[GitHub](https://github.com/aevatarAI/chrono-ornn){.btn .btn-outline-secondary}
+:::

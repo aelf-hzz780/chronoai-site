@@ -5,7 +5,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.PREVIEW_URL||'http://127.0.0.1:8768/chronoai-site/';
-const out='docs/evidence';await fs.mkdir(out,{recursive:true});
+const out=process.env.BROWSER_EVIDENCE_DIR||'docs/evidence';await fs.mkdir(out,{recursive:true});
 const browser=await chromium.launch({headless:true});
 const rawManifest=await fs.readFile('_preview/publication.json');const publication=JSON.parse(rawManifest);
 const evidence={base,contentRevision:publication.revision,bundleManifestSHA256:createHash('sha256').update(rawManifest).digest('hex'),responsive:[],errors:[],externalRequests:[],failedRequests:[]};
@@ -48,7 +48,7 @@ try {
  assert.equal(await page.locator('.bx-nyx a,.bx-nyx button').count(),0);
  assert.equal(await page.locator('.project-summary,.role-map,.flagship-entry').count(),0);
  await page.goto(base+'philosophy.html#an-observation');
- await page.locator('.article-nav a[data-locale="zh"]').click();
+ await page.locator('#quarto-header a[data-locale="zh"]').click();
  await page.waitForURL('**/zh/philosophy.html*');
  assert.equal(decodeURIComponent(new URL(page.url()).hash),'#一个观察');
  assert(await page.locator('#一个观察').isVisible());evidence.articleLocaleAnchor=true;
@@ -100,11 +100,11 @@ try {
  await l.goto(base);await l.locator('.bx-nyx .bxgo').scrollIntoViewIfNeeded();await l.waitForFunction(()=>document.querySelector('.nyx-cta-light'));
  await l.locator('.nyx-cta-light').evaluate(canvas=>canvas.getContext('webgl2').getExtension('WEBGL_lose_context').loseContext());
  await l.waitForFunction(()=>document.querySelector('.bx-nyx .bxgo').dataset.lightState==='lost');
- await Promise.all([l.waitForURL('**/nyxid.html'),l.locator('.bx-nyx').click()]);evidence.actualWebglContextLossLink=true;await loss.close();
+ await Promise.all([l.waitForURL('**/products/nyxid.html'),l.locator('.bx-nyx').click()]);evidence.actualWebglContextLossLink=true;await loss.close();
  await motion.close();
  const fallback=await browser.newContext();await fallback.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return type==='webgl2'?null:original.call(this,type,...args);};});
  const f=await fallback.newPage();await f.goto(base);await f.locator('.bx-nyx').scrollIntoViewIfNeeded();await f.locator('.bx-nyx').click();assert.match(f.url(),/nyxid\.html$/);evidence.webglFallbackLink=true;await fallback.close();
- const touch=await browser.newContext({viewport:{width:375,height:812},isMobile:true,hasTouch:true,reducedMotion:'reduce'});const t=await touch.newPage();await t.goto(base+'zh/');await Promise.all([t.waitForURL('**/zh/nyxid.html'),t.locator('.bx-nyx').tap()]);assert.match(t.url(),/zh\/nyxid\.html$/);evidence.firstTouchNavigation=true;await touch.close();
+ const touch=await browser.newContext({viewport:{width:375,height:812},isMobile:true,hasTouch:true,reducedMotion:'reduce'});const t=await touch.newPage();await t.goto(base+'zh/');await Promise.all([t.waitForURL('**/zh/products/nyxid.html'),t.locator('.bx-nyx').tap()]);assert.match(t.url(),/zh\/products\/nyxid\.html$/);evidence.firstTouchNavigation=true;await touch.close();
  // Regression: delayed scene initialization must obey the latest motion setting.
  for(const resumeBeforeResolve of [false,true]) {
   const race=await browser.newContext({viewport:{width:1440,height:900}});

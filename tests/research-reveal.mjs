@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.PREVIEW_URL||'http://127.0.0.1:8768/chronoai-site/';
-const out='docs/evidence/research-reveal',reproduce=process.argv.includes('--reproduce');
+const out=process.env.REVEAL_EVIDENCE_DIR||'docs/evidence/research-reveal',reproduce=process.argv.includes('--reproduce');
 await fs.mkdir(out,{recursive:true});
 const raw=await fs.readFile('_preview/publication.json'),manifest=JSON.parse(raw);
 const evidence={scope:'Local research reveal; video API and frame simulated, no remote playback claim',sourceCommit:manifest.sourceCommit,revision:manifest.revision,manifestSHA256:createHash('sha256').update(raw).digest('hex'),checks:[],errors:[]};

@@ -1,8 +1,80 @@
 [
-  {"id":"home","en":"index.qmd","zh":"index-zh.qmd"},
-  {"id":"nyxid","en":"nyxid.qmd","zh":"nyxid-zh.qmd"},
-  {"id":"ornn","en":"ornn.qmd","zh":"ornn-zh.qmd"},
-  {"id":"philosophy","en":"philosophy.qmd","zh":"philosophy-zh.qmd"},
-  {"id":"harness","en":"harness.qmd","zh":"harness-zh.qmd"},
-  {"id":"nyxid-dossier","en":"nyxid-dossier.qmd","zh":"nyxid-dossier-zh.qmd"}
+  {
+    "id": "home",
+    "en": "index.qmd",
+    "zh": "index-zh.qmd",
+    "kind": "home",
+    "legacyAlias": true
+  },
+  {
+    "id": "nyxid",
+    "en": "nyxid.qmd",
+    "zh": "nyxid-zh.qmd",
+    "kind": "article",
+    "legacyAlias": true
+  },
+  {
+    "id": "ornn",
+    "en": "ornn.qmd",
+    "zh": "ornn-zh.qmd",
+    "kind": "article",
+    "legacyAlias": true
+  },
+  {
+    "id": "philosophy",
+    "en": "philosophy.qmd",
+    "zh": "philosophy-zh.qmd",
+    "kind": "article",
+    "legacyAlias": true
+  },
+  {
+    "id": "harness",
+    "en": "harness.qmd",
+    "zh": "harness-zh.qmd",
+    "kind": "article",
+    "legacyAlias": true
+  },
+  {
+    "id": "nyxid-dossier",
+    "en": "nyxid-dossier.qmd",
+    "zh": "nyxid-dossier-zh.qmd",
+    "kind": "article",
+    "legacyAlias": true
+  },
+  {
+    "id": "nyxid-product",
+    "kind": "brand",
+    "path": "products/nyxid.html",
+    "en": "content/brand/nyxid.html",
+    "zh": "content/brand/nyxid.zh.json",
+    "title": {
+      "en": "NyxID | ChronoAI",
+      "zh": "NyxID｜ChronoAI"
+    },
+    "descriptionZh": "连接 AI Agent 与公共、私有网络和本地 API。了解 NyxID 的凭据保护、Agent Key、人工审批与连接要求。"
+  },
+  {
+    "id": "ornn-product",
+    "kind": "brand",
+    "path": "products/ornn.html",
+    "en": "content/brand/ornn.html",
+    "zh": "content/brand/ornn.zh.json",
+    "title": {
+      "en": "Ornn | ChronoAI",
+      "zh": "Ornn｜ChronoAI"
+    },
+    "descriptionZh": "面向 AI Agent 的按需技能。通过 Ornn 技能生命周期 API 发现、获取、使用、更新和分享技能。"
+  },
+  {
+    "id": "company",
+    "kind": "brand",
+    "path": "company.html",
+    "en": "content/brand/company.html",
+    "zh": "content/brand/company.zh.json",
+    "title": {
+      "en": "Company | ChronoAI",
+      "zh": "关于 ChronoAI"
+    },
+    "descriptionZh": "了解 ChronoAI 如何开展可验证研究，并构建帮助人与 AI Agent 协作的基础设施。"
+  }
 ]

@@ -10,7 +10,7 @@
       const anchors = mapping ? JSON.parse(mapping.textContent) : {};
       next.hash = hash ? (anchors[hash] || hash) : '';
       if (!next.hash) {
-        const section = [...document.querySelectorAll('main section[id]')]
+        const section = [...document.querySelectorAll('main section[id], main [data-locale-section]')]
           .filter(section => section.getBoundingClientRect().top <= 120).at(-1);
         if (section) next.hash = anchors[section.id] || section.id;
       }

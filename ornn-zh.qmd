@@ -1,31 +1,77 @@
 ---
 title: Ornn
-subtitle: 技能全生命周期 API
+subtitle: AI Skill 平台
 lang: zh
 toc: true
 toc-depth: 2
-description: 面向 AI Agent 的技能 API，支持跨运行时发现、安装、运行、构建和分享技能。
+description: Ornn 历史技术概览，保留原始技术说明。当前产品定位与集成信息请参阅对应产品页面。
 ---
 
 ::: {.lang-switch}
 [English](ornn.qmd)
 :::
 
-## 技能全生命周期 API
+## 给你的 AI Agent 超能力
 
-面向 AI Agent 的技能 API，支持跨运行时发现、安装、运行、构建和分享技能。
+搜索、安装、共享 AI Skills。跨设备同步。通过 NyxID 一行命令启用。
 
-Ornn 是独立项目，为跨运行时的 Agent 提供技能；本概览不宣称 NyxID 会自动配置或连接 Ornn。
+Ornn 是独立的 Skill-as-a-Service 平台。通过 NyxID 体验最佳。
 
-## 生命周期
+## 你能做什么
 
-发现 → 安装 → 运行 → 构建 → 分享。
+::: {.features-grid}
+::: {.feature-card}
+### 创建海报和视频
 
-技能可用于演示文稿、媒体创作及已连接工具等工作流。实际执行取决于所选技能、权限与运行时要求。
+你的 AI Agent 找到合适的 skill，运行它，交付结果。无需手动配置。
+:::
 
-## 技术能力目录
+::: {.feature-card}
+### 构建演示文稿
 
-以下目录保留自既有产品概览。运行时可用性与服务集成取决于当前版本，安装前请查阅仓库。
+使用 NotebookLM 等 skill，从你的数据创建精美的演示文稿。
+:::
+
+::: {.feature-card}
+### 通过飞书和 Slack 协作
+
+连接你的 Agent 到团队工具。调取数据、发送消息、管理任务。
+:::
+
+::: {.feature-card}
+### 调取任何需要的数据
+
+你的 Agent 搜索、过滤、交付来自任何已连接服务的数据。
+:::
+:::
+
+## 开始使用
+
+**通过 NyxID（推荐）：**
+
+```bash
+Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
+```
+
+你的 Agent 安装 NyxID，连接到 Ornn，自动获取所有可用 skills。
+
+**不使用 NyxID：**
+
+访问 [ornn.chrono-ai.fun](https://ornn.chrono-ai.fun) 直接浏览和搜索 skills。或者使用 [Codex 桌面版](https://openai.com/index/codex/) 无需终端即可开始。
+
+## 工作原理
+
+```
+你的 AI Agent (Claude Code / Codex / Cursor)
+  ↓
+NyxID (连接 + 凭证注入)
+  ↓
+Ornn (skill 搜索 + 安装 + 同步)
+  ↓
+Skills 执行 → 你得到结果
+```
+
+Ornn 是 NyxID 内置的 skill 管理服务。安装 NyxID 后，Ornn 已自动连接。你的 skills 在每台安装了 NyxID 的设备上同步。
 
 ## 功能
 
@@ -45,7 +91,7 @@ Ornn 是独立项目，为跨运行时的 Agent 提供技能；本概览不宣�
 ::: {.feature-card}
 ### 跨设备同步
 
-技能库同步取决于具体版本；请在项目文档中核对当前支持情况。
+在笔记本上安装一个 skill，在台式机上使用。你的 skill 库随处可用。
 :::
 
 ::: {.feature-card}
@@ -55,8 +101,13 @@ Ornn 是独立项目，为跨运行时的 Agent 提供技能；本概览不宣�
 :::
 :::
 
-## 构建与分享
+## 创建和分享你的 Skills
 
-创建、验证和发布技能，供其他 Agent 发现与运行。使用前应检查每个技能的依赖项与权限。
+创建自定义 skills 并发布到 Ornn。其他用户即刻发现和使用。完整的 skill 生命周期：创建、验证、发布、发现、执行。
 
-[访问 Ornn](https://ornn.chrono-ai.fun) · [GitHub](https://github.com/ChronoAIProject/Ornn) · [NyxID](nyxid-zh.qmd)
+---
+
+::: {.text-center}
+[开始使用](https://ornn.chrono-ai.fun){.btn .btn-primary}
+[GitHub](https://github.com/aevatarAI/chrono-ornn){.btn .btn-outline-secondary}
+:::

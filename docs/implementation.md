@@ -6,9 +6,9 @@
 
 The goal is to integrate the approved homepage, stable bilingual URLs, static SEO and machine-readable mirrors into the existing Quarto repository while retaining the articles. This is a local preview only, without changing live services, DNS or remote branches. No React, SSR, CMS or custom Markdown renderer was introduced.
 
-`content/publication.json` 是发布白名单：6 个主题、12 个语言页。首页可见英文内容来自 `content/home.html`，实际使用的中文译文来自 `content/home.zh.json`；页面描述来自对应 QMD front matter。文章仍是根目录 QMD。构建脚本先生成隔离 Quarto 输入，再由官方 Quarto/Pandoc 渲染，最后从同份 HTML 语义正文派生 Markdown、head、sitemap、llms 和 publication manifest。导航、动效与装饰不进入机器正文；卡片标题、描述、状态和规范链接保留。
+`content/publication.json` 是发布白名单：9 个主题、18 个语言页。首页可见英文内容来自 `content/home.html`，实际使用的中文译文来自 `content/home.zh.json`；页面描述来自对应 QMD front matter。文章仍是根目录 QMD。构建脚本先生成隔离 Quarto 输入，再由官方 Quarto/Pandoc 渲染，最后从同份 HTML 语义正文派生 Markdown、head、sitemap、llms 和 publication manifest。导航、动效与装饰不进入机器正文；卡片标题、描述、状态和规范链接保留。
 
-`content/publication.json` is the publication allowlist: six subjects and 12 locale pages. The homepage has one English HTML source and an active Chinese dictionary; QMD front matter provides each page description. Existing articles remain QMD files. The build stages isolated Quarto inputs, renders them through official Quarto/Pandoc, then derives Markdown, metadata and indexes from the same semantic content. Navigation and decoration are excluded from mirrors; substantive card copy, status and canonical links remain.
+`content/publication.json` is the publication allowlist: nine subjects and 18 locale pages. The homepage has one English HTML source and an active Chinese dictionary; QMD front matter provides each page description. Existing articles remain QMD files. The build stages isolated Quarto inputs, renders them through official Quarto/Pandoc, then derives Markdown, metadata and indexes from the same semantic content. Navigation and decoration are excluded from mirrors; substantive card copy, status and canonical links remain.
 
 采用简单的构建 pipeline：内容准备、Quarto adapter、产物派生和独立验证各司其职；不存在复杂运行时业务，因此没有增加类层级或服务框架。公开配置由 `site-config.json` 统一管理，`SITE_ORIGIN` 与 `SITE_BASE_PATH` 可覆盖部署位置。错误构建会抛出异常并记录 Trace ID；预览响应包含 `X-Trace-ID`。
 
@@ -24,9 +24,9 @@ English keeps the original page names; Chinese pages use their corresponding `/z
 
 Each of the six legacy Chinese URLs has its own static refresh and clickable destination. JavaScript preserves query/hash. These are HTTP 200 compatibility pages with `noindex,follow`, not production HTTP 301 redirects. Without JavaScript, refresh reaches the corresponding page but arbitrary browsers may not preserve query/hash. Unknown URLs receive real 404s.
 
-`harness.html` 保持《Order, Not Tools》观点文章，不对应 chrono-harness 产品卡。Aevatar 未被替换成 CMA。philosophy、harness 和 dossier 保留完整原始正文，并增加历史研究／组织观点说明。dossier 原署名 `Chrono AI`、发布日期 `2026-04-01`、章节和引用保留；构建时间不充当发表日期。NyxID/Ornn 校准了旧定位、未经确认的自动集成、无条件能力与统计承诺，保留技术概览；旧内容可从基线 Git 历史追溯。
+五类原文章正文已恢复到 `origin/main`，原路径和中文兼容页保留。NyxID/Ornn 明确标为历史技术概览，当前产品使用独立 `/products/` 路径；Company 使用 `/company.html`，不替代 Philosophy。Dossier 保留作者 `Chrono AI` 与真实日期 `2026-04-01`。完整路由、来源哈希和验证范围见 [子页纠偏](subpages.md)。
 
-`harness.html` remains the “Order, Not Tools” essay, separate from the chrono-harness product card. Aevatar was not renamed CMA. Philosophy, harness and dossier retain their complete original bodies with historical/perspective notices. Dossier retains author `Chrono AI`, publication date `2026-04-01`, sections and references. Build time is not publication time. Product overviews calibrate old positioning and unsupported automatic-integration, absolute or statistical claims while retaining technical content; the baseline remains in Git history.
+All five original article bodies are restored to the repository baseline, retaining their routes and legacy Chinese aliases. NyxID/Ornn are explicitly archived technical overviews; current products use separate `/products/` routes. Company uses `/company.html` and does not replace Philosophy. The dossier retains its original author and publication date. Full routing, provenance and validation scope are documented in the subpage restoration document.
 
 ## 构建与复现 / Build and reproduction
 

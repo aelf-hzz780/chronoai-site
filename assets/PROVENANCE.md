@@ -18,3 +18,8 @@ Video posters are the approved local JPG assets; no MP4 was copied. The research
 
 - `poster-en.jpg` SHA-256: `89a7bac8e22035426337274ac88a62fd2712d4e38bb1f915d6b01d170aabde1c`
 - `poster-zh.jpg` SHA-256: `b1d32ba9aaac11dad7617ca082ca0af82f720ea03d34dbd739e93488caaf0bcb`
+
+
+三页官网子页来源固定于 2026-10-29。完整 HTML、来源 URL/日期/SHA-256 见 `content/brand/sources.json`，原 CSS/JS 见 `docs/sources/online-2026-10-29/`。复用已有 `site.css` 和本地字体，不改首页资源；`brand-motion.js` 根据原 NyxID、Company 与连接图序列适配中文控件及生命周期清理。
+
+The three official subpage sources were frozen on 2026-10-29. Source URLs, dates and hashes are recorded alongside the original HTML; original CSS/JS is retained in the source archive. Existing site styles/fonts are reused without changing homepage assets. Brand motion is adapted from the official NyxID, Company and diagram code for translated controls and lifecycle cleanup.

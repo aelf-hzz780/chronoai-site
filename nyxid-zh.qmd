@@ -1,27 +1,31 @@
 ---
 title: NyxID
-subtitle: AI，超越聊天。
+subtitle: 开源 Agent Connectivity Gateway
 lang: zh
 toc: true
 toc-depth: 2
-description: 把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。
+description: NyxID 历史技术概览，保留原始技术说明。当前产品定位与集成信息请参阅对应产品页面。
 ---
 
 ::: {.lang-switch}
 [English](nyxid.qmd)
 :::
 
-## AI，超越聊天。
+## 安装 NyxID Skills
 
-把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。
+复制这行文字，粘贴到你的 AI Agent（Claude Code、Cursor 或任何 LLM）。搞定。
 
-**旗舰产品。** NyxBot 是 NyxID 内置的主要 Agent。
+```bash
+Read https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/SKILL.md and install the NyxID skill following its setup instructions.
+```
 
-[体验 NyxID](https://nyx.chrono-ai.fun/){.btn .btn-primary} [当前文档](https://nyx.chrono-ai.fun/docs)
+你的 Agent 会读取 skill 定义，安装 NyxID CLI，自动完成配置。你不用动配置文件，不用写 YAML，不用手动管理 API key。
 
-## 技术概览
+或者直接安装 CLI：
 
-以下内容介绍网关架构。可用工作流和安装步骤取决于当前版本，安装前请查阅文档。
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ChronoAIProject/NyxID/main/skills/nyxid/tools/install.sh)"
+```
 
 ## NyxID 做什么
 
@@ -33,7 +37,7 @@ NyxID 是开源的 Agent Connectivity Gateway。连接你的 API 和你的 AI Ag
 ::: {.feature-card}
 ### 凭证注入代理
 
-NyxID 作为反向代理位于 Agent 和 API 之间。当 Agent 发起请求时，NyxID 在网络层自动注入正确的凭证。服务配置为网关注入后，Agent 可以在不接收原始 API key 的情况下调用服务。
+NyxID 作为反向代理位于 Agent 和 API 之间。当 Agent 发起请求时，NyxID 在网络层自动注入正确的凭证。你的 Agent 永远不会看到或存储原始 API key。
 :::
 
 ::: {.feature-card}
@@ -47,14 +51,14 @@ NyxID 作为反向代理位于 Agent 和 API 之间。当 Agent 发起请求时�
 ::: {.feature-card}
 ### REST → MCP 自动包装
 
-将 NyxID 指向兼容的 REST API。NyxID 可为支持的端点生成 MCP 接口，供 MCP 兼容客户端使用。具体兼容范围以当前版本文档为准。
+将 NyxID 指向任何 REST API。NyxID 自动生成 MCP Server，任何 MCP 兼容客户端都可以使用。任何 API 立即可被任何 Agent 调用。
 :::
 :::
 
 ## 工作原理
 
 ```
-你的服务 (localhost / 内网 API / 支持的 REST 端点)
+你的服务 (localhost / 内网 API / 任何 REST 端点)
   ↓
 NyxID Gateway
   ├── 凭证注入 (反向代理按请求自动注入凭证)
@@ -62,12 +66,38 @@ NyxID Gateway
   ├── MCP 自动包装 (REST → MCP Server, 自动生成)
   └── Agent 隔离 (scoped token, Agent 之间不可见)
   ↓
-兼容的 AI Agent (Claude Code / Cursor / n8n / MCP 客户端)
+任何 AI Agent (Claude Code / Cursor / n8n / 任何 MCP 客户端)
 ```
 
+## 内置 Skill 管理
 
-## 跨运行时的技能
+NyxID 内置 [Ornn](ornn-zh.qmd) 作为默认 skill 服务。安装 NyxID 后，你的 Agent 立即拥有一整套技能库：创建海报、构建演示文稿、调取数据、通过飞书和 Slack 协作。
 
-[Ornn](ornn-zh.qmd) 是独立的技能全生命周期 API，支持跨运行时发现、安装、运行、构建和分享技能。各项目的可用状态与集成情况有所不同；本概览不承诺自动配置或跨设备同步。
+Skills 在每台安装了 NyxID 的设备上同步。按功能搜索，不用记 skill 名字。
 
-[GitHub](https://github.com/ChronoAIProject/NyxID) · [历史连接研究](nyxid-dossier-zh.qmd)
+[探索 Ornn →](ornn-zh.qmd){.btn .btn-outline-secondary}
+
+## 只有 NyxID 能做的事
+
+没有现有方案同时具备这三个能力：
+
+1. **网络层的凭证注入** — Agent 永远不接触原始 key。不是凭证存储（每个人都做）。是凭证*注入*。
+
+2. **内网 API 的 NAT 穿透** — Cloudflare Tunnel 做 NAT 但不管凭证。NyxID 两者都做。
+
+3. **REST → MCP 自动包装** — 指向一个 REST 端点，得到一个 MCP Server。内置凭证注入。
+
+开源。自托管。Rust 构建。
+
+::: {.proof-strip}
+**9700 万** MCP 月下载量。**8,000+** 服务器暴露。**$82K** 在 48 小时内损失。
+
+你的 AI Agent 连不上你的内网服务。即使连上了，凭证也是暴露的。
+:::
+
+---
+
+::: {.text-center}
+[GitHub](https://github.com/ChronoAIProject/NyxID){.btn .btn-primary}
+[阅读完整分析 →](nyxid-dossier-zh.qmd){.btn .btn-outline-secondary}
+:::

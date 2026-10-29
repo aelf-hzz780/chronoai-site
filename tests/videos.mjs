@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
-const base=process.env.PREVIEW_URL||'http://127.0.0.1:8768/chronoai-site/',out='docs/evidence/videos';await fs.mkdir(out,{recursive:true});
+const base=process.env.PREVIEW_URL||'http://127.0.0.1:8768/chronoai-site/',out=process.env.VIDEO_EVIDENCE_DIR||'docs/evidence/videos';await fs.mkdir(out,{recursive:true});
 const raw=await fs.readFile('_preview/publication.json'),manifest=JSON.parse(raw),external=JSON.parse(await fs.readFile('site-config.json','utf8')).external;
 const evidence={type:'simulated YouTube integration; not proof of remote playback',sourceCommit:manifest.sourceCommit,revision:manifest.revision,manifestSHA256:createHash('sha256').update(raw).digest('hex'),checks:[],errors:[]};
 const fixture=`window.__fake={created:0,destroyed:0,play:0,unmute:0};window.__installFakeYT=()=>{window.YT={Player:class{constructor(frame,options){this.frame=frame;this.events=options.events;window.__fake.created++;if(window.__videoMode!=='no-ready')this.timer=setTimeout(()=>this.events.onReady({target:this}),0);}unMute(){window.__fake.unmute++;}playVideo(){window.__fake.play++;if(window.__videoMode==='blocked')this.events.onAutoplayBlocked({target:this});else if(window.__videoMode==='player-error')this.events.onError({data:101,target:this});else this.events.onStateChange({data:1,target:this});}destroy(){window.__fake.destroyed++;clearTimeout(this.timer);this.frame.remove();}}};};if(window.__videoMode==='late'){window.__staleReady=window.onYouTubeIframeAPIReady;}else{window.__installFakeYT();window.onYouTubeIframeAPIReady();}`;

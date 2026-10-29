@@ -10,6 +10,8 @@ assert (root/'publication.json').exists(), 'Build must produce a publication man
 manifest = json.loads((root/'publication.json').read_text())
 base = manifest['siteUrl']
 checks = 0
+assert len(manifest['pages'])==18
+assert {p['id'] for p in manifest['pages']}=={'home','nyxid','ornn','philosophy','harness','nyxid-dossier','nyxid-product','ornn-product','company'}
 for page in manifest['pages']:
     path = root/page['path']
     soup = BeautifulSoup(path.read_text(), 'html.parser')
@@ -69,6 +71,27 @@ for page in manifest['pages']:
         other_soup=BeautifulSoup((root/other['path']).read_text(),'html.parser')
         for source,target in anchors.items():
             assert soup.find(id=source) and other_soup.find(id=target)
+        if page['kind']=='article':
+            assert soup.select_one('#quarto-header') and not soup.select('main nav.article-nav, main .lang-switch, main .text-end.text-muted')
+            assert len(soup.select('a[data-locale]'))==1
+            assert not soup.select_one('main a[data-locale]')
+            assert all(a['href']=='#' for a in soup.select('#quarto-header .dropdown-toggle'))
+            if page['id'] in ('nyxid','ornn'):
+                label='历史技术概览' if page['lang']=='zh-CN' else 'Archived technical overview'
+                assert label in page['title'] and label in page['description'] and label in md
+                from urllib.parse import urljoin
+                current_product=next(p for p in manifest['pages'] if p['id']==page['id']+'-product' and p['lang']==page['lang'])
+                assert urljoin(page['url'],soup.select_one('.archive-notice a')['href'])==current_product['url']
+        else:
+            original=BeautifulSoup(Path('content/brand/'+('nyxid' if page['id']=='nyxid-product' else 'ornn' if page['id']=='ornn-product' else 'company')+'.html').read_text(),'html.parser')
+            if page['lang']=='en':
+                clean=lambda node:re.sub(r'\s+',' ',node.get_text(' ',strip=True)).strip()
+                assert clean(original.select_one('main'))==clean(soup.select_one('main')),page['path']+': changed official English body'
+            assert soup.select_one('header .language-switch')
+            if page['id']=='nyxid-product':
+                diagrams=soup.select('main svg[role=img]')
+                assert len(diagrams)==2 and diagrams[0]['aria-label']==diagrams[1]['aria-label']
+                assert md.count(diagrams[0]['aria-label'])==1,'Responsive diagram semantics must appear once in mirror'
     assert len(soup.select_one('main').get_text(strip=True)) > 100
     for node in soup.select('[href], [src], [data-src], [data-us-project-src]'):
         for attr in ('href','src','data-src','data-us-project-src'):
@@ -84,6 +107,7 @@ assert urls == {p['url'] for p in manifest['pages']}
 assert not any('/read/' in x for x in urls)
 assert 'localhost' not in (root/'sitemap.xml').read_text()
 assert len(manifest['aliases']) == 6
+assert set(manifest['aliases'])=={'index-zh.html','nyxid-zh.html','ornn-zh.html','philosophy-zh.html','harness-zh.html','nyxid-dossier-zh.html'}
 for alias, target in manifest['aliases'].items():
     soup = BeautifulSoup((root/alias).read_text(), 'html.parser')
     assert soup.select_one('meta[name=robots]')['content'] == 'noindex,follow'

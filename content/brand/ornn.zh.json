@@ -1,0 +1,16 @@
+{
+  "On-demand skills for AI agents.": "为 AI Agent 按需提供技能。",
+  "A skill lifecycle API for developers building AI agents.": "为构建 AI Agent 的开发者提供技能生命周期 API。",
+  "Read Ornn docs ↗": "阅读 Ornn 文档 ↗",
+  "From discovery to use.": "从发现技能，到实际使用。",
+  "Search for skills by meaning or keyword. Retrieve versioned skills and manage how your agent uses them.": "通过语义或关键词搜索技能，获取带版本的技能，并管理 Agent 如何使用它们。",
+  "Ornn supports a skill lifecycle that includes discovery, installation, execution, updates, and sharing.": "Ornn 支持涵盖发现、安装、执行、更新和分享的技能生命周期。",
+  "Discover": "发现",
+  "Retrieve": "获取",
+  "Use": "使用",
+  "Update / Share": "更新 / 分享",
+  "Build with the API.": "通过 API 构建。",
+  "Use the documentation to explore the API and its workflow. Review the source code for implementation details.": "通过文档了解 API 及其工作流程；通过源代码查看实现细节。",
+  "View Ornn source ↗": "查看 Ornn 源码 ↗",
+  "All products →": "所有产品 →"
+}

@@ -3,7 +3,6 @@
 import argparse
 import copy
 import hashlib
-import html
 import json
 import os
 from pathlib import Path
@@ -22,6 +21,10 @@ ROOT = Path(__file__).resolve().parents[1]
 STAGE = ROOT/'.build'
 sys.path.insert(0, str(ROOT/'scripts'))
 from video_content import read_videos, watch_url, locale_video_config
+from brand_content import brand_body, translate
+
+ENTRIES = json.loads((ROOT/'content/publication.json').read_text())
+ROUTES = {entry['id']: entry.get('path', 'index.html' if entry['id']=='home' else entry['id']+'.html') for entry in ENTRIES}
 
 
 def load_configuration():
@@ -40,7 +43,7 @@ def load_configuration():
 
 
 def route(identifier, language):
-    return ('zh/' if language == 'zh' else '') + ('index.html' if identifier == 'home' else identifier+'.html')
+    return ('zh/' if language == 'zh' else '') + ROUTES[identifier]
 
 
 def canonical(config, path):
@@ -58,7 +61,7 @@ def read_qmd(name):
 
 
 def source_revision():
-    paths = sorted([*ROOT.glob('*.qmd'), *ROOT.glob('content/*'), ROOT/'site-config.json'])
+    paths = sorted([*ROOT.glob('*.qmd'), *[p for folder in ('content','assets','templates','scripts') for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts], ROOT/'site-config.json', ROOT/'_quarto.yml', ROOT/'styles.css'])
     digest = hashlib.sha256()
     for path in paths:
         digest.update(path.relative_to(ROOT).as_posix().encode()+b'\0'+path.read_bytes()+b'\0')
@@ -108,12 +111,15 @@ def home_body(language, current, config):
     return str(soup)
 
 
-def article_navigation(language, identifier, current):
-    labels = ['Home','NyxID','Ornn','Philosophy','Research','Order, Not Tools'] if language == 'en' else ['首页','NyxID','Ornn','组织理念','研究','秩序，不是工具']
-    targets = ['home','nyxid','ornn','philosophy','nyxid-dossier','harness']
-    anchors = ''.join(f'<a href="{relative(route(t,language),current)}">{html.escape(label)}</a>' for t,label in zip(targets,labels))
-    other = 'zh' if language == 'en' else 'en'
-    return f'<nav class="article-nav" aria-label="{"Main" if language == "en" else "主导航"}">{anchors}<a data-locale="{other}" hreflang="{"zh-CN" if other == "zh" else "en"}" href="{relative(route(identifier,other),current)}">{"中文" if other == "zh" else "English"}</a></nav>'
+def article_navigation(config):
+    def item(label, identifier):
+        return {'text':label, 'href':route(identifier,'en')}
+    return {'left':[
+        {'text':'Philosophy','menu':[item('One-Person Company','philosophy'),item('Order, Not Tools','harness')]},
+        {'text':'Products','menu':[item('NyxID','nyxid-product'),item('Ornn','ornn-product'),item('NyxID technical overview','nyxid'),item('Ornn technical overview','ornn')]},
+        {'text':'Research','menu':[item('The AI Agent Connectivity Crisis','nyxid-dossier')]},
+        item('About ChronoAI','company')],
+        'right':[{'icon':'github','href':config['external']['github']},{'text':'中文','href':'zh/index.html'}]}
 
 
 def prepare(config, entries):
@@ -132,31 +138,43 @@ def prepare(config, entries):
     (STAGE/'zh').mkdir()
     quarto = yaml.safe_load((ROOT/'_quarto.yml').read_text())
     quarto['website']['site-url'] = config['siteUrl']
-    quarto['project']['render'] = ['*.qmd','zh/*.qmd']
+    quarto['project']['render'] = [route(e['id'],lang).replace('.html','.qmd') for e in entries for lang in ('en','zh')]
     quarto['project']['resources'] = ['assets/**','styles.css']
+    quarto['website']['navbar'] = article_navigation(config)
+    quarto['website']['page-footer'] = {'center':'© 2026 Chrono AI'}
     (STAGE/'_quarto.yml').write_text(yaml.safe_dump(quarto, sort_keys=False))
     mapping = {source: route(entry['id'], lang) for entry in entries for lang,source in entry.items() if lang in ('en','zh')}
     pages = []
     for entry in entries:
         for lang in ('en','zh'):
             current = route(entry['id'],lang)
-            meta, body = read_qmd(entry[lang])
+            if entry['kind'] == 'brand':
+                original = BeautifulSoup((ROOT/entry['en']).read_text(),'html.parser')
+                meta = {'title':entry['title'][lang], 'description':entry['descriptionZh'] if lang=='zh' else original.select_one('meta[name=description]')['content']}
+                meta['brand-class']=' '.join(['brand-page', *original.body.get('class',[])])
+                body = '\n```{=html}\n'+brand_body(ROOT,entry,lang,current,config,route,relative)+'\n```\n'
+            else:
+                meta, body = read_qmd(entry[lang])
+            if entry['id'] in ('nyxid','ornn'):
+                meta['pagetitle']=meta['title']+(' — 历史技术概览' if lang=='zh' else ' — Archived technical overview')
             meta['lang'] = 'en' if lang == 'en' else 'zh-CN'
             if lang == 'zh': meta['language'] = {'toc-title-document':'目录','toc-title-website':'本页内容','section-title-abstract':'摘要','title-block-author-single':'作者','title-block-published':'发表日期'}
             meta['format'] = {'html': {'include-after-body': {'text': f'<script src="{relative("assets/locale.js",current)}" defer></script>'}}}
-            if entry['id'] == 'home':
-                body = '\n```{=html}\n'+home_body(lang,current,config)+'\n```\n'
-                # Home uses the approved standalone Quarto template, without Bootstrap layout.
-                meta['format']['html'].update({'theme':'none','minimal':True,'title-block-style':'none','template':relative('templates/home.html',current),'css':[relative('assets/'+n,current) for n in ('fonts.css','site.css','refined.css','videos.css')]})
+            if entry['kind'] in ('home','brand'):
+                if entry['kind']=='home':
+                    body = '\n```{=html}\n'+home_body(lang,current,config)+'\n```\n'
+                styles = ('fonts.css','site.css','refined.css','videos.css') if entry['kind']=='home' else ('fonts.css','site.css','refined.css','brand.css')
+                meta['format']['html'].update({'theme':'none','minimal':True,'title-block-style':'none','template':relative('templates/'+('home' if entry['kind']=='home' else 'brand')+'.html',current),'css':[relative('assets/'+n,current) for n in styles]})
                 for key in ('template','css'): meta.pop(key,None)
             else:
                 # Resolve original language-switch/article links against the explicit publication manifest.
                 body = re.sub(r'\]\(([^)\s]+\.qmd)(#[^)]*)?\)', lambda m: ']('+relative(mapping[m[1]],current)+(m[2] or '')+')', body)
-                meta['format']['html'].update({'css':[relative('assets/fonts.css',current),relative('styles.css',current),relative('assets/article.css',current)],'include-before-body':{'text':article_navigation(lang,entry['id'],current)}})
+                meta['format']['html'].update({'css':[relative('assets/fonts.css',current),relative('styles.css',current),relative('assets/article.css',current)]})
                 meta.pop('css',None)
             source = current.replace('.html','.qmd')
+            (STAGE/source).parent.mkdir(parents=True,exist_ok=True)
             (STAGE/source).write_text('---\n'+yaml.safe_dump(meta, allow_unicode=True, sort_keys=False)+'---\n'+body)
-            pages.append({'id':entry['id'],'source':entry[lang],'path':current,'lang':meta['lang'],'title':meta['title'],'description':meta['description'],'url':canonical(config,current),'markdown':f'read/{lang}/{entry["id"]}.md','meta':meta})
+            pages.append({'id':entry['id'],'kind':entry['kind'],'legacyAlias':entry.get('legacyAlias',False),'source':entry[lang],'path':current,'lang':meta['lang'],'title':meta.get('pagetitle',meta['title']),'description':meta['description'],'url':canonical(config,current),'markdown':f'read/{lang}/{entry["id"]}.md','meta':meta})
     return pages
 
 
@@ -188,7 +206,19 @@ def add_metadata(soup, page, pair, config, revision, preview):
 def markdown_body(soup, page, config, quarto):
     main = copy.copy(soup.select_one('main'))
     main.name='div';main.attrs={}
-    for node in main.select('script, style, canvas, noscript, nav, button, .lang-switch, [aria-hidden="true"]'): node.decompose()
+    for node in main.select('script, style, canvas, noscript, nav, button, .lang-switch, .article-mobile-toc, [aria-hidden="true"]'): node.decompose()
+    seen_diagrams=set()
+    for node in list(main.select('svg')):
+        if node.get('role')=='img':
+            semantic=node.get('aria-label','')+' '+node.get_text(' ',strip=True)
+            if semantic in seen_diagrams:
+                node.decompose();continue
+            seen_diagrams.add(semantic)
+            paragraph=BeautifulSoup('<p></p>','html.parser').p
+            paragraph.string=semantic
+            node.replace_with(paragraph)
+        else:
+            node.decompose()
     for node in main.select('a[href],img[src]'):
         attr = 'href' if node.name == 'a' else 'src'
         node[attr] = urljoin(page['url'],node[attr])
@@ -216,7 +246,7 @@ def markdown_body(soup, page, config, quarto):
     for node in list(main.select('span')):
         if not node.find_parent(['pre','code']): node.insert_after(' ')
         node.unwrap()
-    for node in list(main.select('div, section, header')): node.unwrap()
+    for node in list(main.select('div, section, header, aside')): node.unwrap()
     for node in main.find_all(True):
         node.attrs={k:v for k,v in node.attrs.items() if k in ('href','src','alt')}
     result = subprocess.run([quarto,'pandoc','--from=html','--to=commonmark','--wrap=none'],input=main.decode_contents(),capture_output=True,text=True,check=True)
@@ -228,14 +258,60 @@ def write_derivatives(output, pages, config, revision, quarto, preview):
         path = output/page['path']; soup = BeautifulSoup(path.read_text(),'html.parser')
         pair = {('zh' if p['lang']=='zh-CN' else 'en'):p for p in pages if p['id']==page['id']}
         add_metadata(soup,page,pair,config,revision,preview)
+        if page['kind']=='brand':
+            for stylesheet in soup.select('link[rel=stylesheet]'):
+                if stylesheet.get('href','').split('/')[-1]=='styles.css':stylesheet.decompose()
         for placeholder in soup.select('header.quarto-title-block[hidden]'): placeholder.decompose()
-        if page['id'] in ('nyxid','ornn'):
-            for repeated in soup.select('#title-block-header .subtitle, #title-block-header .description'): repeated.decompose()
+        if page['kind']=='article':
+            # Keep original QMD bodies intact on disk; navigation belongs outside main.
+            for repeated in soup.select('main .lang-switch, main .text-end.text-muted, #title-block-header .description'):
+                repeated.decompose()
+            locale='zh' if page['lang']=='zh-CN' else 'en'
+            other_locale='en' if locale=='zh' else 'zh'
+            if page['id'] in ('nyxid','ornn'):
+                notice=soup.new_tag('aside',attrs={'role':'note','class':'archive-notice'})
+                paragraph=soup.new_tag('p')
+                paragraph.append('历史技术概览：保留原始技术说明，其中的产品定位和集成描述可能已变化。当前信息请参阅' if locale=='zh' else 'Archived technical overview: original technical claims are preserved; product positioning and integrations may have changed. See the ')
+                link=soup.new_tag('a',href=relative(route(page['id']+'-product',locale),page['path']))
+                link.string='当前产品页面' if locale=='zh' else 'current product page'
+                paragraph.append(link);paragraph.append('。' if locale=='zh' else '.')
+                notice.append(paragraph);soup.select_one('#title-block-header').insert_after(notice)
+            toc=soup.select_one('#TOC > ul')
+            if toc:
+                details=soup.new_tag('details',attrs={'class':'article-mobile-toc'})
+                summary=soup.new_tag('summary');summary.string='本页目录' if locale=='zh' else 'On this page';details.append(summary)
+                links=copy.copy(toc)
+                for node in [links,*links.find_all(True)]:
+                    node.attrs={k:v for k,v in node.attrs.items() if k=='href'}
+                details.append(links)
+                (soup.select_one('.archive-notice') or soup.select_one('#title-block-header')).insert_after(details)
+            language_link=soup.select_one('#quarto-header a[href$="zh/index.html"]')
+            if not language_link:
+                raise ValueError('Missing native Quarto language navigation: '+page['path'])
+            language_link['href']=relative(route(page['id'],other_locale),page['path'])
+            language_link['data-locale']=other_locale
+            language_link['hreflang']='en' if other_locale=='en' else 'zh-CN'
+            language_link.select_one('.menu-text').string='EN' if other_locale=='en' else '中文'
+            tools=soup.select_one('#quarto-header .quarto-navbar-tools')
+            if not tools:
+                raise ValueError('Missing native Quarto navigation tools')
+            parent=language_link.parent
+            tools.append(language_link.extract())
+            if not parent.get_text(strip=True):parent.decompose()
+            for link in soup.select('#quarto-header a[href]'):
+                if link.has_attr('data-locale') or not link['href'] or link['href'].startswith('#'):continue
+                for identifier,english_path in ROUTES.items():
+                    if urlparse(urljoin(page['url'],link['href'])).path==config['basePath']+english_path:
+                        link['href']=relative(route(identifier,locale),page['path'])
+                        break
+            if locale=='zh':
+                translate(soup.select_one('#quarto-header'),{'ChronoAI':'ChronoAI','Philosophy':'组织理念','One-Person Company':'一人公司','Order, Not Tools':'秩序，不是工具','Products':'产品','NyxID technical overview':'NyxID 技术概览','Ornn technical overview':'Ornn 技术概览','Research':'研究','The AI Agent Connectivity Crisis':'AI Agent 连接危机','About ChronoAI':'关于 ChronoAI'})
         if page['id'] != 'home':
             other = next(p for p in pages if p['id']==page['id'] and p['lang']!=page['lang'])
             other_soup = BeautifulSoup((output/other['path']).read_text(),'html.parser')
-            headings = soup.select('main section[id]')
-            other_headings = other_soup.select('main section[id]')
+            selector='main [data-locale-section]' if page['kind']=='brand' else 'main section[id]'
+            headings = soup.select(selector)
+            other_headings = other_soup.select(selector)
             if len(headings) != len(other_headings): raise ValueError('Paired article section counts differ: '+page['id'])
             for link in soup.select('.lang-switch a'):
                 link['data-locale']='en' if page['lang']=='zh-CN' else 'zh'
@@ -252,7 +328,7 @@ def write_derivatives(output, pages, config, revision, quarto, preview):
         mirror.write_text('---\n'+yaml.safe_dump({'title':page['title'],'lang':page['lang'],'canonical':page['url'],'content-revision':revision},allow_unicode=True,sort_keys=False)+'---\n\n'+markdown_body(soup,page,config,quarto))
     aliases = {}
     for p in pages:
-        if p['lang'] != 'zh-CN': continue
+        if p['lang'] != 'zh-CN' or not p['legacyAlias']: continue
         alias = ('index' if p['id']=='home' else p['id'])+'-zh.html'; target=p['path']; aliases[alias]=target
         # Static compatibility: refresh to a real HTML page, while JS preserves query and hash.
         rel=relative(target,alias)

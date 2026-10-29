@@ -1,0 +1,6 @@
+/* Only anchors and motion preferences augment the frozen official page layouts. */
+.brand-page [data-locale-section] { scroll-margin-top:96px; }
+@media(prefers-reduced-motion:reduce) {
+  .brand-page .nx-mark svg,.brand-page .nx-layer { transform:none!important;transition:none!important; }
+  .brand-page .netBg,.brand-page .inviteBg { animation:none!important; }
+}

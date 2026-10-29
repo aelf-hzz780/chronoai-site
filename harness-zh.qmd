@@ -1,15 +1,10 @@
 ---
-title: '秩序, 不是工具: 为什么 Agent Harness 的定义是一个类别错误'
+title: "秩序, 不是工具: 为什么 Agent Harness 的定义是一个类别错误"
 page-layout: article
 lang: zh
 toc: false
 description: 探讨 Agent 工作流中治理与秩序的观点文章，保留原有论述。
 ---
-
-::: {.callout-note}
-历史研究／组织观点。本文保留原始论点、日期与引用，不作为当前产品能力或上线状态的声明。
-:::
-
 
 ::: {.lang-switch}
 [English](harness.qmd)
