@@ -76,5 +76,65 @@
       "zh": "关于 ChronoAI"
     },
     "descriptionZh": "了解 ChronoAI 如何开展可验证研究，并构建帮助人与 AI Agent 协作的基础设施。"
+  },
+  {
+    "id": "cma",
+    "kind": "brand",
+    "path": "products/cma.html",
+    "en": "content/brand/cma.html",
+    "zh": "content/brand/cma.zh.json",
+    "title": {
+      "en": "CMA | ChronoAI",
+      "zh": "CMA｜ChronoAI"
+    },
+    "descriptionZh": "在同一控制台创建和运营具有独立工作空间的云端常驻 Agent，管理运行时镜像，并通过事件网关接收经验证的事件。"
+  },
+  {
+    "id": "godgpt",
+    "kind": "brand",
+    "path": "products/godgpt.html",
+    "en": "content/brand/godgpt.html",
+    "zh": "content/brand/godgpt.zh.json",
+    "title": {
+      "en": "GodGPT | ChronoAI",
+      "zh": "GodGPT｜ChronoAI"
+    },
+    "descriptionZh": "面向个人问题与思考的对话式 AI 应用，让交流超越一次搜索。"
+  },
+  {
+    "id": "research",
+    "kind": "brand",
+    "path": "research.html",
+    "en": "content/brand/research.html",
+    "zh": "content/brand/research.zh.json",
+    "title": {
+      "en": "Research | ChronoAI",
+      "zh": "研究｜ChronoAI"
+    },
+    "descriptionZh": "探索 trureturing 的定义、假设、证明步骤、依赖关系、已记录结果与适用边界。"
+  },
+  {
+    "id": "developers",
+    "kind": "brand",
+    "path": "developers.html",
+    "en": "content/brand/developers.html",
+    "zh": "content/brand/developers.zh.json",
+    "title": {
+      "en": "Developers | ChronoAI",
+      "zh": "开发者资源｜ChronoAI"
+    },
+    "descriptionZh": "查找 NyxID 与 Ornn 的文档和源代码，了解 API 连接、服务凭据、部署要求与技能生命周期。"
+  },
+  {
+    "id": "products",
+    "kind": "brand",
+    "path": "products.html",
+    "en": "content/brand/products.html",
+    "zh": "content/brand/products.zh.json",
+    "title": {
+      "en": "Products | ChronoAI",
+      "zh": "产品｜ChronoAI"
+    },
+    "descriptionZh": "了解 ChronoAI 为 AI Agent 及其使用者构建的连接、技能、运行时、编排和对话产品。"
   }
 ]

@@ -23,3 +23,8 @@ Video posters are the approved local JPG assets; no MP4 was copied. The research
 三页官网子页来源固定于 2026-10-29。完整 HTML、来源 URL/日期/SHA-256 见 `content/brand/sources.json`，原 CSS/JS 见 `docs/sources/online-2026-10-29/`。复用已有 `site.css` 和本地字体，不改首页资源；`brand-motion.js` 根据原 NyxID、Company 与连接图序列适配中文控件及生命周期清理。
 
 The three official subpage sources were frozen on 2026-10-29. Source URLs, dates and hashes are recorded alongside the original HTML; original CSS/JS is retained in the source archive. Existing site styles/fonts are reused without changing homepage assets. Brand motion is adapted from the official NyxID, Company and diagram code for translated controls and lifecycle cleanup.
+
+
+剩余五页于 2026-10-29 从官网冻结，来源与哈希继续记录在 `content/brand/sources.json`。Research 画布/流程原件为 `docs/sources/online-2026-10-29/research.js`；运行版本仅适配中文控件、动态动效偏好、资源清理和尺寸变化时的脉冲边界。保留原有界 N≤150 邻接绘制，性能理由和实测见 `docs/remaining-pages.md` 与本轮证据。
+
+The remaining five official pages were frozen on 2026-10-29. Original Research canvas/pipeline code is archived; runtime adaptations cover locale controls, motion preferences, lifecycle cleanup and resize boundaries. The original bounded adjacency rendering is retained, with rationale and measured costs documented separately.

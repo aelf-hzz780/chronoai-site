@@ -1,7 +1,7 @@
 """Acceptance contracts for the actual Quarto output (run after scripts/build.py)."""
 import json, sys, subprocess, os, shutil
 from pathlib import Path
-from urllib.parse import urlparse, unquote
+from urllib.parse import urlparse, unquote, urljoin
 from xml.etree import ElementTree as ET
 from bs4 import BeautifulSoup
 
@@ -10,8 +10,11 @@ assert (root/'publication.json').exists(), 'Build must produce a publication man
 manifest = json.loads((root/'publication.json').read_text())
 base = manifest['siteUrl']
 checks = 0
-assert len(manifest['pages'])==18
-assert {p['id'] for p in manifest['pages']}=={'home','nyxid','ornn','philosophy','harness','nyxid-dossier','nyxid-product','ornn-product','company'}
+expected_en={'index.html','nyxid.html','ornn.html','philosophy.html','harness.html','nyxid-dossier.html','products/nyxid.html','products/ornn.html','company.html','products/cma.html','products/godgpt.html','research.html','developers.html','products.html'}
+assert {p['path'] for p in manifest['pages']}==expected_en|{'zh/'+path for path in expected_en}
+assert len(manifest['pages'])==28
+entries={e['id']:e for e in json.loads(Path('content/publication.json').read_text())}
+online_host=urlparse(json.loads(Path('site-config.json').read_text())['onlineOrigin']).netloc
 for page in manifest['pages']:
     path = root/page['path']
     soup = BeautifulSoup(path.read_text(), 'html.parser')
@@ -79,11 +82,10 @@ for page in manifest['pages']:
             if page['id'] in ('nyxid','ornn'):
                 label='历史技术概览' if page['lang']=='zh-CN' else 'Archived technical overview'
                 assert label in page['title'] and label in page['description'] and label in md
-                from urllib.parse import urljoin
                 current_product=next(p for p in manifest['pages'] if p['id']==page['id']+'-product' and p['lang']==page['lang'])
                 assert urljoin(page['url'],soup.select_one('.archive-notice a')['href'])==current_product['url']
         else:
-            original=BeautifulSoup(Path('content/brand/'+('nyxid' if page['id']=='nyxid-product' else 'ornn' if page['id']=='ornn-product' else 'company')+'.html').read_text(),'html.parser')
+            original=BeautifulSoup(Path(entries[page['id']]['en']).read_text(),'html.parser')
             if page['lang']=='en':
                 clean=lambda node:re.sub(r'\s+',' ',node.get_text(' ',strip=True)).strip()
                 assert clean(original.select_one('main'))==clean(soup.select_one('main')),page['path']+': changed official English body'
@@ -93,6 +95,20 @@ for page in manifest['pages']:
                 assert len(diagrams)==2 and diagrams[0]['aria-label']==diagrams[1]['aria-label']
                 assert md.count(diagrams[0]['aria-label'])==1,'Responsive diagram semantics must appear once in mirror'
     assert len(soup.select_one('main').get_text(strip=True)) > 100
+    for anchor in soup.select('a[href]'):
+        raw=urlparse(anchor['href'])
+        assert raw.netloc!=online_host, f'{page["path"]}: official-site navigation escaped local publication: {anchor["href"]}'
+        resolved=urlparse(urljoin(page['url'],anchor['href']))
+        if resolved.netloc==urlparse(base).netloc:
+            assert resolved.path.startswith(manifest['basePath']),f'{page["path"]}: missing basePath: {anchor["href"]}'
+            local_path=unquote(resolved.path).removeprefix(manifest['basePath'])
+            target=root/local_path
+            if target.is_dir():target=target/'index.html'
+            assert target.exists(),(page['path'],anchor['href'])
+            if not anchor.has_attr('data-locale') and local_path in {p['path'] for p in manifest['pages']}:
+                assert local_path.startswith('zh/')==(page['lang']=='zh-CN'),(page['path'],anchor['href'],'locale mismatch')
+    for url in re.findall(r'https?://[^\s)<>]+',md):
+        assert urlparse(url).netloc!=online_host,(page['path'],'mirror leaked official internal URL',url)
     for node in soup.select('[href], [src], [data-src], [data-us-project-src]'):
         for attr in ('href','src','data-src','data-us-project-src'):
             if not node.has_attr(attr): continue
@@ -114,4 +130,6 @@ for alias, target in manifest['aliases'].items():
     assert soup.select_one('link[rel=canonical]')['href'] == base + (target[:-10] if target.endswith('index.html') else target)
     assert soup.select_one('a')['href']
 assert not (root/'AGENTS.md').exists() and not (root/'scripts').exists()
+for url in re.findall(r'https?://[^\s)<>]+',(root/'llms.txt').read_text()):
+    assert urlparse(url).netloc!=online_host,('llms.txt leaked official internal URL',url)
 print(f'PASS: {checks} canonical pages, reciprocal locale metadata, JSON-LD, mirrors, all local assets/links, aliases and sitemap')

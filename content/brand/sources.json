@@ -47,5 +47,47 @@
     "fetchedDate": "2026-10-29",
     "sha256": "103b49b4cfd3842c8d3dbecf68633f9998813db76f08a23dacf2be0155444030",
     "bytes": 42574
+  },
+  {
+    "file": "content/brand/cma.html",
+    "url": "https://chrono-ai.fun/products/cma.html",
+    "fetchedDate": "2026-10-29",
+    "sha256": "886a0f52ff9bdbaeb3adb943bca368ca2f32455088db01706b73915d83a23006",
+    "bytes": 8267
+  },
+  {
+    "file": "content/brand/godgpt.html",
+    "url": "https://chrono-ai.fun/products/godgpt.html",
+    "fetchedDate": "2026-10-29",
+    "sha256": "219036ae45e7ef30238024e59d1f67895bb7b81f0af278aafaeb28eb9aedcba8",
+    "bytes": 7675
+  },
+  {
+    "file": "content/brand/research.html",
+    "url": "https://chrono-ai.fun/research.html",
+    "fetchedDate": "2026-10-29",
+    "sha256": "9b6be92b2928cef2e12688f00d9872eddeaaf95c94505b5ce85ea1b663af2dd3",
+    "bytes": 12274
+  },
+  {
+    "file": "content/brand/developers.html",
+    "url": "https://chrono-ai.fun/developers.html",
+    "fetchedDate": "2026-10-29",
+    "sha256": "1543599bfab9409f28e0d591e358a142f6f866853a17945aa8da677e2d80f6cb",
+    "bytes": 7841
+  },
+  {
+    "file": "content/brand/products.html",
+    "url": "https://chrono-ai.fun/products.html",
+    "fetchedDate": "2026-10-29",
+    "sha256": "8461368802928b7ad6823ca7a84fc36ce55c7f33b04cb4dc7b861c32e2727dce",
+    "bytes": 8947
+  },
+  {
+    "file": "docs/sources/online-2026-10-29/research.js",
+    "url": "https://chrono-ai.fun/assets/research.js?v=31b5941534",
+    "fetchedDate": "2026-10-29",
+    "sha256": "31b59415347e068123512c51d50b9c52cd8be302806698862a621103aabe6e4b",
+    "bytes": 5608
   }
 ]

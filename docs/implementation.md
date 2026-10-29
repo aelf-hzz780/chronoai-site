@@ -6,9 +6,9 @@
 
 The goal is to integrate the approved homepage, stable bilingual URLs, static SEO and machine-readable mirrors into the existing Quarto repository while retaining the articles. This is a local preview only, without changing live services, DNS or remote branches. No React, SSR, CMS or custom Markdown renderer was introduced.
 
-`content/publication.json` 是发布白名单：9 个主题、18 个语言页。首页可见英文内容来自 `content/home.html`，实际使用的中文译文来自 `content/home.zh.json`；页面描述来自对应 QMD front matter。文章仍是根目录 QMD。构建脚本先生成隔离 Quarto 输入，再由官方 Quarto/Pandoc 渲染，最后从同份 HTML 语义正文派生 Markdown、head、sitemap、llms 和 publication manifest。导航、动效与装饰不进入机器正文；卡片标题、描述、状态和规范链接保留。
+`content/publication.json` 是发布白名单：14 个主题、28 个语言页。首页可见英文内容来自 `content/home.html`，实际使用的中文译文来自 `content/home.zh.json`；页面描述来自对应 QMD front matter。文章仍是根目录 QMD。构建脚本先生成隔离 Quarto 输入，再由官方 Quarto/Pandoc 渲染，最后从同份 HTML 语义正文派生 Markdown、head、sitemap、llms 和 publication manifest。导航、动效与装饰不进入机器正文；卡片标题、描述、状态和规范链接保留。
 
-`content/publication.json` is the publication allowlist: nine subjects and 18 locale pages. The homepage has one English HTML source and an active Chinese dictionary; QMD front matter provides each page description. Existing articles remain QMD files. The build stages isolated Quarto inputs, renders them through official Quarto/Pandoc, then derives Markdown, metadata and indexes from the same semantic content. Navigation and decoration are excluded from mirrors; substantive card copy, status and canonical links remain.
+`content/publication.json` is the publication allowlist: 14 subjects and 28 locale pages. The homepage has one English HTML source and an active Chinese dictionary; QMD front matter provides each page description. Existing articles remain QMD files. The build stages isolated Quarto inputs, renders them through official Quarto/Pandoc, then derives Markdown, metadata and indexes from the same semantic content. Navigation and decoration are excluded from mirrors; substantive card copy, status and canonical links remain.
 
 采用简单的构建 pipeline：内容准备、Quarto adapter、产物派生和独立验证各司其职；不存在复杂运行时业务，因此没有增加类层级或服务框架。公开配置由 `site-config.json` 统一管理，`SITE_ORIGIN` 与 `SITE_BASE_PATH` 可覆盖部署位置。错误构建会抛出异常并记录 Trace ID；预览响应包含 `X-Trace-ID`。
 
@@ -89,3 +89,8 @@ Quarto/Pandoc may warn about missing translation terms for Chinese. The target l
 未来发布应把同一 `_site/` 整包作为单元，先检查 manifest/hash、响应头和 URL，再经单独授权发布。回滚时恢复此前完整静态包及配套 host headers；源码回滚使用 Git revert 对应实施 commit，重新通过统一构建入口生成。不需数据迁移。此次未执行任何发布或远程回滚。
 
 A future release should publish one complete `_site/` package after manifest/hash, header and URL checks and separate deployment authorization. Roll back the entire previous package with matching host headers, or revert implementation commits and rebuild. No data migration is involved. No release or remote rollback was executed.
+
+
+剩余五个官网页面及全站对应语言路由已补齐，来源、性能例外和本轮验收范围见 [剩余页面补齐](remaining-pages.md)。
+
+The five remaining official pages and site-wide locale routing are documented in the remaining-pages implementation record, including provenance, the bounded performance exception and verification scope.

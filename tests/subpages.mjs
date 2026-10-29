@@ -3,9 +3,9 @@ import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.PREVIEW_URL||'http://127.0.0.1:8768/chronoai-site/';
-const out=process.env.SUBPAGE_EVIDENCE_DIR||'docs/evidence/subpages';await fs.mkdir(out,{recursive:true});
+const out=process.env.SUBPAGE_EVIDENCE_DIR||'docs/evidence/five-pages';await fs.mkdir(out,{recursive:true});
 const bytes=await fs.readFile('_preview/publication.json'),manifest=JSON.parse(bytes),pages=manifest.pages.filter(p=>p.id!=='home');
-assert.equal(pages.length,16);
+assert.equal(pages.length,26);
 const evidence={sourceCommit:manifest.sourceCommit,revision:manifest.revision,manifestSHA256:createHash('sha256').update(bytes).digest('hex'),browser:'Chromium',pages:[],compact:[],noJs:[],locale:[],errors:[],failedResources:[]};
 const browser=await chromium.launch({headless:true});
 const watch=page=>{page.on('pageerror',e=>evidence.errors.push({url:page.url(),message:e.message}));page.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)evidence.failedResources.push({url:r.url(),status:r.status()});});page.on('requestfailed',r=>{if(r.url().startsWith(base)&&r.failure()?.errorText!=='net::ERR_ABORTED')evidence.failedResources.push({url:r.url(),error:r.failure()?.errorText});});};
@@ -50,7 +50,7 @@ try{
   if(item.kind==='brand'){const geometry=await page.locator('header').evaluate(el=>{const left=el.querySelector('.navl').getBoundingClientRect(),right=el.querySelector('.navr').getBoundingClientRect();return{left:left.right,right:right.left};});assert(geometry.left<=geometry.right);}
   await page.locator(header).screenshot({path:`${out}/${item.id}-${item.lang}-320-header.png`});evidence.compact.push({path:item.path,width:320,menu:true,locale:true});
  }
- const pairs={nyxid:['How It Works','工作原理'],ornn:['How It Works','工作原理'],philosophy:['An observation','一个观察'],harness:['Order','秩序'],'nyxid-dossier':['In One Line','一句话'],'nyxid-product':['Three layers, working together.','三层保护，协同工作。'],'ornn-product':['From discovery to use.','从发现技能，到实际使用。'],company:['Direction is part of the work.','确定方向，也是工作的一部分。']};
+ const pairs={nyxid:['How It Works','工作原理'],ornn:['How It Works','工作原理'],philosophy:['An observation','一个观察'],harness:['Order','秩序'],'nyxid-dossier':['In One Line','一句话'],'nyxid-product':['Three layers, working together.','三层保护，协同工作。'],'ornn-product':['From discovery to use.','从发现技能，到实际使用。'],company:['Direction is part of the work.','确定方向，也是工作的一部分。'],cma:['One console, three services.','一个控制台，三项服务。'],godgpt:['Make room for a conversation.','给对话留些空间。'],research:['How a result gets recorded.','一项结果如何被记录。'],developers:['Work with skills in Ornn.','在 Ornn 中使用技能。'],products:['Looking for technical resources?','在寻找技术资源？']};
  // Explicit semantic pairs validate both directions instead of only section counts.
  for(const width of [1440,375])for(const [id,headings] of Object.entries(pairs))for(const language of ['en','zh-CN']){
   await page.setViewportSize({width,height:900});const item=pages.find(p=>p.id===id&&p.lang===language),other=pages.find(p=>p.id===id&&p.lang!==language),index=language==='en'?0:1;

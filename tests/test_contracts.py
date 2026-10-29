@@ -34,10 +34,10 @@ class PublicationContracts(unittest.TestCase):
 
     def test_only_approved_sources_are_published(self):
         entries=json.loads((ROOT/'content/publication.json').read_text())
-        self.assertEqual(len(entries),9)
-        self.assertEqual(len({e[lang] for e in entries for lang in ('en','zh')}),18)
+        self.assertEqual(len(entries),14)
+        self.assertEqual(len({e[lang] for e in entries for lang in ('en','zh')}),28)
         self.assertIn('harness',{e['id'] for e in entries})
-        self.assertEqual({build.route(e['id'],'en') for e in entries if e['kind']=='brand'}, {'products/nyxid.html','products/ornn.html','company.html'})
+        self.assertEqual({build.route(e['id'],'en') for e in entries if e['kind']=='brand'}, {'products/nyxid.html','products/ornn.html','company.html','products/cma.html','products/godgpt.html','research.html','developers.html','products.html'})
         self.assertEqual(build.route('nyxid','en'),'nyxid.html')
         self.assertEqual(build.route('nyxid-product','zh'),'zh/products/nyxid.html')
 

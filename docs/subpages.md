@@ -1,27 +1,32 @@
 # 官网子页纠偏 / Official subpage restoration
 
-本轮仅新增与当前官网对应的 NyxID、Ornn、Company 三页及中文，不迁移 Research、Developers、CMA、GodGPT。已确认首页仅修正 NyxID、Ornn、About 链接，slogan、hero、旗舰卡、shader、视频与研究卡渐显保留。
+官网品牌页现覆盖 NyxID、Ornn、Company、CMA、GodGPT、Research、Developers、Products 八页及中文。已确认首页仅修正 NyxID、Ornn、About 链接，slogan、hero、旗舰卡、shader、视频与研究卡渐显保留。
 
-This change adds the existing official NyxID, Ornn and Company pages with Chinese counterparts. Research, Developers, CMA and GodGPT remain online links. Homepage changes only correct the three destinations; approved copy, hero, flagship card, shader, videos and reveal behavior remain intact.
+The official brand publication covers NyxID, Ornn, Company, CMA, GodGPT, Research, Developers and Products with Chinese counterparts. Homepage changes only correct the three destinations; approved copy, hero, flagship card, shader, videos and reveal behavior remain intact.
 
 | 内容 / Content | English | 中文 / Chinese |
 |---|---|---|
 | NyxID product | `products/nyxid.html` | `zh/products/nyxid.html` |
 | Ornn product | `products/ornn.html` | `zh/products/ornn.html` |
 | Company | `company.html` | `zh/company.html` |
+| CMA | `products/cma.html` | `zh/products/cma.html` |
+| GodGPT | `products/godgpt.html` | `zh/products/godgpt.html` |
+| Research | `research.html` | `zh/research.html` |
+| Developers | `developers.html` | `zh/developers.html` |
+| Products | `products.html` | `zh/products.html` |
 | NyxID archived technical overview | `nyxid.html` | `zh/nyxid.html` |
 | Ornn archived technical overview | `ornn.html` | `zh/ornn.html` |
 | Philosophy | `philosophy.html` | `zh/philosophy.html` |
 | Harness essay | `harness.html` | `zh/harness.html` |
 | NyxID dossier | `nyxid-dossier.html` | `zh/nyxid-dossier.html` |
 
-`content/publication.json` 明确列出 9 个主题、18 个 HTML（首页 2 + 新官网页 6 + 原文章 10）。产品 ID 为 `nyxid-product` / `ornn-product`，不会覆盖旧 `read/{en,zh}/nyxid.md`、`ornn.md`；只保留六个真实旧中文 alias，不生成虚构历史路径。
+`content/publication.json` 明确列出 14 个主题、28 个 HTML（首页 2 + 官网页 16 + 原文章 10）。产品 ID 为 `nyxid-product` / `ornn-product`，不会覆盖旧 `read/{en,zh}/nyxid.md`、`ornn.md`；只保留六个真实旧中文 alias，不生成虚构历史路径。
 
-The manifest explicitly contains nine subjects and 18 HTML documents: two homepages, six new official pages and ten original articles. Distinct product IDs keep existing article mirrors intact. Only the six real legacy Chinese aliases are generated.
+The manifest explicitly contains 14 subjects and 28 HTML documents: two homepages, 16 official pages and ten original articles. Distinct product IDs keep existing article mirrors intact. Only the six real legacy Chinese aliases are generated.
 
 ## 来源与模板 / Sources and templates
 
-2026-10-29 从 `chrono-ai.fun` 获取的完整 HTML 冻结于 `content/brand/*.html`，URL、日期、原始 SHA-256 及字节数见 `content/brand/sources.json`；线上 CSS/JS 原件保存在 `docs/sources/online-2026-10-29/`。不将 `origin/main` 的原 QMD 宣称为当前官网源码。
+2026-10-29 从 `chrono-ai.fun` 获取的八页完整 HTML 冻结于 `content/brand/*.html`，URL、日期、原始 SHA-256 及字节数见 `content/brand/sources.json`；线上 CSS/JS 原件保存在 `docs/sources/online-2026-10-29/`。不将 `origin/main` 的原 QMD 宣称为当前官网源码。
 
 Complete official HTML captured on 2026-10-29 is frozen in `content/brand/*.html`. Source URLs, capture date, original SHA-256 hashes and byte counts are recorded in `sources.json`; original CSS/JS is archived under `docs/sources/online-2026-10-29/`. The original QMD repository is not presented as the current official site's source.
 
@@ -29,9 +34,9 @@ Complete official HTML captured on 2026-10-29 is frozen in `content/brand/*.html
 
 The adapter preserves official components, SVGs, CTA labels, body classes and substantive English text, with separate Chinese dictionaries. The standalone brand template reuses existing fonts, site styles and locale controls without the article framework. Dedicated motion code preserves official paths, the 12-second diagram sequence and pointer ranges while localizing controls and cleaning up observers, frames and listeners.
 
-预期差异仅为：语言入口、站内目标本地化、静态 SEO/AI 镜像、本地字体，以及将 Cloudflare 邮件保护还原为同一邮箱的原生 mailto。共享导航延续已批准的 1023px 断点和紧凑手机控件；不会将这些规则回退到线上旧版本。响应式 NyxID SVG 仍保留两份，机器镜像仅输出一次相同语义。
+预期差异仅为：语言入口、全站目标本地化、静态 SEO/AI 镜像、本地字体，以及将 Cloudflare 邮件保护还原为同一邮箱的原生 mailto。共享导航延续已批准的 1023px 断点和紧凑手机控件；不会将这些规则回退到线上旧版本。响应式 NyxID SVG 仍保留两份，机器镜像仅输出一次相同语义。
 
-Expected differences are locale controls, localized internal destinations, SEO/AI representations, locally served fonts and the same contact address expressed as native mailto instead of Cloudflare protection. Shared navigation retains the approved 1023px breakpoint and compact controls. Both responsive NyxID SVGs remain in HTML; identical diagram semantics appear once in Markdown.
+Expected differences are locale controls, localized official-site destinations, SEO/AI representations, locally served fonts and the same contact address expressed as native mailto instead of Cloudflare protection. Shared navigation retains the approved 1023px breakpoint and compact controls. Both responsive NyxID SVGs remain in HTML; identical diagram semantics appear once in Markdown.
 
 ## 原文与文章外壳 / Original articles
 
@@ -45,10 +50,15 @@ Articles retain native Quarto navigation/footer and the flatly/darkly framework.
 
 ## 验证与回滚 / Verification and rollback
 
-`tests/subpages.mjs` 按清单检查全部 16 个子页：中英 × 1440/375、320 导航、无 JS 全文与原生语言链接、双向语义章节、目录、菜单、图片解码及本地失败请求。`tests/brand-compare.mjs` 对三页英文作线上/本地同视口截图、正文标题、SVG 路径、CTA 目标和几何比较。`verify_site.py` 另逐字核对冻结英文 main，并检查响应式图示镜像去重。
+`tests/subpages.mjs` 按清单检查全部 26 个子页：中英 × 1440/375、320 导航、无 JS 全文与原生语言链接、双向语义章节、目录、菜单、图片解码及本地失败请求。`tests/brand-compare.mjs` 对八页英文作线上/本地同视口截图、正文标题、SVG 路径、CTA 目标和几何比较。`verify_site.py` 另逐字核对冻结英文 main，并检查响应式图示镜像去重。
 
 Manifest-driven browser checks cover every subpage, both desktop/mobile widths, compact navigation, no-JS content/locale links, semantic section preservation, TOCs, menus, image decoding and failed local requests. Official-page comparisons cover screenshots, headings, SVG paths, native CTA destinations and geometry. Static checks compare frozen English substantive content and enforce diagram mirror deduplication.
 
-最终源码、包哈希、逐页矩阵、截图和复现命令存放 `docs/evidence/subpages/`。浏览器证据是 Chromium 视口检查，不等于真机或所有浏览器认证；历史文章的原始外链及旧安装说明没有被执行，也不声明全部外链健康。完整包回滚或 revert 本次实施提交后重建即可；本轮不 push、不 PR、不部署。
+最终源码、包哈希、逐页矩阵、截图和复现命令存放 `docs/evidence/five-pages/`。浏览器证据是 Chromium 视口检查，不等于真机或所有浏览器认证；历史文章的原始外链及旧安装说明没有被执行，也不声明全部外链健康。完整包回滚或 revert 本次实施提交后重建即可；本轮不 push、不 PR、不部署。
 
 Final source/package hashes, page matrices, screenshots and reproduction commands live under the isolated evidence directory. Chromium viewport evidence is not physical-device or universal browser certification. Historical external links and installation commands are preserved without execution or a blanket health claim. Roll back the package or revert the implementation and rebuild. No push, PR or deployment is performed.
+
+
+剩余五页的来源、全站路由回归、Research 有界性能理由与实际绘制测量另见 [补齐记录](remaining-pages.md)。上一轮三页交付的原始证据仍保留在 `docs/evidence/subpages/`。
+
+See the remaining-pages record for provenance, site-wide route regressions and bounded Research rendering costs. The earlier three-page delivery evidence remains unchanged in its original evidence directory.

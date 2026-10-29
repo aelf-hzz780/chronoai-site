@@ -1,0 +1,18 @@
+{
+  "CMA · ChronoAI Managed Agent": "CMA · ChronoAI 云端托管 Agent",
+  "Managed agents, in one console.": "一个控制台，管理云端 Agent。",
+  "Create and operate persistent agents with their own workspaces, running in the cloud.": "创建和运营在云端持续运行、拥有独立工作空间的 Agent。",
+  "Open CMA ↗": "打开 CMA ↗",
+  "One console, three services.": "一个控制台，三项服务。",
+  "Agent Manager": "Agent 管理器",
+  "Create and operate persistent agents with their own workspaces.": "创建和运营拥有独立工作空间的常驻 Agent。",
+  "Image Manager": "镜像管理器",
+  "Choose a trusted public or private runtime image for each agent.": "为每个 Agent 选择可信的公共或私有运行时镜像。",
+  "Event Gateway": "事件网关",
+  "Connect event channels and deliver verified events to your agents.": "连接事件渠道，并将经过验证的事件传递给 Agent。",
+  "Runtime image": "运行时镜像",
+  "Persistent agent": "常驻 Agent",
+  "Verified events": "经验证的事件",
+  "Works with NyxID.": "与 NyxID 协同工作。",
+  "Connect managed agents to the services they need through NyxID.": "通过 NyxID，将托管 Agent 连接到所需服务。"
+}

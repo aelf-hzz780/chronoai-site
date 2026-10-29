@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STAGE = ROOT/'.build'
 sys.path.insert(0, str(ROOT/'scripts'))
 from video_content import read_videos, watch_url, locale_video_config
-from brand_content import brand_body, translate
+from brand_content import brand_body, translate, localize_links
 
 ENTRIES = json.loads((ROOT/'content/publication.json').read_text())
 ROUTES = {entry['id']: entry.get('path', 'index.html' if entry['id']=='home' else entry['id']+'.html') for entry in ENTRIES}
@@ -102,6 +102,7 @@ def home_body(language, current, config):
         link['aria-current'] = 'page'
     source = resolve_tokens(str(soup), language, current, config)
     soup = BeautifulSoup(source, 'html.parser')
+    localize_links(soup,config['siteUrl']+current,current,language,config,ENTRIES,route,relative)
     settings=soup.new_tag('script',id='video-config',type='application/json')
     settings.string=json.dumps(locale_video_config(config['videosConfig'], language, lambda asset:relative(asset,current)),ensure_ascii=False).replace('<','\\u003c')
     soup.append(settings)
@@ -116,8 +117,9 @@ def article_navigation(config):
         return {'text':label, 'href':route(identifier,'en')}
     return {'left':[
         {'text':'Philosophy','menu':[item('One-Person Company','philosophy'),item('Order, Not Tools','harness')]},
-        {'text':'Products','menu':[item('NyxID','nyxid-product'),item('Ornn','ornn-product'),item('NyxID technical overview','nyxid'),item('Ornn technical overview','ornn')]},
-        {'text':'Research','menu':[item('The AI Agent Connectivity Crisis','nyxid-dossier')]},
+        {'text':'Products','menu':[item('All products','products'),item('NyxID','nyxid-product'),item('Ornn','ornn-product'),item('CMA','cma'),item('GodGPT','godgpt'),item('NyxID technical overview','nyxid'),item('Ornn technical overview','ornn')]},
+        {'text':'Research','menu':[item('Research library','research'),item('The AI Agent Connectivity Crisis','nyxid-dossier')]},
+        item('Developers','developers'),
         item('About ChronoAI','company')],
         'right':[{'icon':'github','href':config['external']['github']},{'text':'中文','href':'zh/index.html'}]}
 
@@ -305,7 +307,7 @@ def write_derivatives(output, pages, config, revision, quarto, preview):
                         link['href']=relative(route(identifier,locale),page['path'])
                         break
             if locale=='zh':
-                translate(soup.select_one('#quarto-header'),{'ChronoAI':'ChronoAI','Philosophy':'组织理念','One-Person Company':'一人公司','Order, Not Tools':'秩序，不是工具','Products':'产品','NyxID technical overview':'NyxID 技术概览','Ornn technical overview':'Ornn 技术概览','Research':'研究','The AI Agent Connectivity Crisis':'AI Agent 连接危机','About ChronoAI':'关于 ChronoAI'})
+                translate(soup.select_one('#quarto-header'),{'ChronoAI':'ChronoAI','Philosophy':'组织理念','One-Person Company':'一人公司','Order, Not Tools':'秩序，不是工具','Products':'产品','All products':'所有产品','NyxID technical overview':'NyxID 技术概览','Ornn technical overview':'Ornn 技术概览','Research':'研究','Research library':'研究知识库','Developers':'开发者资源','The AI Agent Connectivity Crisis':'AI Agent 连接危机','About ChronoAI':'关于 ChronoAI'})
         if page['id'] != 'home':
             other = next(p for p in pages if p['id']==page['id'] and p['lang']!=page['lang'])
             other_soup = BeautifulSoup((output/other['path']).read_text(),'html.parser')
@@ -321,6 +323,7 @@ def write_derivatives(output, pages, config, revision, quarto, preview):
             mapping.string=json.dumps(anchors,ensure_ascii=False).replace('<','\\u003c')
             soup.body.append(mapping)
         # Language navigation is an enhancement; native links still work without JS.
+        localize_links(soup,page['url'],page['path'],'zh' if page['lang']=='zh-CN' else 'en',config,ENTRIES,route,relative)
         script=soup.new_tag('script',src=relative('assets/locale.js',page['path']),defer=True)
         if not soup.select_one('script[src$="locale.js"]'):soup.body.append(script)
         path.write_text(('<!doctype html>\n' if not str(soup).lower().startswith('<!doctype') else '')+str(soup))

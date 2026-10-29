@@ -16,9 +16,9 @@
   const progress=new IntersectionObserver(entries=>entries.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('on');progress.unobserve(entry.target);}
   }),{rootMargin:'0px 0px -35% 0px'});
-  if(document.querySelector('.c1'))document.documentElement.classList.add('js5');
+  if(document.querySelector('.h5 .rv,.cat,.wline'))document.documentElement.classList.add('js5');
   document.querySelectorAll('.h5 .rv').forEach(el=>reveal.observe(el));
-  document.querySelectorAll('.st4,.dt,.crow,.kind,.qc,.qa').forEach(el=>progress.observe(el));
+  document.querySelectorAll('.st4,.dt,.crow,.kind,.qc,.qa,.wline,.cat').forEach(el=>progress.observe(el));
   const hero=document.querySelector('.nx-hero'),mark=document.querySelector('.nx-mark svg'),glow=document.querySelector('.nx-glow');
   const reset=()=>{
     mark?.style.setProperty('--rx','0deg');mark?.style.setProperty('--ry','0deg');

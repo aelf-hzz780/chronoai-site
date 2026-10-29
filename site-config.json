@@ -2,10 +2,6 @@
   "origin": "https://chronoaiproject.github.io",
   "basePath": "/chronoai-site/",
   "external": {
-    "research": "https://chrono-ai.fun/research.html",
-    "developers": "https://chrono-ai.fun/developers.html",
-    "cma": "https://chrono-ai.fun/products/cma.html",
-    "godgpt": "https://chrono-ai.fun/products/godgpt.html",
     "nyxApp": "https://nyx.chrono-ai.fun/",
     "nyxDocs": "https://nyx.chrono-ai.fun/docs",
     "ornnApp": "https://ornn.chrono-ai.fun/",
