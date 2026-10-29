@@ -54,3 +54,8 @@ Final package/source hashes and per-page evidence live in a separate directory. 
 本地预览响应使用 `Cache-Control: no-store`，并忽略预览请求中的条件缓存头，确保重建后实际返回当前脚本；正式包本地验证服务仍保留原有条件响应行为。已加载的旧预览标签可单页强制刷新一次，不需清除全局浏览器缓存。最终 HTTP 验证以未来日期的 If-Modified-Since 请求确认预览返回200及当前locale.js哈希、公开模式仍返回304。
 
 Local preview responses disable storage and conditional-cache validation so rebuilt assets are served as current bytes. Public-mode validation keeps normal conditional responses. A previously loaded preview tab can be force-reloaded once without clearing global browser data. Final HTTP checks verify a future-date conditional request returns current asset bytes in preview and 304 in public mode.
+
+
+为覆盖浏览器已缓存旧URL的首次重开，预览HTML中每个本地script与stylesheet引用附当前文件SHA-256前12位作为v参数，已有其他query参数和fragment保留；正式HTML不附该预览参数。静态验收逐引用重算文件哈希，不只检查参数存在。这样新页面会请求明确的新资源URL，无需用户清除任何浏览器缓存。
+
+To cover first navigation from a browser that already cached old URLs, preview HTML fingerprints each local script/stylesheet URL with the first 12 SHA-256 characters of the actual file. Other query values/fragments remain intact; public HTML receives no preview parameter. Output verification recomputes every resource hash rather than checking parameter presence alone.

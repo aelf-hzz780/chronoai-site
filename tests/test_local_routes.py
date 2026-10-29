@@ -2,7 +2,9 @@
 import importlib.util
 from pathlib import Path
 import unittest
-from urllib.parse import urlparse, urljoin
+import tempfile
+import hashlib
+from urllib.parse import urlparse, urljoin, parse_qs
 from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -42,6 +44,17 @@ class LocalOfficialRoutes(unittest.TestCase):
         self.assertFalse(soup.a.has_attr('target'))
         self.assertEqual(soup.select('a')[1]['href'],'https://nyx.chrono-ai.fun/docs?lang=en#setup')
         self.assertEqual(soup.select_one('pre a')['href'],'https://chrono-ai.fun/research.html')
+
+    def test_preview_asset_versions_match_bytes_without_losing_query(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output=Path(directory);(output/'assets').mkdir();(output/'zh').mkdir()
+            raw=b'window.localeReady=true;';(output/'assets/locale.js').write_bytes(raw)
+            soup=BeautifulSoup('<script src="../assets/locale.js?feature=1&amp;feature=2#ready"></script><script src="https://example.org/external.js"></script>','html.parser')
+            build.version_preview_assets(soup,'zh/index.html',output,build.load_configuration())
+            address=urlparse(soup.script['src'])
+            self.assertEqual(parse_qs(address.query),{'feature':['1','2'],'v':[hashlib.sha256(raw).hexdigest()[:12]]})
+            self.assertEqual(address.fragment,'ready')
+            self.assertEqual(soup.select('script')[1]['src'],'https://example.org/external.js')
 
 
 if __name__=='__main__':unittest.main()

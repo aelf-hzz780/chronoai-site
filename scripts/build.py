@@ -11,7 +11,7 @@ import shutil
 import subprocess
 import sys
 import uuid
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, parse_qsl, urlencode, unquote
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 from bs4 import BeautifulSoup
@@ -255,6 +255,20 @@ def markdown_body(soup, page, config, quarto):
     return result.stdout.strip()+'\n'
 
 
+def version_preview_assets(soup, current, output, config):
+    """A new preview document must not reuse an old browser-cached script URL."""
+    for node in soup.select('script[src], link[rel=stylesheet][href]'):
+        attr='src' if node.name=='script' else 'href'
+        parsed=urlparse(node[attr])
+        if parsed.scheme or parsed.netloc:continue
+        asset=(output/unquote(parsed.path).removeprefix(config['basePath'])) if parsed.path.startswith('/') else output/Path(current).parent/unquote(parsed.path)
+        if not asset.resolve().is_relative_to(output.resolve()) or not asset.is_file():
+            raise ValueError('Invalid local preview asset: '+node[attr])
+        version=hashlib.sha256(asset.read_bytes()).hexdigest()[:12]
+        query=[(key,value) for key,value in parse_qsl(parsed.query,keep_blank_values=True) if key!='v']
+        node[attr]=parsed._replace(query=urlencode([*query,('v',version)])).geturl()
+
+
 def write_derivatives(output, pages, config, revision, quarto, preview):
     for page in pages:
         path = output/page['path']; soup = BeautifulSoup(path.read_text(),'html.parser')
@@ -326,6 +340,7 @@ def write_derivatives(output, pages, config, revision, quarto, preview):
         localize_links(soup,page['url'],page['path'],'zh' if page['lang']=='zh-CN' else 'en',config,ENTRIES,route,relative)
         script=soup.new_tag('script',src=relative('assets/locale.js',page['path']),defer=True)
         if not soup.select_one('script[src$="locale.js"]'):soup.body.append(script)
+        if preview:version_preview_assets(soup,page['path'],output,config)
         path.write_text(('<!doctype html>\n' if not str(soup).lower().startswith('<!doctype') else '')+str(soup))
         mirror=output/page['markdown'];mirror.parent.mkdir(parents=True,exist_ok=True)
         mirror.write_text('---\n'+yaml.safe_dump({'title':page['title'],'lang':page['lang'],'canonical':page['url'],'content-revision':revision},allow_unicode=True,sort_keys=False)+'---\n\n'+markdown_body(soup,page,config,quarto))

@@ -1,7 +1,7 @@
 """Acceptance contracts for the actual Quarto output (run after scripts/build.py)."""
 import json, sys, subprocess, os, shutil
 from pathlib import Path
-from urllib.parse import urlparse, unquote, urljoin
+from urllib.parse import urlparse, unquote, urljoin, parse_qs
 from xml.etree import ElementTree as ET
 from bs4 import BeautifulSoup
 
@@ -35,6 +35,15 @@ for page in manifest['pages']:
     assert len(soup.select('link[hreflang]')) == 3
     assert bool(soup.select_one('meta[name=robots]')) == manifest['preview']
     assert soup.select_one('script[type="application/ld+json"]')
+    for asset in soup.select('script[src], link[rel=stylesheet][href]'):
+        address=urlparse(asset['src' if asset.name=='script' else 'href'])
+        if address.scheme or address.netloc:continue
+        target=(root/unquote(address.path).removeprefix(manifest['basePath'])) if address.path.startswith('/') else path.parent/unquote(address.path)
+        if manifest['preview']:
+            import hashlib
+            assert parse_qs(address.query).get('v')==[hashlib.sha256(target.read_bytes()).hexdigest()[:12]],(page['path'],address.path,'stale preview asset URL')
+        else:
+            assert 'v' not in parse_qs(address.query),(page['path'],'preview version leaked to public assets')
     md = (root/page['markdown']).read_text()
     assert manifest['revision'] in md and page['url'] in md
     import re
