@@ -1,0 +1,74 @@
+[ 1/28] index.qmd
+[ 2/28] zh/index.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[ 3/28] nyxid.qmd
+[ 4/28] zh/nyxid.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[ 5/28] ornn.qmd
+[ 6/28] zh/ornn.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[ 7/28] philosophy.qmd
+[ 8/28] zh/philosophy.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[ 9/28] harness.qmd
+[10/28] zh/harness.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[11/28] nyxid-dossier.qmd
+[12/28] zh/nyxid-dossier.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[13/28] products/nyxid.qmd
+[14/28] zh/products/nyxid.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[15/28] products/ornn.qmd
+[16/28] zh/products/ornn.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[17/28] company.qmd
+[18/28] zh/company.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[19/28] products/cma.qmd
+[20/28] zh/products/cma.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[21/28] products/godgpt.qmd
+[22/28] zh/products/godgpt.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[23/28] research.qmd
+[24/28] zh/research.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[25/28] developers.qmd
+[26/28] zh/developers.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+[27/28] products.qmd
+[28/28] zh/products.qmd
+[WARNING] Could not load translations for zh-CN
+  translations/zh.yaml:
+[WARNING] The term Abstract has no translation defined.
+
+Output created: ../_site/index.html
+
+Built 28 canonical pages at /Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/_site; revision 5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672

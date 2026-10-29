@@ -1,0 +1,687 @@
+{
+  "base": "http://127.0.0.1:8768/chronoai-site/",
+  "contentRevision": "5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672",
+  "bundleManifestSHA256": "d9b2e402a83ac6a35291d37378f414f56d7424788b39cc5d848c34d9da0c3cec",
+  "responsive": [
+    {
+      "width": 375,
+      "lang": "en",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 900,
+        "top": 0,
+        "right": 375,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 20,
+        "y": 501.640625,
+        "width": 335,
+        "height": 22.71875,
+        "top": 501.640625,
+        "right": 355,
+        "bottom": 524.359375,
+        "left": 20
+      },
+      "tagline": [
+        "AI that does",
+        "more than chat."
+      ],
+      "description": "Hand the boring stuff to AI, so you can focus on what matters. Connect your apps, decide what it can touch, and let it get to work.",
+      "logo": 1062
+    },
+    {
+      "width": 375,
+      "lang": "zh-CN",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 900,
+        "top": 0,
+        "right": 375,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 20,
+        "y": 501.640625,
+        "width": 335,
+        "height": 22.71875,
+        "top": 501.640625,
+        "right": 355,
+        "bottom": 524.359375,
+        "left": 20
+      },
+      "tagline": [
+        "AI，",
+        "超越聊天。"
+      ],
+      "description": "把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。",
+      "logo": 1062
+    },
+    {
+      "width": 700,
+      "lang": "en",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 700,
+        "height": 900,
+        "top": 0,
+        "right": 700,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 20,
+        "y": 491.78125,
+        "width": 660,
+        "height": 42.421875,
+        "top": 491.78125,
+        "right": 680,
+        "bottom": 534.203125,
+        "left": 20
+      },
+      "tagline": [
+        "AI that does",
+        "more than chat."
+      ],
+      "description": "Hand the boring stuff to AI, so you can focus on what matters. Connect your apps, decide what it can touch, and let it get to work.",
+      "logo": 1062
+    },
+    {
+      "width": 700,
+      "lang": "zh-CN",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 700,
+        "height": 900,
+        "top": 0,
+        "right": 700,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 20,
+        "y": 491.78125,
+        "width": 660,
+        "height": 42.421875,
+        "top": 491.78125,
+        "right": 680,
+        "bottom": 534.203125,
+        "left": 20
+      },
+      "tagline": [
+        "AI，",
+        "超越聊天。"
+      ],
+      "description": "把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。",
+      "logo": 1062
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 900,
+        "top": 0,
+        "right": 768,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 20,
+        "y": 489.734375,
+        "width": 728,
+        "height": 46.53125,
+        "top": 489.734375,
+        "right": 748,
+        "bottom": 536.265625,
+        "left": 20
+      },
+      "tagline": [
+        "AI that does",
+        "more than chat."
+      ],
+      "description": "Hand the boring stuff to AI, so you can focus on what matters. Connect your apps, decide what it can touch, and let it get to work.",
+      "logo": 1062
+    },
+    {
+      "width": 768,
+      "lang": "zh-CN",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 900,
+        "top": 0,
+        "right": 768,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 20,
+        "y": 489.734375,
+        "width": 728,
+        "height": 46.53125,
+        "top": 489.734375,
+        "right": 748,
+        "bottom": 536.265625,
+        "left": 20
+      },
+      "tagline": [
+        "AI，",
+        "超越聊天。"
+      ],
+      "description": "把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。",
+      "logo": 1062
+    },
+    {
+      "width": 1024,
+      "lang": "en",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 900,
+        "top": 0,
+        "right": 1024,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 64,
+        "y": 482.140625,
+        "width": 896,
+        "height": 61.703125,
+        "top": 482.140625,
+        "right": 960,
+        "bottom": 543.84375,
+        "left": 64
+      },
+      "tagline": [
+        "AI that does",
+        "more than chat."
+      ],
+      "description": "Hand the boring stuff to AI, so you can focus on what matters. Connect your apps, decide what it can touch, and let it get to work.",
+      "logo": 1062
+    },
+    {
+      "width": 1024,
+      "lang": "zh-CN",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 900,
+        "top": 0,
+        "right": 1024,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 64,
+        "y": 482.140625,
+        "width": 896,
+        "height": 61.703125,
+        "top": 482.140625,
+        "right": 960,
+        "bottom": 543.84375,
+        "left": 64
+      },
+      "tagline": [
+        "AI，",
+        "超越聊天。"
+      ],
+      "description": "把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。",
+      "logo": 1062
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "top": 0,
+        "right": 1440,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 80,
+        "y": 480.625,
+        "width": 1280,
+        "height": 64.734375,
+        "top": 480.625,
+        "right": 1360,
+        "bottom": 545.359375,
+        "left": 80
+      },
+      "tagline": [
+        "AI that does",
+        "more than chat."
+      ],
+      "description": "Hand the boring stuff to AI, so you can focus on what matters. Connect your apps, decide what it can touch, and let it get to work.",
+      "logo": 1062
+    },
+    {
+      "width": 1440,
+      "lang": "zh-CN",
+      "mode": "CSS1Compat",
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "top": 0,
+        "right": 1440,
+        "bottom": 900,
+        "left": 0
+      },
+      "h1": {
+        "x": 80,
+        "y": 480.625,
+        "width": 1280,
+        "height": 64.734375,
+        "top": 480.625,
+        "right": 1360,
+        "bottom": 545.359375,
+        "left": 80
+      },
+      "tagline": [
+        "AI，",
+        "超越聊天。"
+      ],
+      "description": "把无聊的事交给 AI，你专注真正重要的事。连接你的应用，决定它能碰什么，然后让它开工。",
+      "logo": 1062
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "failedRequests": [],
+  "prototypeGeometry": [
+    {
+      "width": 375,
+      "expected": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 65
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 20,
+          "y": 116,
+          "width": 335,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 20,
+          "y": 501.640625,
+          "width": 335,
+          "height": 22.71875
+        },
+        ".bigslogan": {
+          "x": 20,
+          "y": 501.640625,
+          "width": 335,
+          "height": 22.71875
+        }
+      },
+      "actual": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 65
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 20,
+          "y": 116,
+          "width": 335,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 20,
+          "y": 501.640625,
+          "width": 335,
+          "height": 22.71875
+        },
+        ".bigslogan": {
+          "x": 20,
+          "y": 501.640625,
+          "width": 335,
+          "height": 22.71875
+        }
+      }
+    },
+    {
+      "width": 700,
+      "expected": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 65
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 20,
+          "y": 116,
+          "width": 660,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 20,
+          "y": 491.78125,
+          "width": 660,
+          "height": 42.421875
+        },
+        ".bigslogan": {
+          "x": 20,
+          "y": 491.78125,
+          "width": 660,
+          "height": 42.421875
+        }
+      },
+      "actual": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 65
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 20,
+          "y": 116,
+          "width": 660,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 20,
+          "y": 491.78125,
+          "width": 660,
+          "height": 42.421875
+        },
+        ".bigslogan": {
+          "x": 20,
+          "y": 491.78125,
+          "width": 660,
+          "height": 42.421875
+        }
+      }
+    },
+    {
+      "width": 768,
+      "expected": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 73
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 20,
+          "y": 116,
+          "width": 728,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 20,
+          "y": 489.734375,
+          "width": 728,
+          "height": 46.53125
+        },
+        ".bigslogan": {
+          "x": 20,
+          "y": 489.734375,
+          "width": 728,
+          "height": 46.53125
+        }
+      },
+      "actual": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 73
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 20,
+          "y": 116,
+          "width": 728,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 20,
+          "y": 489.734375,
+          "width": 728,
+          "height": 46.53125
+        },
+        ".bigslogan": {
+          "x": 20,
+          "y": 489.734375,
+          "width": 728,
+          "height": 46.53125
+        }
+      }
+    },
+    {
+      "width": 1024,
+      "expected": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 73
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 64,
+          "y": 116,
+          "width": 896,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 64,
+          "y": 482.140625,
+          "width": 896,
+          "height": 61.703125
+        },
+        ".bigslogan": {
+          "x": 64,
+          "y": 482.140625,
+          "width": 896,
+          "height": 61.703125
+        }
+      },
+      "actual": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 73
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 64,
+          "y": 116,
+          "width": 896,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 64,
+          "y": 482.140625,
+          "width": 896,
+          "height": 61.703125
+        },
+        ".bigslogan": {
+          "x": 64,
+          "y": 482.140625,
+          "width": 896,
+          "height": 61.703125
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "expected": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 73
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 80,
+          "y": 116,
+          "width": 1280,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 80,
+          "y": 480.625,
+          "width": 1280,
+          "height": 64.734375
+        },
+        ".bigslogan": {
+          "x": 80,
+          "y": 480.625,
+          "width": 1280,
+          "height": 64.734375
+        }
+      },
+      "actual": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 73
+        },
+        ".s1": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        ".s1in": {
+          "x": 80,
+          "y": 116,
+          "width": 1280,
+          "height": 740
+        },
+        ".s1text": {
+          "x": 80,
+          "y": 480.625,
+          "width": 1280,
+          "height": 64.734375
+        },
+        ".bigslogan": {
+          "x": 80,
+          "y": 480.625,
+          "width": 1280,
+          "height": 64.734375
+        }
+      }
+    }
+  ],
+  "allArticlesResponsive": true,
+  "articleLocaleAnchor": true,
+  "legacyAnchor": true,
+  "noJsBilingual": true,
+  "allArticlesNoJs": true,
+  "heroCanvas": {
+    "width": 1040,
+    "height": 618
+  },
+  "ctaSettles": true,
+  "ctaOffscreenCleanup": true,
+  "ctaReducedMotionCleanup": true,
+  "ctaKeyboardFocus": true,
+  "simulatedBackgroundCleanup": true,
+  "simulatedPageTransitionRecovery": true,
+  "actualWebglContextLossLink": true,
+  "webglFallbackLink": true,
+  "firstTouchNavigation": true,
+  "delayedSceneLifecycle": true,
+  "status": "pass"
+}

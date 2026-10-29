@@ -1,0 +1,949 @@
+{
+  "sourceCommit": "0b83fc1907f2ee2cae664fb11d9abe6ba083bab5",
+  "revision": "5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672",
+  "manifestSHA256": "d9b2e402a83ac6a35291d37378f414f56d7424788b39cc5d848c34d9da0c3cec",
+  "pages": [
+    {
+      "path": "index.html",
+      "width": 1440,
+      "checkedLocalAnchors": 33,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/index.html",
+      "width": 1440,
+      "checkedLocalAnchors": 33,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "nyxid.html",
+      "width": 1440,
+      "checkedLocalAnchors": 40,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/nyxid.html",
+      "width": 1440,
+      "checkedLocalAnchors": 40,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "ornn.html",
+      "width": 1440,
+      "checkedLocalAnchors": 39,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/ornn.html",
+      "width": 1440,
+      "checkedLocalAnchors": 39,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "philosophy.html",
+      "width": 1440,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/philosophy.html",
+      "width": 1440,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "harness.html",
+      "width": 1440,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/harness.html",
+      "width": 1440,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "width": 1440,
+      "checkedLocalAnchors": 55,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "width": 1440,
+      "checkedLocalAnchors": 55,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/nyxid.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/ornn.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "company.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/company.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/cma.html",
+      "width": 1440,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/cma.html",
+      "width": 1440,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/godgpt.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/godgpt.html",
+      "width": 1440,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "research.html",
+      "width": 1440,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/research.html",
+      "width": 1440,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "developers.html",
+      "width": 1440,
+      "checkedLocalAnchors": 30,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/developers.html",
+      "width": 1440,
+      "checkedLocalAnchors": 30,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products.html",
+      "width": 1440,
+      "checkedLocalAnchors": 34,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products.html",
+      "width": 1440,
+      "checkedLocalAnchors": 34,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "index.html",
+      "width": 375,
+      "checkedLocalAnchors": 33,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/index.html",
+      "width": 375,
+      "checkedLocalAnchors": 33,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "nyxid.html",
+      "width": 375,
+      "checkedLocalAnchors": 35,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/nyxid.html",
+      "width": 375,
+      "checkedLocalAnchors": 35,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "ornn.html",
+      "width": 375,
+      "checkedLocalAnchors": 33,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/ornn.html",
+      "width": 375,
+      "checkedLocalAnchors": 33,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "philosophy.html",
+      "width": 375,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/philosophy.html",
+      "width": 375,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "harness.html",
+      "width": 375,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/harness.html",
+      "width": 375,
+      "checkedLocalAnchors": 19,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "width": 375,
+      "checkedLocalAnchors": 55,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "width": 375,
+      "checkedLocalAnchors": 55,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/nyxid.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/ornn.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "company.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/company.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/cma.html",
+      "width": 375,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/cma.html",
+      "width": 375,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products/godgpt.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/godgpt.html",
+      "width": 375,
+      "checkedLocalAnchors": 28,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "research.html",
+      "width": 375,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/research.html",
+      "width": 375,
+      "checkedLocalAnchors": 29,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "developers.html",
+      "width": 375,
+      "checkedLocalAnchors": 30,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/developers.html",
+      "width": 375,
+      "checkedLocalAnchors": 30,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "products.html",
+      "width": 375,
+      "checkedLocalAnchors": 34,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products.html",
+      "width": 375,
+      "checkedLocalAnchors": 34,
+      "noOfficialSiteEscape": true,
+      "basePath": true,
+      "locale": true
+    }
+  ],
+  "clicks": [
+    {
+      "from": "products/nyxid.html",
+      "to": "/chronoai-site/products.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/products/nyxid.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "products/ornn.html",
+      "to": "/chronoai-site/products.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/products/ornn.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "company.html",
+      "to": "/chronoai-site/research.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/company.html",
+      "to": "/chronoai-site/zh/research.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "products/cma.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "products/cma.html",
+      "to": "/chronoai-site/products.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "zh/products/cma.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/products/cma.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "products/godgpt.html",
+      "to": "/chronoai-site/products.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/products/godgpt.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "research.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "research.html",
+      "to": "/chronoai-site/products.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "zh/research.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/research.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "developers.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "developers.html",
+      "to": "/chronoai-site/products/ornn.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "developers.html",
+      "to": "/chronoai-site/products.html",
+      "width": 1440,
+      "index": 2
+    },
+    {
+      "from": "zh/developers.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/developers.html",
+      "to": "/chronoai-site/zh/products/ornn.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "zh/developers.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 1440,
+      "index": 2
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/ornn.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/cma.html",
+      "width": 1440,
+      "index": 2
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/company.html",
+      "width": 1440,
+      "index": 3
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/company.html",
+      "width": 1440,
+      "index": 4
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/godgpt.html",
+      "width": 1440,
+      "index": 5
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/developers.html",
+      "width": 1440,
+      "index": 6
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 1440,
+      "index": 0
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/ornn.html",
+      "width": 1440,
+      "index": 1
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/cma.html",
+      "width": 1440,
+      "index": 2
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/company.html",
+      "width": 1440,
+      "index": 3
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/company.html",
+      "width": 1440,
+      "index": 4
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/godgpt.html",
+      "width": 1440,
+      "index": 5
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/developers.html",
+      "width": 1440,
+      "index": 6
+    },
+    {
+      "from": "products/nyxid.html",
+      "to": "/chronoai-site/products.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/products/nyxid.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "products/ornn.html",
+      "to": "/chronoai-site/products.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/products/ornn.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "company.html",
+      "to": "/chronoai-site/research.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/company.html",
+      "to": "/chronoai-site/zh/research.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "products/cma.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "products/cma.html",
+      "to": "/chronoai-site/products.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "zh/products/cma.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/products/cma.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "products/godgpt.html",
+      "to": "/chronoai-site/products.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/products/godgpt.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "research.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "research.html",
+      "to": "/chronoai-site/products.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "zh/research.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/research.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "developers.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "developers.html",
+      "to": "/chronoai-site/products/ornn.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "developers.html",
+      "to": "/chronoai-site/products.html",
+      "width": 375,
+      "index": 2
+    },
+    {
+      "from": "zh/developers.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/developers.html",
+      "to": "/chronoai-site/zh/products/ornn.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "zh/developers.html",
+      "to": "/chronoai-site/zh/products.html",
+      "width": 375,
+      "index": 2
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/ornn.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/cma.html",
+      "width": 375,
+      "index": 2
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/company.html",
+      "width": 375,
+      "index": 3
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/company.html",
+      "width": 375,
+      "index": 4
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/products/godgpt.html",
+      "width": 375,
+      "index": 5
+    },
+    {
+      "from": "products.html",
+      "to": "/chronoai-site/developers.html",
+      "width": 375,
+      "index": 6
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/nyxid.html",
+      "width": 375,
+      "index": 0
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/ornn.html",
+      "width": 375,
+      "index": 1
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/cma.html",
+      "width": 375,
+      "index": 2
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/company.html",
+      "width": 375,
+      "index": 3
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/company.html",
+      "width": 375,
+      "index": 4
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/products/godgpt.html",
+      "width": 375,
+      "index": 5
+    },
+    {
+      "from": "zh/products.html",
+      "to": "/chronoai-site/zh/developers.html",
+      "width": 375,
+      "index": 6
+    }
+  ],
+  "readingPosition": [
+    {
+      "id": "products",
+      "from": "en",
+      "width": 1440,
+      "anchor": "heca",
+      "repeatedQuery": true
+    },
+    {
+      "id": "research",
+      "from": "en",
+      "width": 1440,
+      "anchor": "section-4",
+      "repeatedQuery": true
+    },
+    {
+      "id": "products",
+      "from": "zh-CN",
+      "width": 1440,
+      "anchor": "heca",
+      "repeatedQuery": true
+    },
+    {
+      "id": "research",
+      "from": "zh-CN",
+      "width": 1440,
+      "anchor": "section-4",
+      "repeatedQuery": true
+    },
+    {
+      "id": "products",
+      "from": "en",
+      "width": 375,
+      "anchor": "heca",
+      "repeatedQuery": true
+    },
+    {
+      "id": "research",
+      "from": "en",
+      "width": 375,
+      "anchor": "section-4",
+      "repeatedQuery": true
+    },
+    {
+      "id": "products",
+      "from": "zh-CN",
+      "width": 375,
+      "anchor": "heca",
+      "repeatedQuery": true
+    },
+    {
+      "id": "research",
+      "from": "zh-CN",
+      "width": 375,
+      "anchor": "section-4",
+      "repeatedQuery": true
+    }
+  ],
+  "errors": [],
+  "status": "pass"
+}

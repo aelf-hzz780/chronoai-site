@@ -1,0 +1,537 @@
+{
+  "status": "pass",
+  "contentRevision": "5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672",
+  "bundleManifestSHA256": "d0b22cb41aba06df4710abac42a02e385ba2959394b61630e75e1ec114363f32",
+  "preview": false,
+  "base": "http://127.0.0.1:61844/chronoai-site/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/home.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/index.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/home.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/nyxid.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/nyxid.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/ornn.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/ornn.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "philosophy.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/philosophy.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/philosophy.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/philosophy.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "harness.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/harness.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/harness.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/harness.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/nyxid-dossier.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/nyxid-dossier.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "products/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/nyxid-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/nyxid-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "products/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/ornn-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/ornn-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "company.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/company.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/company.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/company.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "products/cma.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/cma.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/products/cma.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/cma.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "products/godgpt.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/godgpt.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/products/godgpt.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/godgpt.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "research.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/research.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/research.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/research.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "developers.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/developers.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/developers.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/developers.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "products.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/products.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "zh/products.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/zh/products.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex",
+      "cacheControl": null
+    },
+    {
+      "path": "index-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "nyxid-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "ornn-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "philosophy-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "harness-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "nyxid-dossier-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "llms.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "mime": "application/xml",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "unknown",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "zh/unknown.html",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "hidden-draft.html",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "read/en/unknown.md",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "scripts/build.py",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "docs/implementation.md",
+      "status": 404,
+      "mime": "text/html",
+      "robots": null,
+      "cacheControl": null
+    },
+    {
+      "path": "http://127.0.0.1:61844/chronoai-site",
+      "method": "GET",
+      "status": 301,
+      "location": "/chronoai-site/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:61844/chronoai-site",
+      "method": "HEAD",
+      "status": 301,
+      "location": "/chronoai-site/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:61844/chronoai-site/zh",
+      "method": "GET",
+      "status": 301,
+      "location": "/chronoai-site/zh/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:61844/chronoai-site/zh",
+      "method": "HEAD",
+      "status": 301,
+      "location": "/chronoai-site/zh/?sample=1"
+    },
+    {
+      "path": "assets/locale.js",
+      "conditionalRequest": true,
+      "status": 304,
+      "cacheControl": null,
+      "currentAssetVerified": false
+    }
+  ]
+}

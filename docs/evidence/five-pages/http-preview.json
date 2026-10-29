@@ -1,0 +1,537 @@
+{
+  "status": "pass",
+  "contentRevision": "5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672",
+  "bundleManifestSHA256": "d9b2e402a83ac6a35291d37378f414f56d7424788b39cc5d848c34d9da0c3cec",
+  "preview": true,
+  "base": "http://127.0.0.1:8768/chronoai-site/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/home.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/index.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/home.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/nyxid.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/nyxid.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/ornn.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/ornn.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "philosophy.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/philosophy.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/philosophy.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/philosophy.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "harness.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/harness.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/harness.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/harness.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/nyxid-dossier.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/nyxid-dossier.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "products/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/nyxid-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/nyxid-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "products/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/ornn-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/ornn-product.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "company.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/company.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/company.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/company.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "products/cma.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/cma.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/products/cma.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/cma.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "products/godgpt.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/godgpt.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/products/godgpt.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/godgpt.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "research.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/research.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/research.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/research.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "developers.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/developers.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/developers.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/developers.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "products.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/products.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/products.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/zh/products.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "index-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "nyxid-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "ornn-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "philosophy-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "harness-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "nyxid-dossier-zh.html",
+      "status": 200,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "llms.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "mime": "application/xml",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "unknown",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "zh/unknown.html",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "hidden-draft.html",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "read/en/unknown.md",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "scripts/build.py",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "docs/implementation.md",
+      "status": 404,
+      "mime": "text/html",
+      "robots": "noindex, nofollow",
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "http://127.0.0.1:8768/chronoai-site",
+      "method": "GET",
+      "status": 301,
+      "location": "/chronoai-site/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:8768/chronoai-site",
+      "method": "HEAD",
+      "status": 301,
+      "location": "/chronoai-site/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:8768/chronoai-site/zh",
+      "method": "GET",
+      "status": 301,
+      "location": "/chronoai-site/zh/?sample=1"
+    },
+    {
+      "path": "http://127.0.0.1:8768/chronoai-site/zh",
+      "method": "HEAD",
+      "status": 301,
+      "location": "/chronoai-site/zh/?sample=1"
+    },
+    {
+      "path": "assets/locale.js",
+      "conditionalRequest": true,
+      "status": 200,
+      "cacheControl": "no-store",
+      "currentAssetVerified": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "sourceCommit": "0b83fc1907f2ee2cae664fb11d9abe6ba083bab5",
+  "manifestSHA256": "d9b2e402a83ac6a35291d37378f414f56d7424788b39cc5d848c34d9da0c3cec",
+  "url": "http://127.0.0.1:8768/chronoai-site/zh/products.html?preview=5658af2b3f51",
+  "documentCacheControl": "no-store",
+  "assetURL": "http://127.0.0.1:8768/chronoai-site/assets/locale.js?v=3c2d4b3fa3ff",
+  "assetCacheControl": "no-store",
+  "assetSHA256": "3c2d4b3fa3ff17200cc4a0a16f660b0e8cfdf6731c8fcacc0ef5e291a95afeb4",
+  "conditionalStatus": 200,
+  "contentFingerprintMatchesBytes": true,
+  "globalBrowserCacheCleared": false
+}

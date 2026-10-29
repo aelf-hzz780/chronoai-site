@@ -1,0 +1,68 @@
+FFF
+======================================================================
+FAIL: test_all_approved_official_routes_are_declared (test_local_routes.LocalOfficialRoutes.test_all_approved_official_routes_are_declared)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/tests/test_local_routes.py", line 22, in test_all_approved_official_routes_are_declared
+    self.assertEqual({e['path'] for e in build.ENTRIES if e['kind']=='brand'},APPROVED)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'products/cma.html'
+'developers.html'
+'products.html'
+'research.html'
+'products/godgpt.html'
+
+======================================================================
+FAIL: test_brand_menus_cards_cta_and_all_products_stay_local (test_local_routes.LocalOfficialRoutes.test_brand_menus_cards_cta_and_all_products_stay_local)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/tests/test_local_routes.py", line 34, in test_brand_menus_cards_cta_and_all_products_stay_local
+    self.assert_local(build.brand_body(ROOT,entry,language,build.route(entry['id'],language),config,build.route,build.relative),entry['id']+' '+language)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/tests/test_local_routes.py", line 19, in assert_local
+    self.assertEqual(leaked,[],context+': official-site destinations must stay local')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['https://chrono-ai.fun/research.html', 'h[499 chars]tml'] != []
+
+First list contains 13 additional elements.
+First extra element 0:
+'https://chrono-ai.fun/research.html'
+
++ []
+- ['https://chrono-ai.fun/research.html',
+-  'https://chrono-ai.fun/products/cma.html',
+-  'https://chrono-ai.fun/products/godgpt.html',
+-  'https://chrono-ai.fun/developers.html',
+-  'https://chrono-ai.fun/research.html',
+-  'https://chrono-ai.fun/products/cma.html',
+-  'https://chrono-ai.fun/products/godgpt.html',
+-  'https://chrono-ai.fun/developers.html',
+-  'https://chrono-ai.fun/products.html',
+-  'https://chrono-ai.fun/research.html',
+-  'https://chrono-ai.fun/products/cma.html',
+-  'https://chrono-ai.fun/products/godgpt.html',
+-  'https://chrono-ai.fun/developers.html'] : nyxid-product en: official-site destinations must stay local
+
+======================================================================
+FAIL: test_home_entries_stay_in_the_selected_locale (test_local_routes.LocalOfficialRoutes.test_home_entries_stay_in_the_selected_locale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/tests/test_local_routes.py", line 27, in test_home_entries_stay_in_the_selected_locale
+    self.assert_local(build.home_body(language,build.route('home',language),config),'home '+language)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huangzongzhe/workspace/vibeCoding/chrono-ai官网/chronoai-site/tests/test_local_routes.py", line 19, in assert_local
+    self.assertEqual(leaked,[],context+': official-site destinations must stay local')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['https://chrono-ai.fun/research.html', 'h[620 chars]tml'] != []
+
+First list contains 16 additional elements.
+First extra element 0:
+'https://chrono-ai.fun/research.html'
+
+Diff is 720 characters long. Set self.maxDiff to None to see it. : home en: official-site destinations must stay local
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.112s
+
+FAILED (failures=3)

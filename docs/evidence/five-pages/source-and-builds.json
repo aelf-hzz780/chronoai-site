@@ -1,0 +1,109 @@
+{
+  "sourceCommit": "0b83fc1907f2ee2cae664fb11d9abe6ba083bab5",
+  "baseline": "8b401abb0542a46f33b1847c18898e815da2b3f3",
+  "status": "pass",
+  "unitTests": {
+    "passed": 14
+  },
+  "bundles": {
+    "_site": {
+      "sourceCommit": "0b83fc1907f2ee2cae664fb11d9abe6ba083bab5",
+      "revision": "5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672",
+      "manifestSHA256": "d0b22cb41aba06df4710abac42a02e385ba2959394b61630e75e1ec114363f32",
+      "htmlPages": 28,
+      "verifiedFileHashes": 126
+    },
+    "_preview": {
+      "sourceCommit": "0b83fc1907f2ee2cae664fb11d9abe6ba083bab5",
+      "revision": "5658af2b3f51c677a850b548e18d3d963a1d082876652199a3fbd974ce34e672",
+      "manifestSHA256": "d9b2e402a83ac6a35291d37378f414f56d7424788b39cc5d848c34d9da0c3cec",
+      "htmlPages": 28,
+      "verifiedFileHashes": 126
+    }
+  },
+  "unchangedQmd": [
+    {
+      "path": "nyxid.qmd",
+      "sha256": "e02db3d762bcdf2fc026b522cceb0c90488ae251852ca0b7c33bdd4c41fc3505"
+    },
+    {
+      "path": "nyxid-zh.qmd",
+      "sha256": "a0a029dd0ea421d13254d27f91b997cc8174acf3fa5daccff27320a6495fdc50"
+    },
+    {
+      "path": "ornn.qmd",
+      "sha256": "df6c00f67d91af7a5b32a50591842881a35fe1637a7bd6172e89db5d4d5abada"
+    },
+    {
+      "path": "ornn-zh.qmd",
+      "sha256": "84ddbde9dfe9bb0037345092c52bc9fba0cac919e83c338f3af9c3f866c59238"
+    },
+    {
+      "path": "philosophy.qmd",
+      "sha256": "7d28b0d947181475ef3375672f4e144e3a3488a441a6438f7b10fcaa1e29a0d1"
+    },
+    {
+      "path": "philosophy-zh.qmd",
+      "sha256": "cccd8eaebf43eab23ef280b60978130e122c158fa23c6fd16a91ee84e8c357dc"
+    },
+    {
+      "path": "harness.qmd",
+      "sha256": "90764a1d060900bc93d96a4c51865e3f781ed5d1f15ce70da98ab601076de405"
+    },
+    {
+      "path": "harness-zh.qmd",
+      "sha256": "132889051a3d4f39883dc96910575620380a80836d9926670562bca3ad85b5ed"
+    },
+    {
+      "path": "nyxid-dossier.qmd",
+      "sha256": "30cedada934a8f7ee222e85a38b84e8198081aabea761531a1d82e56134bb5c3"
+    },
+    {
+      "path": "nyxid-dossier-zh.qmd",
+      "sha256": "d0422dd4a825a39d2f4205eadbf9e564c131eb96f8546432c53e3fb6b1b0d773"
+    }
+  ],
+  "unchangedHomepageAssets": [
+    {
+      "path": "assets/home.js",
+      "sha256": "6ad72e67649d4c3454ce82a43b8248dd0f8f58d97a85689baddce2bcce2345be"
+    },
+    {
+      "path": "assets/site.js",
+      "sha256": "feb0280f822a22ad75eda88457623b99c5a483a96b151668200ec0d4a232fbfc"
+    },
+    {
+      "path": "assets/site.css",
+      "sha256": "f7ff38c499947226db7ae25b696a9906f7e6e7f9fbc385693446b438e8a2cc40"
+    },
+    {
+      "path": "assets/refined.css",
+      "sha256": "8573cbe8d4e5fc0413047d1c1d071cfaf3099adadbc38e078bc8dacfc8206b4b"
+    },
+    {
+      "path": "assets/videos.js",
+      "sha256": "fd36d0da6a2707f868dac33c79d3b325df84f9f674397265e031d0ae823bd0f2"
+    },
+    {
+      "path": "assets/videos.css",
+      "sha256": "373bfa6292f8c3585a3f9639eedee1a954d27085baaa8349b32baa098a60b677"
+    },
+    {
+      "path": "assets/asciimark.js",
+      "sha256": "62f67420d286d9bb22feb489ada7059a354b51655b41bbba463540bf0c53a234"
+    },
+    {
+      "path": "assets/nyx-cta-light.js",
+      "sha256": "c3e7057514166f6b7f0934d50a7a0cd5dbefa9a378e8630adfde63c043c00870"
+    },
+    {
+      "path": "templates/home.html",
+      "sha256": "479b3074a69e3d3a9822b347b6e6bc4552bd48786c8014a6a02120044d76f384"
+    },
+    {
+      "path": "content/videos.json",
+      "sha256": "fb6065875563bd77e5ceb5da17339d63f389a39eb33ffac969b6f23fda2d3e9b"
+    }
+  ],
+  "homepageTextStructureAndVisualAttributesUnchanged": true
+}
