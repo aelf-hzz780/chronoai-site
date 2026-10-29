@@ -1,0 +1,3564 @@
+{
+  "sourceCommit": "808b6cf06e241e624c6d0cd8f11b726cd8f1932e",
+  "revision": "8d473114fd1664ba04195dbce36242bbcb994324d3f5936628e0344f744ea0c3",
+  "manifestSHA256": "7cf967346e9fa00c2664664ed7927a67782547e8313a262fa24bdbcbea63c6f2",
+  "comparedAt": "2026-10-29T03:53:09.468Z",
+  "expectedDifferences": [
+    "Header/footer add native locale controls; approved shared navigation breakpoint and compact mobile logo rules",
+    "Internal NyxID/Ornn/Company links resolve to corresponding local locale; remaining pages stay online",
+    "Cloudflare email protection resolves to the same mailto contact; no Cloudflare script",
+    "Fonts served from the existing local font archive; SEO/AI metadata added",
+    "Original motion adapted for translated controls, reduced-motion and lifecycle cleanup"
+  ],
+  "checks": [
+    {
+      "id": "nyxid-product",
+      "width": 1440,
+      "onlineUrl": "https://chrono-ai.fun/products/nyxid.html",
+      "headingsMatch": true,
+      "svgPathsMatch": true,
+      "geometryDifferences": [],
+      "online": {
+        "title": "NyxID | ChronoAI",
+        "text": ".dia .dia-m{display:none}@media (max-width:767px){.dia .dia-d{display:none}.dia .dia-m{display:block}} by ChronoAI Open-source Agent Connectivity Gateway Connect AI agents to any API, anywhere. Securely. Bring public, private-network, and local APIs within your agent’s reach. NyxBot is the main agent inside NyxID. Try NyxID ↗Read the docs ↗ What NyxID protects Three layers, working together. Credentials stay in NyxID.NyxID proxies requests and injects credentials on the service side, so the agent does not receive the original service credentials. A scoped Agent Key for each agent.Give each agent its own Agent Key. Configure permissions and service access for the work it needs to do. Human approval, when you want it.Human approval is available as an option. It is not required for every request. Connection flow Bring your APIs into reach. For private-network or local services, configure a credential node for your environment. AI agentNyxIDPublic APIcredential nodePrivate or local APIAI agentNyxIDPublic APIcredential nodePrivate or local API Conceptual connection flow.Pause animation Check the setup for your service.REST-to-MCP conversion requires an OpenAPI specification. Private-network and local connections require a configured credential node.Follow the documentation for deployment and connection requirements. Nyx guards the gate. You hold the key. Try NyxID ↗Read the docs ↗View source on GitHub ↗All products →",
+        "headings": [
+          "Connect AI agents to any API, anywhere. Securely.",
+          "Three layers, working together.",
+          "Credentials stay in NyxID.",
+          "A scoped Agent Key for each agent.",
+          "Human approval, when you want it.",
+          "Bring your APIs into reach.",
+          "Check the setup for your service.",
+          "Nyx guards the gate. You hold the key."
+        ],
+        "geometry": [
+          {
+            "x": 120,
+            "y": 328.4375,
+            "width": 720,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 361.234375,
+            "width": 720,
+            "height": 207.328125,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "64px",
+            "lineHeight": "69.12px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 584.5625,
+            "width": 612,
+            "height": 56,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1021,
+            "width": 1200,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1037.796875,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 149,
+            "y": 1218.796875,
+            "width": 331.328125,
+            "height": 27.5,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 149,
+            "y": 1256.296875,
+            "width": 331.328125,
+            "height": 112,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 554.328125,
+            "y": 1218.796875,
+            "width": 331.328125,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 554.328125,
+            "y": 1283.796875,
+            "width": 331.328125,
+            "height": 84,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 959.65625,
+            "y": 1218.796875,
+            "width": 331.34375,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 959.65625,
+            "y": 1283.796875,
+            "width": 331.34375,
+            "height": 84,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1509.296875,
+            "width": 1200,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1526.09375,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1586.09375,
+            "width": 792,
+            "height": 28,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1646.09375,
+            "width": 1200,
+            "height": 548.328125,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(23, 23, 23)"
+          },
+          {
+            "x": 120,
+            "y": 2206.421875,
+            "width": 184.640625,
+            "height": 22,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 145,
+            "y": 2293.421875,
+            "width": 1150,
+            "height": 36,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 145,
+            "y": 2341.421875,
+            "width": 1150,
+            "height": 28,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 145,
+            "y": 2381.421875,
+            "width": 1150,
+            "height": 28,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 2674.421875,
+            "width": 784,
+            "height": 123.1875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "56px",
+            "lineHeight": "61.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4",
+          "m21 2-9.6 9.6",
+          "M16 10h2",
+          "M16 14h2",
+          "M6.17 15a3 3 0 0 1 5.66 0",
+          "m9 12 2 2 4-4",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z"
+        ],
+        "cta": [
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View source on GitHub ↗",
+            "href": "https://github.com/ChronoAIProject/NyxID"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": true
+        }
+      },
+      "built": {
+        "title": "NyxID | ChronoAI",
+        "text": ".dia .dia-m{display:none}@media (max-width:767px){.dia .dia-d{display:none}.dia .dia-m{display:block}} by ChronoAI Open-source Agent Connectivity Gateway Connect AI agents to any API, anywhere. Securely. Bring public, private-network, and local APIs within your agent’s reach. NyxBot is the main agent inside NyxID. Try NyxID ↗Read the docs ↗ What NyxID protects Three layers, working together. Credentials stay in NyxID.NyxID proxies requests and injects credentials on the service side, so the agent does not receive the original service credentials. A scoped Agent Key for each agent.Give each agent its own Agent Key. Configure permissions and service access for the work it needs to do. Human approval, when you want it.Human approval is available as an option. It is not required for every request. Connection flow Bring your APIs into reach. For private-network or local services, configure a credential node for your environment. AI agentNyxIDPublic APIcredential nodePrivate or local APIAI agentNyxIDPublic APIcredential nodePrivate or local API Conceptual connection flow.Pause animation Check the setup for your service.REST-to-MCP conversion requires an OpenAPI specification. Private-network and local connections require a configured credential node.Follow the documentation for deployment and connection requirements. Nyx guards the gate. You hold the key. Try NyxID ↗Read the docs ↗View source on GitHub ↗All products →",
+        "headings": [
+          "Connect AI agents to any API, anywhere. Securely.",
+          "Three layers, working together.",
+          "Credentials stay in NyxID.",
+          "A scoped Agent Key for each agent.",
+          "Human approval, when you want it.",
+          "Bring your APIs into reach.",
+          "Check the setup for your service.",
+          "Nyx guards the gate. You hold the key."
+        ],
+        "geometry": [
+          {
+            "x": 120,
+            "y": 328.4375,
+            "width": 720,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 361.234375,
+            "width": 720,
+            "height": 207.328125,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "64px",
+            "lineHeight": "69.12px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 584.5625,
+            "width": 612,
+            "height": 56,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1021,
+            "width": 1200,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1037.796875,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 149,
+            "y": 1218.796875,
+            "width": 331.328125,
+            "height": 27.5,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 149,
+            "y": 1256.296875,
+            "width": 331.328125,
+            "height": 112,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 554.328125,
+            "y": 1218.796875,
+            "width": 331.328125,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 554.328125,
+            "y": 1283.796875,
+            "width": 331.328125,
+            "height": 84,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 959.65625,
+            "y": 1218.796875,
+            "width": 331.34375,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 959.65625,
+            "y": 1283.796875,
+            "width": 331.34375,
+            "height": 84,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1509.296875,
+            "width": 1200,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1526.09375,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1586.09375,
+            "width": 792,
+            "height": 28,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 1646.09375,
+            "width": 1200,
+            "height": 548.328125,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(23, 23, 23)"
+          },
+          {
+            "x": 120,
+            "y": 2206.421875,
+            "width": 184.609375,
+            "height": 22,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 145,
+            "y": 2293.421875,
+            "width": 1150,
+            "height": 36,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 145,
+            "y": 2341.421875,
+            "width": 1150,
+            "height": 28,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 145,
+            "y": 2381.421875,
+            "width": 1150,
+            "height": 28,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 2674.421875,
+            "width": 784,
+            "height": 123.1875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "56px",
+            "lineHeight": "61.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4",
+          "m21 2-9.6 9.6",
+          "M16 10h2",
+          "M16 14h2",
+          "M6.17 15a3 3 0 0 1 5.66 0",
+          "m9 12 2 2 4-4",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z"
+        ],
+        "cta": [
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View source on GitHub ↗",
+            "href": "https://github.com/ChronoAIProject/NyxID"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": true
+        }
+      }
+    },
+    {
+      "id": "ornn-product",
+      "width": 1440,
+      "onlineUrl": "https://chrono-ai.fun/products/ornn.html",
+      "headingsMatch": true,
+      "svgPathsMatch": true,
+      "geometryDifferences": [],
+      "online": {
+        "title": "Ornn | ChronoAI",
+        "text": "Ornn On-demand skills for AI agents. A skill lifecycle API for developers building AI agents. Visit Ornn ↗Read Ornn docs ↗ From discovery to use. Search for skills by meaning or keyword. Retrieve versioned skills and manage how your agent uses them. Ornn supports a skill lifecycle that includes discovery, installation, execution, updates, and sharing. Discover→Retrieve→Use→Update / Share Build with the API. Use the documentation to explore the API and its workflow. Review the source code for implementation details. Read Ornn docs ↗View Ornn source ↗All products →",
+        "headings": [
+          "On-demand skills for AI agents.",
+          "From discovery to use.",
+          "Build with the API."
+        ],
+        "geometry": [
+          {
+            "x": 120,
+            "y": 121,
+            "width": 792,
+            "height": 22,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 155,
+            "width": 792,
+            "height": 64,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "56px",
+            "lineHeight": "64px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 235,
+            "width": 792,
+            "height": 28,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 431,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 491,
+            "width": 792,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 563,
+            "width": 792,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 651,
+            "width": 1200,
+            "height": 68,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 815,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 875,
+            "width": 792,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Visit Ornn ↗",
+            "href": "https://ornn.chrono-ai.fun/"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View Ornn source ↗",
+            "href": "https://github.com/ChronoAIProject/Ornn"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      },
+      "built": {
+        "title": "Ornn | ChronoAI",
+        "text": "Ornn On-demand skills for AI agents. A skill lifecycle API for developers building AI agents. Visit Ornn ↗Read Ornn docs ↗ From discovery to use. Search for skills by meaning or keyword. Retrieve versioned skills and manage how your agent uses them. Ornn supports a skill lifecycle that includes discovery, installation, execution, updates, and sharing. Discover→Retrieve→Use→Update / Share Build with the API. Use the documentation to explore the API and its workflow. Review the source code for implementation details. Read Ornn docs ↗View Ornn source ↗All products →",
+        "headings": [
+          "On-demand skills for AI agents.",
+          "From discovery to use.",
+          "Build with the API."
+        ],
+        "geometry": [
+          {
+            "x": 120,
+            "y": 121,
+            "width": 792,
+            "height": 22,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 155,
+            "width": 792,
+            "height": 64,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "56px",
+            "lineHeight": "64px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 235,
+            "width": 792,
+            "height": 28,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 431,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 491,
+            "width": 792,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 563,
+            "width": 792,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 651,
+            "width": 1200,
+            "height": 68,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 815,
+            "width": 1200,
+            "height": 44,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "44px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 120,
+            "y": 875,
+            "width": 792,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Visit Ornn ↗",
+            "href": "https://ornn.chrono-ai.fun/"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View Ornn source ↗",
+            "href": "https://github.com/ChronoAIProject/Ornn"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      }
+    },
+    {
+      "id": "company",
+      "width": 1440,
+      "onlineUrl": "https://chrono-ai.fun/company.html",
+      "headingsMatch": true,
+      "svgPathsMatch": true,
+      "geometryDifferences": [],
+      "online": {
+        "title": "Company | ChronoAI",
+        "text": "ChronoAI Accelerate the discovery of truth. We pursue verifiable research and build tools for people to work with AI agents. Our work connects two ambitions: asking better questions and making it practical to act on them. Pause animation Direction is part of the work. Our view is that greater execution capacity makes judgment more important. People choose the questions, define the conditions and decide what is worth pursuing. AI helps carry the work forward; explicit checks help us evaluate the result. QuestionConditionsChecks A connected body of work. trureturingOur research: questions, assumptions, recorded results and limits. NyxIDConnects agents to services. NyxBot is the main agent inside NyxID. OrnnA place to find and share agent skills. CMAChronoAI Managed Agent: persistent agents in the cloud. heca Coming soonOrchestration for agent work. chrono-harnessGovernance for agent workflows — a Rust harness for explicit registrations and scoped checks. Public beta. Each project has its own scope and availability. Source-code availability is recorded per project. Make the claim precise. Research becomes useful when readers can see the question, the assumptions, the result and the limits. Two examples from trureturing: a recorded counterexample shows that a plausible floor formula for OEIS A175406 fails; and an entropy identity relates von Neumann entropy to quantum relative entropy — under explicitly stated conditions, and without claiming unconditional entropy increase. We distinguish Lean-checked results, paper proofs and open questions. The scope of a result belongs beside the result. Lean-checked resultPaper proofOpen question Explore trureturing → Make the work inspectable. 01Start with a question. 02State the assumptions. 03Inspect the evidence. 04Decide what to test next. We look for people who can bring questions and exercise judgment. A useful contribution leaves others something they can examine and build on. Selected public records. October 15, 2026trureturing reading snapshot — a dated view of the public research materials. Read the snapshot ↗ chrono-harnessPublic beta documentation — the documented scope and implementation limits. View the repository ↗ The snapshot date marks when the reading site was built, not a launch or founding date. Bring a question worth pursuing. Show us what you want to understand or build—and what you have tried. Join us ↗Contact ChronoAI",
+        "headings": [
+          "Accelerate the discovery of truth.",
+          "Direction is part of the work.",
+          "A connected body of work.",
+          "trureturing",
+          "NyxID",
+          "Ornn",
+          "CMA",
+          "heca Coming soon",
+          "chrono-harness",
+          "Make the claim precise.",
+          "Make the work inspectable.",
+          "Start with a question.",
+          "State the assumptions.",
+          "Inspect the evidence.",
+          "Decide what to test next.",
+          "Selected public records.",
+          "Bring a question worth pursuing."
+        ],
+        "geometry": [
+          {
+            "x": 80,
+            "y": 314.03125,
+            "width": 506.65625,
+            "height": 19.59375,
+            "font": "\"IBM Plex Mono\", ui-monospace, monospace",
+            "fontSize": "14px",
+            "lineHeight": "19.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 314.03125,
+            "width": 709.34375,
+            "height": 120.9375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "56px",
+            "lineHeight": "60.48px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 458.96875,
+            "width": 709.34375,
+            "height": 93,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 938,
+            "width": 506.65625,
+            "height": 96.78125,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 962,
+            "width": 709.34375,
+            "height": 124,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 1440,
+            "width": 506.65625,
+            "height": 96.78125,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1463,
+            "width": 240,
+            "height": 56,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1463,
+            "width": 445.34375,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1564,
+            "width": 240,
+            "height": 56,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1564,
+            "width": 445.34375,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1665,
+            "width": 240,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1665,
+            "width": 445.34375,
+            "height": 28.59375,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1738.59375,
+            "width": 240,
+            "height": 56,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1738.59375,
+            "width": 445.34375,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1839.59375,
+            "width": 240,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1839.59375,
+            "width": 445.34375,
+            "height": 28.59375,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1913.1875,
+            "width": 240,
+            "height": 84,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1913.1875,
+            "width": 445.34375,
+            "height": 84,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2039.1875,
+            "width": 709.34375,
+            "height": 28,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 2356.1875,
+            "width": 506.65625,
+            "height": 48.390625,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2380.1875,
+            "width": 709.34375,
+            "height": 62,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2466.1875,
+            "width": 709.34375,
+            "height": 155,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2645.1875,
+            "width": 709.34375,
+            "height": 62,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 3168.1875,
+            "width": 506.65625,
+            "height": 96.78125,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3232.1875,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3344.984375,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3457.78125,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3570.578125,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3643.375,
+            "width": 709.34375,
+            "height": 93,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 4025.375,
+            "width": 506.65625,
+            "height": 48.390625,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 680.65625,
+            "y": 4059.375,
+            "width": 679.34375,
+            "height": 104,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 680.65625,
+            "y": 4229.375,
+            "width": 679.34375,
+            "height": 104,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 4385.375,
+            "width": 709.34375,
+            "height": 28,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 4823.3125,
+            "width": 1280,
+            "height": 69.109375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "64px",
+            "lineHeight": "69.12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 4916.421875,
+            "width": 760,
+            "height": 31,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Explore trureturing →",
+            "href": "https://chrono-ai.fun/research.html"
+          },
+          {
+            "text": "Read the snapshot ↗",
+            "href": "https://the-omega-institute.github.io/trureturing-mdbook/"
+          },
+          {
+            "text": "View the repository ↗",
+            "href": "https://github.com/ChronoAIProject/chrono-harness"
+          },
+          {
+            "text": "Join us ↗",
+            "href": "https://sg.jobstreet.com/ChronoAI-Pte-Ltd-jobs/at-this-company"
+          },
+          {
+            "text": "Contact ChronoAI",
+            "href": "mailto:contact@chrono-ai.fun"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      },
+      "built": {
+        "title": "Company | ChronoAI",
+        "text": "ChronoAI Accelerate the discovery of truth. We pursue verifiable research and build tools for people to work with AI agents. Our work connects two ambitions: asking better questions and making it practical to act on them. Pause animation Direction is part of the work. Our view is that greater execution capacity makes judgment more important. People choose the questions, define the conditions and decide what is worth pursuing. AI helps carry the work forward; explicit checks help us evaluate the result. QuestionConditionsChecks A connected body of work. trureturingOur research: questions, assumptions, recorded results and limits. NyxIDConnects agents to services. NyxBot is the main agent inside NyxID. OrnnA place to find and share agent skills. CMAChronoAI Managed Agent: persistent agents in the cloud. heca Coming soonOrchestration for agent work. chrono-harnessGovernance for agent workflows — a Rust harness for explicit registrations and scoped checks. Public beta. Each project has its own scope and availability. Source-code availability is recorded per project. Make the claim precise. Research becomes useful when readers can see the question, the assumptions, the result and the limits. Two examples from trureturing: a recorded counterexample shows that a plausible floor formula for OEIS A175406 fails; and an entropy identity relates von Neumann entropy to quantum relative entropy — under explicitly stated conditions, and without claiming unconditional entropy increase. We distinguish Lean-checked results, paper proofs and open questions. The scope of a result belongs beside the result. Lean-checked resultPaper proofOpen question Explore trureturing → Make the work inspectable. 01Start with a question. 02State the assumptions. 03Inspect the evidence. 04Decide what to test next. We look for people who can bring questions and exercise judgment. A useful contribution leaves others something they can examine and build on. Selected public records. October 15, 2026trureturing reading snapshot — a dated view of the public research materials. Read the snapshot ↗ chrono-harnessPublic beta documentation — the documented scope and implementation limits. View the repository ↗ The snapshot date marks when the reading site was built, not a launch or founding date. Bring a question worth pursuing. Show us what you want to understand or build—and what you have tried. Join us ↗Contact ChronoAI",
+        "headings": [
+          "Accelerate the discovery of truth.",
+          "Direction is part of the work.",
+          "A connected body of work.",
+          "trureturing",
+          "NyxID",
+          "Ornn",
+          "CMA",
+          "heca Coming soon",
+          "chrono-harness",
+          "Make the claim precise.",
+          "Make the work inspectable.",
+          "Start with a question.",
+          "State the assumptions.",
+          "Inspect the evidence.",
+          "Decide what to test next.",
+          "Selected public records.",
+          "Bring a question worth pursuing."
+        ],
+        "geometry": [
+          {
+            "x": 80,
+            "y": 314.03125,
+            "width": 506.65625,
+            "height": 19.59375,
+            "font": "\"IBM Plex Mono\", ui-monospace, monospace",
+            "fontSize": "14px",
+            "lineHeight": "19.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 314.03125,
+            "width": 709.34375,
+            "height": 120.9375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "56px",
+            "lineHeight": "60.48px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 458.96875,
+            "width": 709.34375,
+            "height": 93,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 938,
+            "width": 506.65625,
+            "height": 96.78125,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 962,
+            "width": 709.34375,
+            "height": 124,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 1440,
+            "width": 506.65625,
+            "height": 96.78125,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1463,
+            "width": 240,
+            "height": 56,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1463,
+            "width": 445.34375,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1564,
+            "width": 240,
+            "height": 56,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1564,
+            "width": 445.34375,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1665,
+            "width": 240,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1665,
+            "width": 445.34375,
+            "height": 28.59375,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1738.59375,
+            "width": 240,
+            "height": 56,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1738.59375,
+            "width": 445.34375,
+            "height": 56,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1839.59375,
+            "width": 240,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1839.59375,
+            "width": 445.34375,
+            "height": 28.59375,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 1913.1875,
+            "width": 240,
+            "height": 84,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 914.65625,
+            "y": 1913.1875,
+            "width": 445.34375,
+            "height": 84,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2039.1875,
+            "width": 709.34375,
+            "height": 28,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 2356.1875,
+            "width": 506.65625,
+            "height": 48.390625,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2380.1875,
+            "width": 709.34375,
+            "height": 62,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2466.1875,
+            "width": 709.34375,
+            "height": 155,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 2645.1875,
+            "width": 709.34375,
+            "height": 62,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 3168.1875,
+            "width": 506.65625,
+            "height": 96.78125,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3232.1875,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3344.984375,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3457.78125,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3570.578125,
+            "width": 709.34375,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 3643.375,
+            "width": 709.34375,
+            "height": 93,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 4025.375,
+            "width": 506.65625,
+            "height": 48.390625,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "44px",
+            "lineHeight": "48.4px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 680.65625,
+            "y": 4059.375,
+            "width": 679.34375,
+            "height": 104,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 680.65625,
+            "y": 4229.375,
+            "width": 679.34375,
+            "height": 104,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 650.65625,
+            "y": 4385.375,
+            "width": 709.34375,
+            "height": 28,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "28px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 4823.3125,
+            "width": 1280,
+            "height": 69.109375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "64px",
+            "lineHeight": "69.12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 80,
+            "y": 4916.421875,
+            "width": 760,
+            "height": 31,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "20px",
+            "lineHeight": "31px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Explore trureturing →",
+            "href": "https://chrono-ai.fun/research.html"
+          },
+          {
+            "text": "Read the snapshot ↗",
+            "href": "https://the-omega-institute.github.io/trureturing-mdbook/"
+          },
+          {
+            "text": "View the repository ↗",
+            "href": "https://github.com/ChronoAIProject/chrono-harness"
+          },
+          {
+            "text": "Join us ↗",
+            "href": "https://sg.jobstreet.com/ChronoAI-Pte-Ltd-jobs/at-this-company"
+          },
+          {
+            "text": "Contact ChronoAI",
+            "href": "mailto:contact@chrono-ai.fun"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      }
+    },
+    {
+      "id": "nyxid-product",
+      "width": 375,
+      "onlineUrl": "https://chrono-ai.fun/products/nyxid.html",
+      "headingsMatch": true,
+      "svgPathsMatch": true,
+      "geometryDifferences": [],
+      "online": {
+        "title": "NyxID | ChronoAI",
+        "text": ".dia .dia-m{display:none}@media (max-width:767px){.dia .dia-d{display:none}.dia .dia-m{display:block}} by ChronoAI Open-source Agent Connectivity Gateway Connect AI agents to any API, anywhere. Securely. Bring public, private-network, and local APIs within your agent’s reach. NyxBot is the main agent inside NyxID. Try NyxID ↗Read the docs ↗ What NyxID protects Three layers, working together. Credentials stay in NyxID.NyxID proxies requests and injects credentials on the service side, so the agent does not receive the original service credentials. A scoped Agent Key for each agent.Give each agent its own Agent Key. Configure permissions and service access for the work it needs to do. Human approval, when you want it.Human approval is available as an option. It is not required for every request. Connection flow Bring your APIs into reach. For private-network or local services, configure a credential node for your environment. AI agentNyxIDPublic APIcredential nodePrivate or local APIAI agentNyxIDPublic APIcredential nodePrivate or local API Conceptual connection flow.Play animation Check the setup for your service.REST-to-MCP conversion requires an OpenAPI specification. Private-network and local connections require a configured credential node.Follow the documentation for deployment and connection requirements. Nyx guards the gate. You hold the key. Try NyxID ↗Read the docs ↗View source on GitHub ↗All products →",
+        "headings": [
+          "Connect AI agents to any API, anywhere. Securely.",
+          "Three layers, working together.",
+          "Credentials stay in NyxID.",
+          "A scoped Agent Key for each agent.",
+          "Human approval, when you want it.",
+          "Bring your APIs into reach.",
+          "Check the setup for your service.",
+          "Nyx guards the gate. You hold the key."
+        ],
+        "geometry": [
+          {
+            "x": 24,
+            "y": 409,
+            "width": 327,
+            "height": 33.59375,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 458.59375,
+            "width": 327,
+            "height": 172.75,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "40px",
+            "lineHeight": "43.2px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 647.34375,
+            "width": 327,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1006.34375,
+            "width": 327,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1023.140625,
+            "width": 327,
+            "height": 72,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1232.140625,
+            "width": 269,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1297.140625,
+            "width": 269,
+            "height": 104,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1543.140625,
+            "width": 269,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1608.140625,
+            "width": 269,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1828.140625,
+            "width": 269,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1893.140625,
+            "width": 269,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2080.140625,
+            "width": 327,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2096.9375,
+            "width": 327,
+            "height": 72,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2184.9375,
+            "width": 327,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2294.9375,
+            "width": 327,
+            "height": 422.5625,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(23, 23, 23)"
+          },
+          {
+            "x": 24,
+            "y": 2729.5,
+            "width": 184.640625,
+            "height": 22,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 45,
+            "y": 2812.5,
+            "width": 285,
+            "height": 72,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 45,
+            "y": 2896.5,
+            "width": 285,
+            "height": 104,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 45,
+            "y": 3012.5,
+            "width": 285,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 3311.5,
+            "width": 327,
+            "height": 118.78125,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "39.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4",
+          "m21 2-9.6 9.6",
+          "M16 10h2",
+          "M16 14h2",
+          "M6.17 15a3 3 0 0 1 5.66 0",
+          "m9 12 2 2 4-4",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z"
+        ],
+        "cta": [
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View source on GitHub ↗",
+            "href": "https://github.com/ChronoAIProject/NyxID"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": true
+        }
+      },
+      "built": {
+        "title": "NyxID | ChronoAI",
+        "text": ".dia .dia-m{display:none}@media (max-width:767px){.dia .dia-d{display:none}.dia .dia-m{display:block}} by ChronoAI Open-source Agent Connectivity Gateway Connect AI agents to any API, anywhere. Securely. Bring public, private-network, and local APIs within your agent’s reach. NyxBot is the main agent inside NyxID. Try NyxID ↗Read the docs ↗ What NyxID protects Three layers, working together. Credentials stay in NyxID.NyxID proxies requests and injects credentials on the service side, so the agent does not receive the original service credentials. A scoped Agent Key for each agent.Give each agent its own Agent Key. Configure permissions and service access for the work it needs to do. Human approval, when you want it.Human approval is available as an option. It is not required for every request. Connection flow Bring your APIs into reach. For private-network or local services, configure a credential node for your environment. AI agentNyxIDPublic APIcredential nodePrivate or local APIAI agentNyxIDPublic APIcredential nodePrivate or local API Conceptual connection flow.Play animation Check the setup for your service.REST-to-MCP conversion requires an OpenAPI specification. Private-network and local connections require a configured credential node.Follow the documentation for deployment and connection requirements. Nyx guards the gate. You hold the key. Try NyxID ↗Read the docs ↗View source on GitHub ↗All products →",
+        "headings": [
+          "Connect AI agents to any API, anywhere. Securely.",
+          "Three layers, working together.",
+          "Credentials stay in NyxID.",
+          "A scoped Agent Key for each agent.",
+          "Human approval, when you want it.",
+          "Bring your APIs into reach.",
+          "Check the setup for your service.",
+          "Nyx guards the gate. You hold the key."
+        ],
+        "geometry": [
+          {
+            "x": 24,
+            "y": 409,
+            "width": 327,
+            "height": 33.59375,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 458.59375,
+            "width": 327,
+            "height": 172.75,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "40px",
+            "lineHeight": "43.2px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 647.34375,
+            "width": 327,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1006.34375,
+            "width": 327,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1023.140625,
+            "width": 327,
+            "height": 72,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1232.140625,
+            "width": 269,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1297.140625,
+            "width": 269,
+            "height": 104,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1543.140625,
+            "width": 269,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1608.140625,
+            "width": 269,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1828.140625,
+            "width": 269,
+            "height": 55,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "27.5px",
+            "color": "rgb(250, 250, 250)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 53,
+            "y": 1893.140625,
+            "width": 269,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2080.140625,
+            "width": 327,
+            "height": 16.796875,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "12px",
+            "lineHeight": "16.8px",
+            "color": "rgb(166, 114, 251)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2096.9375,
+            "width": 327,
+            "height": 72,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2184.9375,
+            "width": 327,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 2294.9375,
+            "width": 327,
+            "height": 422.5625,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(23, 23, 23)"
+          },
+          {
+            "x": 24,
+            "y": 2729.5,
+            "width": 184.609375,
+            "height": 22,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgb(163, 163, 163)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 45,
+            "y": 2812.5,
+            "width": 285,
+            "height": 72,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 45,
+            "y": 2896.5,
+            "width": 285,
+            "height": 104,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 45,
+            "y": 3012.5,
+            "width": 285,
+            "height": 78,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 3311.5,
+            "width": 327,
+            "height": 118.78125,
+            "font": "\"Mona Sans\", system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "39.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z",
+          "m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4",
+          "m21 2-9.6 9.6",
+          "M16 10h2",
+          "M16 14h2",
+          "M6.17 15a3 3 0 0 1 5.66 0",
+          "m9 12 2 2 4-4",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M192 208H600",
+          "M600 208H1008",
+          "M600 208V392H1008",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M171 56V156",
+          "M171 156V220H84V296",
+          "M171 156V220H258V388",
+          "M422.875 88.0461V335.824C422.875 383.898 383.903 422.87 335.829 422.87H214.328C213.008 422.87 211.938 421.799 211.938 420.48V191.899C211.938 189.461 208.72 188.587 207.487 190.69L72.0088 421.69C71.5786 422.421 70.7947 422.87 69.9486 422.87H3.39006C2.07075 422.87 1 421.799 1 420.48V3.39006C1 2.07075 2.07075 1 3.39006 1H139.237C140.556 1 141.627 2.07075 141.627 3.39006V231.971C141.627 234.409 144.844 235.284 146.077 233.18L281.56 2.18069C281.99 1.44933 282.774 1 283.62 1H335.824C383.898 1 422.87 39.9724 422.87 88.0461H422.875Z"
+        ],
+        "cta": [
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Try NyxID ↗",
+            "href": "https://nyx.chrono-ai.fun/"
+          },
+          {
+            "text": "Read the docs ↗",
+            "href": "https://nyx.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View source on GitHub ↗",
+            "href": "https://github.com/ChronoAIProject/NyxID"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": true
+        }
+      }
+    },
+    {
+      "id": "ornn-product",
+      "width": 375,
+      "onlineUrl": "https://chrono-ai.fun/products/ornn.html",
+      "headingsMatch": true,
+      "svgPathsMatch": true,
+      "geometryDifferences": [],
+      "online": {
+        "title": "Ornn | ChronoAI",
+        "text": "Ornn On-demand skills for AI agents. A skill lifecycle API for developers building AI agents. Visit Ornn ↗Read Ornn docs ↗ From discovery to use. Search for skills by meaning or keyword. Retrieve versioned skills and manage how your agent uses them. Ornn supports a skill lifecycle that includes discovery, installation, execution, updates, and sharing. Discover→Retrieve→Use→Update / Share Build with the API. Use the documentation to explore the API and its workflow. Review the source code for implementation details. Read Ornn docs ↗View Ornn source ↗All products →",
+        "headings": [
+          "On-demand skills for AI agents.",
+          "From discovery to use.",
+          "Build with the API."
+        ],
+        "geometry": [
+          {
+            "x": 24,
+            "y": 97,
+            "width": 327,
+            "height": 22,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 131,
+            "width": 327,
+            "height": 84,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "42px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 231,
+            "width": 327,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 475,
+            "width": 327,
+            "height": 36,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 527,
+            "width": 327,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 621,
+            "width": 327,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 731,
+            "width": 327,
+            "height": 356,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1151,
+            "width": 327,
+            "height": 36,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1203,
+            "width": 327,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Visit Ornn ↗",
+            "href": "https://ornn.chrono-ai.fun/"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View Ornn source ↗",
+            "href": "https://github.com/ChronoAIProject/Ornn"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      },
+      "built": {
+        "title": "Ornn | ChronoAI",
+        "text": "Ornn On-demand skills for AI agents. A skill lifecycle API for developers building AI agents. Visit Ornn ↗Read Ornn docs ↗ From discovery to use. Search for skills by meaning or keyword. Retrieve versioned skills and manage how your agent uses them. Ornn supports a skill lifecycle that includes discovery, installation, execution, updates, and sharing. Discover→Retrieve→Use→Update / Share Build with the API. Use the documentation to explore the API and its workflow. Review the source code for implementation details. Read Ornn docs ↗View Ornn source ↗All products →",
+        "headings": [
+          "On-demand skills for AI agents.",
+          "From discovery to use.",
+          "Build with the API."
+        ],
+        "geometry": [
+          {
+            "x": 24,
+            "y": 97,
+            "width": 327,
+            "height": 22,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "22px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 131,
+            "width": 327,
+            "height": 84,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "42px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 231,
+            "width": 327,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 475,
+            "width": 327,
+            "height": 36,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 527,
+            "width": 327,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 621,
+            "width": 327,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 731,
+            "width": 327,
+            "height": 356,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1151,
+            "width": 327,
+            "height": 36,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "28px",
+            "lineHeight": "36px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 24,
+            "y": 1203,
+            "width": 327,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.8)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Visit Ornn ↗",
+            "href": "https://ornn.chrono-ai.fun/"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "Read Ornn docs ↗",
+            "href": "https://ornn.chrono-ai.fun/docs"
+          },
+          {
+            "text": "View Ornn source ↗",
+            "href": "https://github.com/ChronoAIProject/Ornn"
+          },
+          {
+            "text": "All products →",
+            "href": "https://chrono-ai.fun/products.html"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      }
+    },
+    {
+      "id": "company",
+      "width": 375,
+      "onlineUrl": "https://chrono-ai.fun/company.html",
+      "headingsMatch": true,
+      "svgPathsMatch": true,
+      "geometryDifferences": [],
+      "online": {
+        "title": "Company | ChronoAI",
+        "text": "ChronoAI Accelerate the discovery of truth. We pursue verifiable research and build tools for people to work with AI agents. Our work connects two ambitions: asking better questions and making it practical to act on them. Pause animation Direction is part of the work. Our view is that greater execution capacity makes judgment more important. People choose the questions, define the conditions and decide what is worth pursuing. AI helps carry the work forward; explicit checks help us evaluate the result. QuestionConditionsChecks A connected body of work. trureturingOur research: questions, assumptions, recorded results and limits. NyxIDConnects agents to services. NyxBot is the main agent inside NyxID. OrnnA place to find and share agent skills. CMAChronoAI Managed Agent: persistent agents in the cloud. heca Coming soonOrchestration for agent work. chrono-harnessGovernance for agent workflows — a Rust harness for explicit registrations and scoped checks. Public beta. Each project has its own scope and availability. Source-code availability is recorded per project. Make the claim precise. Research becomes useful when readers can see the question, the assumptions, the result and the limits. Two examples from trureturing: a recorded counterexample shows that a plausible floor formula for OEIS A175406 fails; and an entropy identity relates von Neumann entropy to quantum relative entropy — under explicitly stated conditions, and without claiming unconditional entropy increase. We distinguish Lean-checked results, paper proofs and open questions. The scope of a result belongs beside the result. Lean-checked resultPaper proofOpen question Explore trureturing → Make the work inspectable. 01Start with a question. 02State the assumptions. 03Inspect the evidence. 04Decide what to test next. We look for people who can bring questions and exercise judgment. A useful contribution leaves others something they can examine and build on. Selected public records. October 15, 2026trureturing reading snapshot — a dated view of the public research materials. Read the snapshot ↗ chrono-harnessPublic beta documentation — the documented scope and implementation limits. View the repository ↗ The snapshot date marks when the reading site was built, not a launch or founding date. Bring a question worth pursuing. Show us what you want to understand or build—and what you have tried. Join us ↗Contact ChronoAI",
+        "headings": [
+          "Accelerate the discovery of truth.",
+          "Direction is part of the work.",
+          "A connected body of work.",
+          "trureturing",
+          "NyxID",
+          "Ornn",
+          "CMA",
+          "heca Coming soon",
+          "chrono-harness",
+          "Make the claim precise.",
+          "Make the work inspectable.",
+          "Start with a question.",
+          "State the assumptions.",
+          "Inspect the evidence.",
+          "Decide what to test next.",
+          "Selected public records.",
+          "Bring a question worth pursuing."
+        ],
+        "geometry": [
+          {
+            "x": 20,
+            "y": 284.625,
+            "width": 335,
+            "height": 19.59375,
+            "font": "\"IBM Plex Mono\", ui-monospace, monospace",
+            "fontSize": "14px",
+            "lineHeight": "19.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 336.21875,
+            "width": 335,
+            "height": 73.4375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "34px",
+            "lineHeight": "36.72px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 433.65625,
+            "width": 335,
+            "height": 131.71875,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 866,
+            "width": 335,
+            "height": 66,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 988,
+            "width": 335,
+            "height": 184.40625,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1443.40625,
+            "width": 335,
+            "height": 66,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1564.40625,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1599,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1696,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1730.59375,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1827.59375,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1862.1875,
+            "width": 335,
+            "height": 26,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1933.1875,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1967.78125,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2064.78125,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2099.375,
+            "width": 335,
+            "height": 26,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2170.375,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2204.96875,
+            "width": 335,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2324.96875,
+            "width": 335,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2563.96875,
+            "width": 335,
+            "height": 33,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2652.96875,
+            "width": 335,
+            "height": 79.03125,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2756,
+            "width": 335,
+            "height": 210.75,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2990.75,
+            "width": 335,
+            "height": 105.375,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3475.125,
+            "width": 335,
+            "height": 66,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3635.125,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3745.921875,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3856.71875,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3967.515625,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 4040.3125,
+            "width": 335,
+            "height": 131.71875,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 4333.03125,
+            "width": 335,
+            "height": 33,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 50,
+            "y": 4430.03125,
+            "width": 305,
+            "height": 128,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 50,
+            "y": 4622.03125,
+            "width": 305,
+            "height": 128,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 4802.03125,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 5151.375,
+            "width": 335,
+            "height": 80.625,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "40.32px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 5256,
+            "width": 335,
+            "height": 52.6875,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Explore trureturing →",
+            "href": "https://chrono-ai.fun/research.html"
+          },
+          {
+            "text": "Read the snapshot ↗",
+            "href": "https://the-omega-institute.github.io/trureturing-mdbook/"
+          },
+          {
+            "text": "View the repository ↗",
+            "href": "https://github.com/ChronoAIProject/chrono-harness"
+          },
+          {
+            "text": "Join us ↗",
+            "href": "https://sg.jobstreet.com/ChronoAI-Pte-Ltd-jobs/at-this-company"
+          },
+          {
+            "text": "Contact ChronoAI",
+            "href": "mailto:contact@chrono-ai.fun"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      },
+      "built": {
+        "title": "Company | ChronoAI",
+        "text": "ChronoAI Accelerate the discovery of truth. We pursue verifiable research and build tools for people to work with AI agents. Our work connects two ambitions: asking better questions and making it practical to act on them. Pause animation Direction is part of the work. Our view is that greater execution capacity makes judgment more important. People choose the questions, define the conditions and decide what is worth pursuing. AI helps carry the work forward; explicit checks help us evaluate the result. QuestionConditionsChecks A connected body of work. trureturingOur research: questions, assumptions, recorded results and limits. NyxIDConnects agents to services. NyxBot is the main agent inside NyxID. OrnnA place to find and share agent skills. CMAChronoAI Managed Agent: persistent agents in the cloud. heca Coming soonOrchestration for agent work. chrono-harnessGovernance for agent workflows — a Rust harness for explicit registrations and scoped checks. Public beta. Each project has its own scope and availability. Source-code availability is recorded per project. Make the claim precise. Research becomes useful when readers can see the question, the assumptions, the result and the limits. Two examples from trureturing: a recorded counterexample shows that a plausible floor formula for OEIS A175406 fails; and an entropy identity relates von Neumann entropy to quantum relative entropy — under explicitly stated conditions, and without claiming unconditional entropy increase. We distinguish Lean-checked results, paper proofs and open questions. The scope of a result belongs beside the result. Lean-checked resultPaper proofOpen question Explore trureturing → Make the work inspectable. 01Start with a question. 02State the assumptions. 03Inspect the evidence. 04Decide what to test next. We look for people who can bring questions and exercise judgment. A useful contribution leaves others something they can examine and build on. Selected public records. October 15, 2026trureturing reading snapshot — a dated view of the public research materials. Read the snapshot ↗ chrono-harnessPublic beta documentation — the documented scope and implementation limits. View the repository ↗ The snapshot date marks when the reading site was built, not a launch or founding date. Bring a question worth pursuing. Show us what you want to understand or build—and what you have tried. Join us ↗Contact ChronoAI",
+        "headings": [
+          "Accelerate the discovery of truth.",
+          "Direction is part of the work.",
+          "A connected body of work.",
+          "trureturing",
+          "NyxID",
+          "Ornn",
+          "CMA",
+          "heca Coming soon",
+          "chrono-harness",
+          "Make the claim precise.",
+          "Make the work inspectable.",
+          "Start with a question.",
+          "State the assumptions.",
+          "Inspect the evidence.",
+          "Decide what to test next.",
+          "Selected public records.",
+          "Bring a question worth pursuing."
+        ],
+        "geometry": [
+          {
+            "x": 20,
+            "y": 284.625,
+            "width": 335,
+            "height": 19.59375,
+            "font": "\"IBM Plex Mono\", ui-monospace, monospace",
+            "fontSize": "14px",
+            "lineHeight": "19.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 336.21875,
+            "width": 335,
+            "height": 73.4375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "34px",
+            "lineHeight": "36.72px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 433.65625,
+            "width": 335,
+            "height": 131.71875,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 866,
+            "width": 335,
+            "height": 66,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 988,
+            "width": 335,
+            "height": 184.40625,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1443.40625,
+            "width": 335,
+            "height": 66,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1564.40625,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1599,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1696,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1730.59375,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1827.59375,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1862.1875,
+            "width": 335,
+            "height": 26,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1933.1875,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 1967.78125,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2064.78125,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2099.375,
+            "width": 335,
+            "height": 26,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2170.375,
+            "width": 335,
+            "height": 28.59375,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "22px",
+            "lineHeight": "28.6px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2204.96875,
+            "width": 335,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.82)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2324.96875,
+            "width": 335,
+            "height": 78,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2563.96875,
+            "width": 335,
+            "height": 33,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2652.96875,
+            "width": 335,
+            "height": 79.03125,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2756,
+            "width": 335,
+            "height": 210.75,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 2990.75,
+            "width": 335,
+            "height": 105.375,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3475.125,
+            "width": 335,
+            "height": 66,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3635.125,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3745.921875,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3856.71875,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 3967.515625,
+            "width": 335,
+            "height": 28.796875,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "24px",
+            "lineHeight": "28.8px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 4040.3125,
+            "width": 335,
+            "height": 131.71875,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 4333.03125,
+            "width": 335,
+            "height": 33,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "30px",
+            "lineHeight": "33px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 50,
+            "y": 4430.03125,
+            "width": 305,
+            "height": 128,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 50,
+            "y": 4622.03125,
+            "width": 305,
+            "height": 128,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 4802.03125,
+            "width": 335,
+            "height": 52,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "15px",
+            "lineHeight": "26px",
+            "color": "rgba(255, 255, 255, 0.6)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 5151.375,
+            "width": 335,
+            "height": 80.625,
+            "font": "\"Inter Tight\", Inter, system-ui, sans-serif",
+            "fontSize": "36px",
+            "lineHeight": "40.32px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "x": 20,
+            "y": 5256,
+            "width": 335,
+            "height": 52.6875,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": "17px",
+            "lineHeight": "26.35px",
+            "color": "rgba(255, 255, 255, 0.86)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ],
+        "svgPaths": [],
+        "cta": [
+          {
+            "text": "Explore trureturing →",
+            "href": "https://chrono-ai.fun/research.html"
+          },
+          {
+            "text": "Read the snapshot ↗",
+            "href": "https://the-omega-institute.github.io/trureturing-mdbook/"
+          },
+          {
+            "text": "View the repository ↗",
+            "href": "https://github.com/ChronoAIProject/chrono-harness"
+          },
+          {
+            "text": "Join us ↗",
+            "href": "https://sg.jobstreet.com/ChronoAI-Pte-Ltd-jobs/at-this-company"
+          },
+          {
+            "text": "Contact ChronoAI",
+            "href": "mailto:contact@chrono-ai.fun"
+          }
+        ],
+        "overflow": false,
+        "fonts": {
+          "Inter": true,
+          "Mona": false
+        }
+      }
+    }
+  ],
+  "status": "pass"
+}

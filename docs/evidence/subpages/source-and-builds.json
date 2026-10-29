@@ -1,0 +1,120 @@
+{
+  "sourceCommit": "808b6cf06e241e624c6d0cd8f11b726cd8f1932e",
+  "author": "hzz780",
+  "baseline": "8bf6a7e876950f008e38df77689981b0c891e594",
+  "originalRepositoryBaseline": "1317113a4c3cb9164ccc601af19f6ce1d3817ca8",
+  "originalBodies": [
+    {
+      "path": "nyxid.qmd",
+      "verbatim": true,
+      "bodySHA256": "f1a879f989331ca8d0902b41b352d8aca7e8808e5a27a5187299388fff980f57"
+    },
+    {
+      "path": "nyxid-zh.qmd",
+      "verbatim": true,
+      "bodySHA256": "2bdd54a14b6021002641e2098c7bb770ec3df1cae95270ca118f0a79680118f7"
+    },
+    {
+      "path": "ornn.qmd",
+      "verbatim": true,
+      "bodySHA256": "fa0285c7ab1bac8bc7eb5c5865eaf7ed3a4a1d6dbbcb5575248f491694ec7f86"
+    },
+    {
+      "path": "ornn-zh.qmd",
+      "verbatim": true,
+      "bodySHA256": "11cbff07b8d977a31dde2f3af733995591bac544e7d247c867132aa54d418d22"
+    },
+    {
+      "path": "philosophy.qmd",
+      "verbatim": true,
+      "bodySHA256": "d15148a3b6a722befc3fb30add6b472bf294e349a7628f89ce5ecc96a4078a9d"
+    },
+    {
+      "path": "philosophy-zh.qmd",
+      "verbatim": true,
+      "bodySHA256": "857909337faea4906d0f676e3235f755e314683d5828e8633ae2cb76b6617bd5"
+    },
+    {
+      "path": "harness.qmd",
+      "verbatim": true,
+      "bodySHA256": "83e6c82e2d5dc089bac9408cfe3d9f4fbca377febb338e57004f0c6c7ef0936e"
+    },
+    {
+      "path": "harness-zh.qmd",
+      "verbatim": true,
+      "bodySHA256": "58378c8f6ee4e9e6fe78724f7e19dd43552a91a180e80c95f0918867a3dd890a"
+    },
+    {
+      "path": "nyxid-dossier.qmd",
+      "verbatim": true,
+      "bodySHA256": "47c15b0d62dff94bdade91eeb45af391bb7aa4fc40e3aac0ffd2d76611f13119"
+    },
+    {
+      "path": "nyxid-dossier-zh.qmd",
+      "verbatim": true,
+      "bodySHA256": "e43cb4028b0e988f134e99aaeb089af0b813fc2c9e6a7e3a20e0d50f358f3cc0"
+    }
+  ],
+  "homepageOnlyThreeDestinationTokens": true,
+  "unchangedHomepageAssets": [
+    {
+      "path": "assets/home.js",
+      "sha256": "6ad72e67649d4c3454ce82a43b8248dd0f8f58d97a85689baddce2bcce2345be"
+    },
+    {
+      "path": "assets/site.js",
+      "sha256": "feb0280f822a22ad75eda88457623b99c5a483a96b151668200ec0d4a232fbfc"
+    },
+    {
+      "path": "assets/site.css",
+      "sha256": "f7ff38c499947226db7ae25b696a9906f7e6e7f9fbc385693446b438e8a2cc40"
+    },
+    {
+      "path": "assets/refined.css",
+      "sha256": "8573cbe8d4e5fc0413047d1c1d071cfaf3099adadbc38e078bc8dacfc8206b4b"
+    },
+    {
+      "path": "assets/videos.js",
+      "sha256": "fd36d0da6a2707f868dac33c79d3b325df84f9f674397265e031d0ae823bd0f2"
+    },
+    {
+      "path": "assets/videos.css",
+      "sha256": "373bfa6292f8c3585a3f9639eedee1a954d27085baaa8349b32baa098a60b677"
+    },
+    {
+      "path": "assets/asciimark.js",
+      "sha256": "62f67420d286d9bb22feb489ada7059a354b51655b41bbba463540bf0c53a234"
+    },
+    {
+      "path": "assets/nyx-cta-light.js",
+      "sha256": "c3e7057514166f6b7f0934d50a7a0cd5dbefa9a378e8630adfde63c043c00870"
+    },
+    {
+      "path": "templates/home.html",
+      "sha256": "479b3074a69e3d3a9822b347b6e6bc4552bd48786c8014a6a02120044d76f384"
+    }
+  ],
+  "bundles": {
+    "_site": {
+      "sourceCommit": "808b6cf06e241e624c6d0cd8f11b726cd8f1932e",
+      "revision": "8d473114fd1664ba04195dbce36242bbcb994324d3f5936628e0344f744ea0c3",
+      "manifestSHA256": "f1b4b17791a7bd4b1046c726991c2a16d7fdb4dc6be765e80576f41c7cc47c4d",
+      "htmlPages": 18
+    },
+    "_preview": {
+      "sourceCommit": "808b6cf06e241e624c6d0cd8f11b726cd8f1932e",
+      "revision": "8d473114fd1664ba04195dbce36242bbcb994324d3f5936628e0344f744ea0c3",
+      "manifestSHA256": "7cf967346e9fa00c2664664ed7927a67782547e8313a262fa24bdbcbea63c6f2",
+      "htmlPages": 18
+    }
+  },
+  "unitTests": {
+    "passed": 9
+  },
+  "staticChecks": {
+    "_site": "pass, 18 pages",
+    "_preview": "pass, 18 pages"
+  },
+  "externalHistoricalLinks": "Preserved, not executed or exhaustively checked; no blanket health claim",
+  "status": "pass"
+}

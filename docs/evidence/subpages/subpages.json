@@ -1,0 +1,1046 @@
+{
+  "sourceCommit": "808b6cf06e241e624c6d0cd8f11b726cd8f1932e",
+  "revision": "8d473114fd1664ba04195dbce36242bbcb994324d3f5936628e0344f744ea0c3",
+  "manifestSHA256": "7cf967346e9fa00c2664664ed7927a67782547e8313a262fa24bdbcbea63c6f2",
+  "browser": "Chromium",
+  "pages": [
+    {
+      "id": "nyxid",
+      "path": "nyxid.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/nyxid.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-en-1440.png"
+    },
+    {
+      "id": "nyxid",
+      "path": "zh/nyxid.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "nyxid.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-zh-CN-1440.png"
+    },
+    {
+      "id": "ornn",
+      "path": "ornn.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/ornn.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "ornn-en-1440.png"
+    },
+    {
+      "id": "ornn",
+      "path": "zh/ornn.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "ornn.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "ornn-zh-CN-1440.png"
+    },
+    {
+      "id": "philosophy",
+      "path": "philosophy.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/philosophy.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "philosophy-en-1440.png"
+    },
+    {
+      "id": "philosophy",
+      "path": "zh/philosophy.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "philosophy.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "philosophy-zh-CN-1440.png"
+    },
+    {
+      "id": "harness",
+      "path": "harness.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/harness.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "harness-en-1440.png"
+    },
+    {
+      "id": "harness",
+      "path": "zh/harness.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "harness.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "harness-zh-CN-1440.png"
+    },
+    {
+      "id": "nyxid-dossier",
+      "path": "nyxid-dossier.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/nyxid-dossier.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-dossier-en-1440.png"
+    },
+    {
+      "id": "nyxid-dossier",
+      "path": "zh/nyxid-dossier.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "nyxid-dossier.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-dossier-zh-CN-1440.png"
+    },
+    {
+      "id": "nyxid-product",
+      "path": "products/nyxid.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/products/nyxid.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "nyxid-product-en-1440.png"
+    },
+    {
+      "id": "nyxid-product",
+      "path": "zh/products/nyxid.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "products/nyxid.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "nyxid-product-zh-CN-1440.png"
+    },
+    {
+      "id": "ornn-product",
+      "path": "products/ornn.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/products/ornn.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "ornn-product-en-1440.png"
+    },
+    {
+      "id": "ornn-product",
+      "path": "zh/products/ornn.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "products/ornn.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "ornn-product-zh-CN-1440.png"
+    },
+    {
+      "id": "company",
+      "path": "company.html",
+      "lang": "en",
+      "width": 1440,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/company.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "company-en-1440.png"
+    },
+    {
+      "id": "company",
+      "path": "zh/company.html",
+      "lang": "zh-CN",
+      "width": 1440,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "company.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "company-zh-CN-1440.png"
+    },
+    {
+      "id": "nyxid",
+      "path": "nyxid.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/nyxid.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-en-375.png"
+    },
+    {
+      "id": "nyxid",
+      "path": "zh/nyxid.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "nyxid.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-zh-CN-375.png"
+    },
+    {
+      "id": "ornn",
+      "path": "ornn.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/ornn.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "ornn-en-375.png"
+    },
+    {
+      "id": "ornn",
+      "path": "zh/ornn.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "ornn.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "ornn-zh-CN-375.png"
+    },
+    {
+      "id": "philosophy",
+      "path": "philosophy.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/philosophy.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "philosophy-en-375.png"
+    },
+    {
+      "id": "philosophy",
+      "path": "zh/philosophy.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "philosophy.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "philosophy-zh-CN-375.png"
+    },
+    {
+      "id": "harness",
+      "path": "harness.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/harness.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "harness-en-375.png"
+    },
+    {
+      "id": "harness",
+      "path": "zh/harness.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "harness.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "harness-zh-CN-375.png"
+    },
+    {
+      "id": "nyxid-dossier",
+      "path": "nyxid-dossier.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/nyxid-dossier.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-dossier-en-375.png"
+    },
+    {
+      "id": "nyxid-dossier",
+      "path": "zh/nyxid-dossier.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "article",
+      "body": true,
+      "menu": true,
+      "localeTarget": "nyxid-dossier.html",
+      "resources": true,
+      "toc": true,
+      "screenshot": "nyxid-dossier-zh-CN-375.png"
+    },
+    {
+      "id": "nyxid-product",
+      "path": "products/nyxid.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/products/nyxid.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "nyxid-product-en-375.png"
+    },
+    {
+      "id": "nyxid-product",
+      "path": "zh/products/nyxid.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "products/nyxid.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "nyxid-product-zh-CN-375.png"
+    },
+    {
+      "id": "ornn-product",
+      "path": "products/ornn.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/products/ornn.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "ornn-product-en-375.png"
+    },
+    {
+      "id": "ornn-product",
+      "path": "zh/products/ornn.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "products/ornn.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "ornn-product-zh-CN-375.png"
+    },
+    {
+      "id": "company",
+      "path": "company.html",
+      "lang": "en",
+      "width": 375,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "zh/company.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "company-en-375.png"
+    },
+    {
+      "id": "company",
+      "path": "zh/company.html",
+      "lang": "zh-CN",
+      "width": 375,
+      "kind": "brand",
+      "body": true,
+      "menu": true,
+      "localeTarget": "company.html",
+      "resources": true,
+      "toc": false,
+      "screenshot": "company-zh-CN-375.png"
+    }
+  ],
+  "compact": [
+    {
+      "path": "nyxid.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/nyxid.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "ornn.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/ornn.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "philosophy.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/philosophy.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "harness.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/harness.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "products/nyxid.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "products/ornn.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "company.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    },
+    {
+      "path": "zh/company.html",
+      "width": 320,
+      "menu": true,
+      "locale": true
+    }
+  ],
+  "noJs": [
+    {
+      "path": "nyxid.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/nyxid.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "ornn.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/ornn.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "philosophy.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/philosophy.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "harness.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/harness.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "products/nyxid.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "products/ornn.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "company.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/company.html",
+      "width": 1440,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "nyxid.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/nyxid.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "ornn.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/ornn.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "philosophy.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/philosophy.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "harness.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/harness.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "nyxid-dossier.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/nyxid-dossier.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "products/nyxid.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/products/nyxid.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "products/ornn.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/products/ornn.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "company.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    },
+    {
+      "path": "zh/company.html",
+      "width": 375,
+      "body": true,
+      "nativeLocale": true
+    }
+  ],
+  "locale": [
+    {
+      "id": "nyxid",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "how-it-works",
+      "target": "工作原理",
+      "heading": "工作原理"
+    },
+    {
+      "id": "nyxid",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "工作原理",
+      "target": "how-it-works",
+      "heading": "How It Works"
+    },
+    {
+      "id": "ornn",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "how-it-works",
+      "target": "工作原理",
+      "heading": "工作原理"
+    },
+    {
+      "id": "ornn",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "工作原理",
+      "target": "how-it-works",
+      "heading": "How It Works"
+    },
+    {
+      "id": "philosophy",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "an-observation",
+      "target": "一个观察",
+      "heading": "一个观察"
+    },
+    {
+      "id": "philosophy",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "一个观察",
+      "target": "an-observation",
+      "heading": "An observation"
+    },
+    {
+      "id": "harness",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "order",
+      "target": "秩序",
+      "heading": "秩序"
+    },
+    {
+      "id": "harness",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "秩序",
+      "target": "order",
+      "heading": "Order"
+    },
+    {
+      "id": "nyxid-dossier",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "in-one-line",
+      "target": "一句话",
+      "heading": "一句话"
+    },
+    {
+      "id": "nyxid-dossier",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "一句话",
+      "target": "in-one-line",
+      "heading": "In One Line"
+    },
+    {
+      "id": "nyxid-product",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "三层保护，协同工作。"
+    },
+    {
+      "id": "nyxid-product",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "Three layers, working together."
+    },
+    {
+      "id": "ornn-product",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "从发现技能，到实际使用。"
+    },
+    {
+      "id": "ornn-product",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "From discovery to use."
+    },
+    {
+      "id": "company",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 1440,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "确定方向，也是工作的一部分。"
+    },
+    {
+      "id": "company",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 1440,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "Direction is part of the work."
+    },
+    {
+      "id": "nyxid",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "how-it-works",
+      "target": "工作原理",
+      "heading": "工作原理"
+    },
+    {
+      "id": "nyxid",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "工作原理",
+      "target": "how-it-works",
+      "heading": "How It Works"
+    },
+    {
+      "id": "ornn",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "how-it-works",
+      "target": "工作原理",
+      "heading": "工作原理"
+    },
+    {
+      "id": "ornn",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "工作原理",
+      "target": "how-it-works",
+      "heading": "How It Works"
+    },
+    {
+      "id": "philosophy",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "an-observation",
+      "target": "一个观察",
+      "heading": "一个观察"
+    },
+    {
+      "id": "philosophy",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "一个观察",
+      "target": "an-observation",
+      "heading": "An observation"
+    },
+    {
+      "id": "harness",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "order",
+      "target": "秩序",
+      "heading": "秩序"
+    },
+    {
+      "id": "harness",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "秩序",
+      "target": "order",
+      "heading": "Order"
+    },
+    {
+      "id": "nyxid-dossier",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "in-one-line",
+      "target": "一句话",
+      "heading": "一句话"
+    },
+    {
+      "id": "nyxid-dossier",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "一句话",
+      "target": "in-one-line",
+      "heading": "In One Line"
+    },
+    {
+      "id": "nyxid-product",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "三层保护，协同工作。"
+    },
+    {
+      "id": "nyxid-product",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "Three layers, working together."
+    },
+    {
+      "id": "ornn-product",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "从发现技能，到实际使用。"
+    },
+    {
+      "id": "ornn-product",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "From discovery to use."
+    },
+    {
+      "id": "company",
+      "from": "en",
+      "to": "zh-CN",
+      "width": 375,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "确定方向，也是工作的一部分。"
+    },
+    {
+      "id": "company",
+      "from": "zh-CN",
+      "to": "en",
+      "width": 375,
+      "source": "section-2",
+      "target": "section-2",
+      "heading": "Direction is part of the work."
+    }
+  ],
+  "errors": [],
+  "failedResources": [],
+  "legacy": [
+    {
+      "alias": "index-zh.html",
+      "target": "zh/index.html",
+      "queryAndHash": true
+    },
+    {
+      "alias": "nyxid-zh.html",
+      "target": "zh/nyxid.html",
+      "queryAndHash": true
+    },
+    {
+      "alias": "ornn-zh.html",
+      "target": "zh/ornn.html",
+      "queryAndHash": true
+    },
+    {
+      "alias": "philosophy-zh.html",
+      "target": "zh/philosophy.html",
+      "queryAndHash": true
+    },
+    {
+      "alias": "harness-zh.html",
+      "target": "zh/harness.html",
+      "queryAndHash": true
+    },
+    {
+      "alias": "nyxid-dossier-zh.html",
+      "target": "zh/nyxid-dossier.html",
+      "queryAndHash": true
+    }
+  ],
+  "motion": {
+    "companyReveal": true,
+    "nyxidDiagramPause": true,
+    "reducedMotion": true
+  },
+  "status": "pass"
+}
