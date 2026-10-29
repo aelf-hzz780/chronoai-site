@@ -21,13 +21,13 @@ Preview links above use the configured subpath. `site-config.json` centralizes t
 
 Build the public package with `.tools/venv/bin/python scripts/build.py` into `_site/`. Use this entry point instead of plain `quarto render` so every representation and locale comes from the same publication manifest. The workflow uses this same entry point.
 
-手动运行 `Deploy Quarto site to GitHub Pages` 时，选择待验收的功能分支。工作流会按当前仓库的 `https://<owner>.github.io/<repo>/` 构建、验证并发布 `_preview/`，所有正式 HTML 页面保留 `noindex,nofollow`。Pages Source 必须为 GitHub Actions，`github-pages` environment 必须允许所选分支。验收站使用 GitHub 默认域名，不绑定正式官网域名。只有 push main 才沿用 `site-config.json` 构建正式 `_site/`；无需为验收合并 main。
+个人仓库 `aelf-hzz780/chronoai-site` 的发布始终生成验收包。手动运行 `Deploy Quarto site to GitHub Pages` 时，选择待验收的功能分支；工作流会按 `https://aelf-hzz780.github.io/chronoai-site/` 构建、验证并发布 `_preview/`，所有正式 HTML 页面保留 `noindex,nofollow`。Pages Source 必须为 GitHub Actions，`github-pages` environment 必须允许所选分支。无需为验收合并 main，也不绑定正式官网域名。
 
-Run `Deploy Quarto site to GitHub Pages` manually and select the feature branch to review. The workflow builds, verifies and deploys `_preview/` at the current repository's `https://<owner>.github.io/<repo>/` address, retaining `noindex,nofollow` on every canonical HTML page. Set the Pages source to GitHub Actions and allow the selected branch in the `github-pages` environment. Use the default GitHub domain for acceptance, without assigning the production domain. Only pushes to main use `site-config.json` to build the public `_site/`; acceptance does not require merging main.
+Deployments from the personal repository, `aelf-hzz780/chronoai-site`, always produce an acceptance package. Run `Deploy Quarto site to GitHub Pages` manually and select the feature branch to review. The workflow builds, verifies and deploys `_preview/` at `https://aelf-hzz780.github.io/chronoai-site/`, retaining `noindex,nofollow` on every canonical HTML page. Set the Pages source to GitHub Actions and allow the selected branch in the `github-pages` environment. Acceptance does not require merging main or assigning the production domain.
 
-当前验收分支 `feature/approved-home-bilingual-seo` 的 push 也会自动构建并发布同样的预览包，以完成首次工作流登记并持续更新验收站。其他功能分支需手动运行。
+个人仓库的当前验收分支 `feature/approved-home-bilingual-seo` push 后会自动更新验收站，其他功能分支需手动运行。官方仓库仅允许 main 部署；push main 或手动运行 main 均沿用 `site-config.json` 构建、验证并发布正式 `_site/`，不会进入个人验收逻辑。
 
-Pushes to the current acceptance branch, `feature/approved-home-bilingual-seo`, also build and deploy the same preview package, registering the workflow on its first run and keeping the acceptance site current. Other feature branches require a manual run.
+Pushes to `feature/approved-home-bilingual-seo` in the personal repository update the acceptance site automatically; other feature branches require a manual run. The official repository deploys only main. Both pushes to main and manual runs on main use `site-config.json` to build, verify and publish the public `_site/`, without entering the personal acceptance path.
 
 手动发布或验收分支 push 会替换当前仓库的 Pages 内容。验收结束可在个人仓库的 Pages 设置中取消发布。`noindex` 不是访问控制；GitHub Pages 不执行生成的 `_headers` 文件，不能依靠它为 Markdown 或其他文件设置响应头。
 
