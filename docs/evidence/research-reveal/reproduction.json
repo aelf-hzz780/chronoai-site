@@ -1,0 +1,262 @@
+{
+  "scope": "Local research reveal; video API and frame simulated, no remote playback claim",
+  "sourceCommit": "4c8fb7da263b8f9106525be459b64b706172dbec",
+  "revision": "07aba97bbe0f2e53adf7b760c691350c8e912ef72bc22b649c7a2aecea39562b",
+  "manifestSHA256": "f62f4f90fb907411ac961a764a97ca8a08fed4982b941d7bacbb60a9821447ae",
+  "checks": [
+    {
+      "width": 375,
+      "lang": "en",
+      "before": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 5397.234375,
+          "bottom": 5477.859375,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 5501.859375,
+          "bottom": 5580.890625,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 5596.890625,
+          "bottom": 6135.359375,
+          "revealed": false
+        }
+      },
+      "boundary": {
+        "h2": {
+          "opacity": 0.415102,
+          "transform": "matrix(1, 0, 0, 1, 0, 7.01877)",
+          "transition": "0.4s",
+          "delay": "0s, 0s",
+          "top": 567.253173828125,
+          "bottom": 647.878173828125,
+          "revealed": true
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 676.859375,
+          "bottom": 755.890625,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 771.890625,
+          "bottom": 1310.359375,
+          "revealed": false
+        }
+      },
+      "cardVisibleBeforeIntroSettles": true
+    },
+    {
+      "width": 375,
+      "lang": "zh",
+      "before": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 5096.09375,
+          "bottom": 5136.40625,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 5160.40625,
+          "bottom": 5213.09375,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 5229.09375,
+          "bottom": 5721.171875,
+          "revealed": false
+        }
+      },
+      "boundary": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 639.09375,
+          "bottom": 679.40625,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 12)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 703.40625,
+          "bottom": 756.09375,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 772.09375,
+          "bottom": 1264.171875,
+          "revealed": false
+        }
+      },
+      "cardVisibleBeforeIntroSettles": true
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "before": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 6256.609375,
+          "bottom": 6325.71875,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 6349.71875,
+          "bottom": 6411.71875,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 6419.71875,
+          "bottom": 6756.109375,
+          "revealed": false
+        }
+      },
+      "boundary": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 696.609375,
+          "bottom": 765.71875,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 789.71875,
+          "bottom": 851.71875,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 859.71875,
+          "bottom": 1196.109375,
+          "revealed": false
+        }
+      },
+      "cardVisibleBeforeIntroSettles": true
+    },
+    {
+      "width": 1440,
+      "lang": "zh",
+      "before": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 6161.3125,
+          "bottom": 6230.421875,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 6254.421875,
+          "bottom": 6285.421875,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 6293.421875,
+          "bottom": 6629.8125,
+          "revealed": false
+        }
+      },
+      "boundary": {
+        "h2": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 728.3125,
+          "bottom": 797.421875,
+          "revealed": false
+        },
+        ".lead5": {
+          "opacity": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 20)",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 821.421875,
+          "bottom": 852.421875,
+          "revealed": false
+        },
+        "#research-video": {
+          "opacity": 1,
+          "transform": "none",
+          "transition": "0s",
+          "delay": "0s",
+          "top": 860.421875,
+          "bottom": 1196.8125,
+          "revealed": false
+        }
+      },
+      "cardVisibleBeforeIntroSettles": true
+    }
+  ],
+  "errors": [],
+  "status": "reproduced"
+}

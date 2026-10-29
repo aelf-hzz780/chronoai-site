@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "694404a04c697918f783dca739d8ac78553d6374",
+  "checks": {
+    "unitTests": {
+      "passed": 7
+    },
+    "staticPages": {
+      "_site": 12,
+      "_preview": 12
+    },
+    "javascriptSyntax": "pass",
+    "scopedWhitespace": "pass"
+  },
+  "bundles": {
+    "_site": {
+      "sourceCommit": "694404a04c697918f783dca739d8ac78553d6374",
+      "revision": "d3ac84f9f2221c0e08f965f5eaba8f48bd1ee99293b43cc05ca5b74b76c5e628",
+      "manifestSHA256": "bfbaa2a1d414e9b1a2787621d6d19500167d35dbcc19f8257f0835ced4f275be"
+    },
+    "_preview": {
+      "sourceCommit": "694404a04c697918f783dca739d8ac78553d6374",
+      "revision": "d3ac84f9f2221c0e08f965f5eaba8f48bd1ee99293b43cc05ca5b74b76c5e628",
+      "manifestSHA256": "28144904cb14fd712555e184dba6c0c2fcd678c619b844464b79050ef939640a"
+    }
+  }
+}
